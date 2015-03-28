@@ -1,5 +1,5 @@
 //
-//  IncidentReportingDetailViewController.h
+//  WaterDetailsViewController.h
 //  eNIM
 //
 //  Created by 179159 on 27/03/15.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface IncidentReportingDetailViewController : UIViewController
+@interface WaterDetailsViewController : UIViewController
 
 @end

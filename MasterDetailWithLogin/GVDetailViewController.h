@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #include "DetailViewManager.h"
+
 @interface GVDetailViewController : UIViewController <SubstitutableDetailViewController>
 
 @property (strong, nonatomic) id detailItem;

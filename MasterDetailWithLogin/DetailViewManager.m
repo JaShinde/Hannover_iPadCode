@@ -9,6 +9,7 @@
 #import "DetailViewManager.h"
 #import "GVLoadingDetailViewController.h"
 #import "GVMasterViewController.h"
+#import "IncidentDetailsViewController.h"
 
 @interface DetailViewManager ()
 // Holds a reference to the split view controller's bar button item
@@ -36,24 +37,37 @@
     self.detailViewController.navigationPaneBarButtonItem = nil;
     
     
-    _detailViewController = detailViewController;
+    
     
     // Set the new detailViewController's navigationPaneBarButtonItem to the value of our
     // navigationPaneButtonItem.  If navigationPaneButtonItem is not nil, then the button
     // will be displayed.
-    _detailViewController.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
+    
     
     UIViewController* topLevelController = nil;
     if ([detailViewController class] ==  [GVLoadingDetailViewController class]) {
+        _detailViewController = detailViewController;
+        _detailViewController.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
         topLevelController = _detailViewController;
-    } else {
-        topLevelController = self.detailNavCtrl;
+    } else
+    {
+        if ([detailViewController class] ==  [IncidentDetailsViewController class]) {
+            _incidentDetails = detailViewController;
+            _incidentDetails.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
+            topLevelController = _incidentDetails;
+        }else{
+//        _incidentDetails = detailViewController;
+//        _incidentDetails.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
+//        topLevelController = _detailViewController;
+          topLevelController = self.detailNavCtrl;
+        }
     }
     
     // Update the split view controller's view controllers array.
     // This causes the new detail view controller to be displayed.
     UIViewController *navigationViewController = [self.splitViewController.viewControllers objectAtIndex:0];
     NSArray *viewControllers = [[NSArray alloc] initWithObjects:navigationViewController, topLevelController, nil];
+    
     self.splitViewController.viewControllers = viewControllers;
     
     // Dismiss the navigation popover if one was present.  This will

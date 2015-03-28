@@ -8,8 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+#import "DetailViewManager.h"
+
+//@class DetailViewManager;
+
 @interface GVAppDelegate : UIResponder <UIApplicationDelegate>
 @property (nonatomic) BOOL authenticated;
 @property (strong, nonatomic) UIWindow *window;
+
+//@property (strong, nonatomic) DetailViewManager *detailViewManager;
 
 @end

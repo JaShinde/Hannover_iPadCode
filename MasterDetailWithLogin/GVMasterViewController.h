@@ -11,4 +11,5 @@
 
 @interface GVMasterViewController : UITableViewController
 @property (strong, nonatomic) DetailViewManager *detailViewManager;
+
 @end

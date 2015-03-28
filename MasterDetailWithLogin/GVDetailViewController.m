@@ -59,21 +59,22 @@
         // if we are in portrait mode and we are not authenticated, we need to invoke the login screen.
         // Note that this is necessary because in portrait mode, the master view's viewWillAppear will not
         // be called until its popover is displayed.
-        if(UIInterfaceOrientationIsPortrait(self.interfaceOrientation)
-           && ![(GVAppDelegate*)[[UIApplication sharedApplication] delegate] authenticated])
-        {
-            // display login screen if we are not authenticated.
-            NSLog(@"Not authenticated and in portrait, put up login screen.");
-            GVLoginViewController *vc =  (GVLoginViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
-            [vc setModalPresentationStyle:UIModalPresentationFullScreen];
-            [self presentViewController:vc animated:NO completion:nil];
-            
-        } else if(self.detailItem == nil) {
+//        if(UIInterfaceOrientationIsPortrait(self.interfaceOrientation)
+//           && ![(GVAppDelegate*)[[UIApplication sharedApplication] delegate] authenticated])
+//        {
+//            // display login screen if we are not authenticated.
+//            NSLog(@"Not authenticated and in portrait, put up login screen.");
+//            GVLoginViewController *vc =  (GVLoginViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"loginViewController"];
+//            [vc setModalPresentationStyle:UIModalPresentationFullScreen];
+//            [self presentViewController:vc animated:NO completion:nil];
+//            
+//        } else if(self.detailItem == nil) {
             // display the alternate view if we have no data.
-            NSLog(@"No data! loading detail view will appear as alternate until we have data.");
-            DetailViewManager* dvm = (DetailViewManager*)self.splitViewController.delegate;
-            dvm.detailViewController = dvm.loadingDetailViewController;
-        }
+//            NSLog(@"No data! loading detail view will appear as alternate until we have data.");
+//            DetailViewManager* dvm = (DetailViewManager*)self.splitViewController.delegate;
+//            dvm.detailViewController = dvm.loadingDetailViewController;
+        
+//        }
     }
 }
 

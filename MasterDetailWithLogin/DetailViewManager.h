@@ -11,6 +11,7 @@
 
 @class GVLoadingDetailViewController;
 @class GVDetailViewController;
+@class IncidentDetailsViewController;
 
 /*
  SubstitutableDetailViewController defines the protocol that detail view controllers must adopt.
@@ -35,6 +36,9 @@
 
 // This controller will be displayed whenever we have data to display.
 @property (strong, nonatomic) GVDetailViewController *loadedDetailViewController;
+
+// This controller will be displayed whenever we have data to display for Incidemtn Details View.
+@property (strong, nonatomic) IncidentDetailsViewController* incidentDetails;
 
 // This is the nav controller that will contain the loadedDetailViewController.
 @property (strong, nonatomic) UINavigationController *detailNavCtrl;

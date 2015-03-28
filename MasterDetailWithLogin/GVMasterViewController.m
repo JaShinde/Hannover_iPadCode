@@ -11,6 +11,7 @@
 #import "GVLoginViewController.h"
 #import "GVLoadingDetailViewController.h"
 #import "GVAppDelegate.h"
+#import "IncidentDetailsViewController.h"
 
 @interface GVMasterViewController () {
     NSMutableArray *_objects;
@@ -58,10 +59,16 @@
         // tell the mgr about the detail, so buttons get added if needed.  We default with the loadedDetailViewController.
         self.detailViewManager.detailViewController = self.detailViewManager.loadedDetailViewController;
         
-// Commended this line purposefully
+// Comment this line purposefully
 // load up the alternate loading detail... we'll need it shortly!
-//        self.detailViewManager.loadingDetailViewController = (GVLoadingDetailViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"LoadingDetailViewController"];
-//        [self.detailViewManager.loadingDetailViewController view]; // force the outlets to be bound.
+        self.detailViewManager.loadingDetailViewController = (GVLoadingDetailViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"LoadingDetailViewController"];
+        [self.detailViewManager.loadingDetailViewController view]; // force the outlets to be bound.
+
+        // load up the alternate loading detail... we'll need it shortly!
+        self.detailViewManager.incidentDetails = (IncidentDetailsViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"IncidentDetails"];
+        [self.detailViewManager.incidentDetails view]; // force the outlets to be bound.
+
+        
     }
     
 }
@@ -201,10 +208,52 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+   // GVAppDelegate *appDelegate = (GVAppDelegate *)[[UIApplication sharedApplication] delegate];
+    
+//UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
+
+
+   // DetailViewManager *detailViewManager = (DetailViewManager*)self.splitViewController.delegate;
+    
+    NSUInteger row = indexPath.row;
+
+    if (row == 0) {
         NSDate *object = _objects[indexPath.row];
-        self.detailViewManager.loadedDetailViewController.detailItem = object;
+        self.detailViewManager.loadedDetailViewController.detailItem = [_objects objectAtIndex:0];
+        self.detailViewManager.detailViewController = self.detailViewManager.loadedDetailViewController;
+        //self.detailViewManager.loadedDetailViewController.detailItem = object;
     }
+    else {
+        if(row== 2){
+            self.detailViewManager.detailViewController = self.detailViewManager.incidentDetails;
+
+        }else{
+                      self.detailViewManager.detailViewController = self.detailViewManager.loadingDetailViewController;
+        // Create and configure a new detail view controller appropriate for the selection.
+//            UIViewController <SubstitutableDetailViewController> *detailViewController = nil;
+        
+//        IncidentDetailsViewController *newDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"IncidentDetails"];
+//         GVLoadingDetailViewController *newDetailViewController = [[GVLoadingDetailViewController alloc]init];
+//        self.detailViewManager.detailViewController = self.detailViewManager.loadingDetailViewController;
+//            detailViewController = newDetailViewController;
+//        detailViewController.title = [tableView   cellForRowAtIndexPath:indexPath].textLabel.text;
+        // DetailViewManager exposes a property, detailViewController.  Set this property
+        // to the detail view controller we want displayed.  Configuring the detail view
+        // controller to display the navigation button (if needed) and presenting it
+        // happens inside DetailViewManager.
+//        [self.detailViewManager setDetailViewController:newDetailViewController];
+        
+//        [newDetailViewController release];
+        }
+    }
+    
+//    self.detailViewManager.detailViewController = self.detailViewManager.incidentDetails;
+    
+//    if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
+//        
+//        NSDate *object = _objects[indexPath.row];
+//        self.detailViewManager.loadedDetailViewController.detailItem = object;
+//    }
 }
 
 

@@ -23,6 +23,8 @@
         [splitViewController setValue:[NSNumber numberWithFloat:200.0] forKey:@"_masterColumnWidth"];
 
         splitViewController.delegate = mvc.detailViewManager;
+//        self.detailViewManager = [[DetailViewManager alloc] init];
+        
         mvc.detailViewManager.splitViewController = splitViewController;
     }
     return YES;

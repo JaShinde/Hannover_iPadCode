@@ -10,8 +10,11 @@
 		7E9D51C41AC2F54600DB63D5 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7E9D51C31AC2F54600DB63D5 /* login.jpg */; };
 		7E9D51C71AC2F91E00DB63D5 /* btRippleButtton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */; };
 		7E9D51C91AC2FA7400DB63D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */; };
-		7EC2B8D21AC53D0A00883BF8 /* IncidentReportingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8D11AC53D0A00883BF8 /* IncidentReportingDetailViewController.m */; };
 		7EC2B8D51AC53D2600883BF8 /* EnergyDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8D41AC53D2600883BF8 /* EnergyDetailsViewController.m */; };
+		7EC2B8D81AC53DE400883BF8 /* WasteDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8D71AC53DE400883BF8 /* WasteDetailsViewController.m */; };
+		7EC2B8DB1AC53DF700883BF8 /* AirDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8DA1AC53DF700883BF8 /* AirDetailsViewController.m */; };
+		7EC2B8DE1AC53E0900883BF8 /* WaterDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8DD1AC53E0900883BF8 /* WaterDetailsViewController.m */; };
+		7EC2B8E11AC53E1C00883BF8 /* IncidentDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8E01AC53E1C00883BF8 /* IncidentDetailsViewController.m */; };
 		9E32DD16180ECA2A00D38DD4 /* GVLoadingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E32DD15180ECA2A00D38DD4 /* GVLoadingDetailViewController.m */; };
 		9E32DD19180ECACF00D38DD4 /* DetailViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E32DD18180ECACF00D38DD4 /* DetailViewManager.m */; };
 		9E85464D18119CCA00D2229B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E85464C18119CCA00D2229B /* README.md */; };
@@ -36,10 +39,16 @@
 		7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btRippleButtton.m; sourceTree = "<group>"; };
 		7E9D51C61AC2F91E00DB63D5 /* btRippleButtton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btRippleButtton.h; sourceTree = "<group>"; };
 		7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		7EC2B8D01AC53D0A00883BF8 /* IncidentReportingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncidentReportingDetailViewController.h; sourceTree = "<group>"; };
-		7EC2B8D11AC53D0A00883BF8 /* IncidentReportingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidentReportingDetailViewController.m; sourceTree = "<group>"; };
 		7EC2B8D31AC53D2600883BF8 /* EnergyDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnergyDetailsViewController.h; sourceTree = "<group>"; };
 		7EC2B8D41AC53D2600883BF8 /* EnergyDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnergyDetailsViewController.m; sourceTree = "<group>"; };
+		7EC2B8D61AC53DE400883BF8 /* WasteDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WasteDetailsViewController.h; sourceTree = "<group>"; };
+		7EC2B8D71AC53DE400883BF8 /* WasteDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WasteDetailsViewController.m; sourceTree = "<group>"; };
+		7EC2B8D91AC53DF700883BF8 /* AirDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirDetailsViewController.h; sourceTree = "<group>"; };
+		7EC2B8DA1AC53DF700883BF8 /* AirDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirDetailsViewController.m; sourceTree = "<group>"; };
+		7EC2B8DC1AC53E0900883BF8 /* WaterDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WaterDetailsViewController.h; sourceTree = "<group>"; };
+		7EC2B8DD1AC53E0900883BF8 /* WaterDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WaterDetailsViewController.m; sourceTree = "<group>"; };
+		7EC2B8DF1AC53E1C00883BF8 /* IncidentDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IncidentDetailsViewController.h; sourceTree = "<group>"; };
+		7EC2B8E01AC53E1C00883BF8 /* IncidentDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IncidentDetailsViewController.m; sourceTree = "<group>"; };
 		9E32DD14180ECA2A00D38DD4 /* GVLoadingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVLoadingDetailViewController.h; sourceTree = "<group>"; };
 		9E32DD15180ECA2A00D38DD4 /* GVLoadingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVLoadingDetailViewController.m; sourceTree = "<group>"; };
 		9E32DD17180ECACF00D38DD4 /* DetailViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewManager.h; sourceTree = "<group>"; };
@@ -133,10 +142,16 @@
 				9E9FD1E317DA514E00A3D1EC /* GVLoginViewController.h */,
 				9E9FD1E417DA514E00A3D1EC /* GVLoginViewController.m */,
 				9E9FD1C117DA502500A3D1EC /* Supporting Files */,
-				7EC2B8D01AC53D0A00883BF8 /* IncidentReportingDetailViewController.h */,
-				7EC2B8D11AC53D0A00883BF8 /* IncidentReportingDetailViewController.m */,
 				7EC2B8D31AC53D2600883BF8 /* EnergyDetailsViewController.h */,
 				7EC2B8D41AC53D2600883BF8 /* EnergyDetailsViewController.m */,
+				7EC2B8D61AC53DE400883BF8 /* WasteDetailsViewController.h */,
+				7EC2B8D71AC53DE400883BF8 /* WasteDetailsViewController.m */,
+				7EC2B8D91AC53DF700883BF8 /* AirDetailsViewController.h */,
+				7EC2B8DA1AC53DF700883BF8 /* AirDetailsViewController.m */,
+				7EC2B8DC1AC53E0900883BF8 /* WaterDetailsViewController.h */,
+				7EC2B8DD1AC53E0900883BF8 /* WaterDetailsViewController.m */,
+				7EC2B8DF1AC53E1C00883BF8 /* IncidentDetailsViewController.h */,
+				7EC2B8E01AC53E1C00883BF8 /* IncidentDetailsViewController.m */,
 			);
 			path = MasterDetailWithLogin;
 			sourceTree = "<group>";
@@ -233,12 +248,15 @@
 				9E9FD1C717DA502500A3D1EC /* main.m in Sources */,
 				9E9FD1CB17DA502500A3D1EC /* GVAppDelegate.m in Sources */,
 				9E9FD1DA17DA502500A3D1EC /* GVMasterViewController.m in Sources */,
+				7EC2B8D81AC53DE400883BF8 /* WasteDetailsViewController.m in Sources */,
 				9E32DD16180ECA2A00D38DD4 /* GVLoadingDetailViewController.m in Sources */,
+				7EC2B8E11AC53E1C00883BF8 /* IncidentDetailsViewController.m in Sources */,
 				9E9FD1DD17DA502500A3D1EC /* GVDetailViewController.m in Sources */,
-				7EC2B8D21AC53D0A00883BF8 /* IncidentReportingDetailViewController.m in Sources */,
 				9E9FD1E517DA514E00A3D1EC /* GVLoginViewController.m in Sources */,
 				7EC2B8D51AC53D2600883BF8 /* EnergyDetailsViewController.m in Sources */,
 				7E9D51C71AC2F91E00DB63D5 /* btRippleButtton.m in Sources */,
+				7EC2B8DB1AC53DF700883BF8 /* AirDetailsViewController.m in Sources */,
+				7EC2B8DE1AC53E0900883BF8 /* WaterDetailsViewController.m in Sources */,
 				9E32DD19180ECACF00D38DD4 /* DetailViewManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
