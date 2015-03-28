@@ -173,13 +173,22 @@
     {
         UIViewController *vc = [self.splitViewController.viewControllers lastObject];
         if((_objects.count > 0) && ([vc class] ==  [GVLoadingDetailViewController class])) {
-            NSLog(@"We have data, replacing detail view with normal view.");
+         //   NSLog(@"We have data, replacing detail view with normal view.");
             self.detailViewManager.detailViewController = self.detailViewManager.loadedDetailViewController;
         }
     }
     
-    NSString *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 125)]; // your cell's height should be greater than 48 for this.
+    imgView.tag = 1;
+    [cell.contentView addSubview:imgView];
+    imgView = nil;
+
+    UIImageView *_imgView = (UIImageView *)[cell.contentView viewWithTag:1];
+    _imgView.image = [UIImage imageNamed:@"album-bb.jpg"]; // repace the same with array of imwage names.
+//    
+//    
+//    NSString *object = _objects[indexPath.row];
+//    cell.textLabel.text = [object description];
     return cell;
 }
 
