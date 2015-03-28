@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "DetailViewManager.h"
 
-@interface WasteDetailsViewController : UIViewController
+@interface WasteDetailsViewController : UIViewController<SubstitutableDetailViewController>
+
+
+@property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end

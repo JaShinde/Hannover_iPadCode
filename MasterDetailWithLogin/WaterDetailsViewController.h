@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#include "DetailViewManager.h"
 
-@interface WaterDetailsViewController : UIViewController
+@interface WaterDetailsViewController : UIViewController<SubstitutableDetailViewController>
+
+
+@property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end

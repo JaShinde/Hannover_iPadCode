@@ -10,6 +10,6 @@
 #include "DetailViewManager.h"
 @interface GVLoadingDetailViewController : UIViewController<SubstitutableDetailViewController>
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
-@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
+//@property (weak, nonatomic) IBOutlet UIActivityIndicatorView *loadingIndicator;
 @property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
 @end

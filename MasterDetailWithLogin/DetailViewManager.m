@@ -10,6 +10,11 @@
 #import "GVLoadingDetailViewController.h"
 #import "GVMasterViewController.h"
 #import "IncidentDetailsViewController.h"
+#import "WaterDetailsViewController.h"
+#import "WasteDetailsViewController.h"
+#import "EnergyDetailsViewController.h"
+#import "AirDetailsViewController.h"
+
 
 @interface DetailViewManager ()
 // Holds a reference to the split view controller's bar button item
@@ -36,9 +41,6 @@
     // no longer be displayed.
     self.detailViewController.navigationPaneBarButtonItem = nil;
     
-    
-    
-    
     // Set the new detailViewController's navigationPaneBarButtonItem to the value of our
     // navigationPaneButtonItem.  If navigationPaneButtonItem is not nil, then the button
     // will be displayed.
@@ -51,15 +53,40 @@
         topLevelController = _detailViewController;
     } else
     {
-        if ([detailViewController class] ==  [IncidentDetailsViewController class]) {
+        if ([detailViewController class] == [IncidentDetailsViewController class]) {
             _incidentDetails = detailViewController;
             _incidentDetails.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
             topLevelController = _incidentDetails;
         }else{
-//        _incidentDetails = detailViewController;
-//        _incidentDetails.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
-//        topLevelController = _detailViewController;
-          topLevelController = self.detailNavCtrl;
+            
+        if ([detailViewController class] == [WaterDetailsViewController class]) {
+            _waterDetails = detailViewController;
+            _waterDetails.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
+            topLevelController = _waterDetails;
+        }
+        
+        else{
+            if([detailViewController class] == [WasteDetailsViewController class]) {
+                _wasteDetails = detailViewController;
+                _wasteDetails.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
+                topLevelController = _wasteDetails;
+            }
+            else{
+                if([detailViewController class] == [EnergyDetailsViewController class]) {
+                    _energyDetails = detailViewController;
+                    _energyDetails.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
+                    topLevelController = _energyDetails;
+                }else{
+                    if ([detailViewController class] == [AirDetailsViewController class]) {
+                        _airDetails = detailViewController;
+                        _airDetails.navigationPaneBarButtonItem = self.navigationPaneButtonItem;
+                        topLevelController = _airDetails;
+                    }else{
+                        topLevelController = self.detailNavCtrl;
+                    }
+                }
+            }
+        }
         }
     }
     
@@ -72,8 +99,8 @@
     
     // Dismiss the navigation popover if one was present.  This will
     // only occur if the device is in portrait.
-    if (self.navigationPopoverController)
-        [self.navigationPopoverController dismissPopoverAnimated:YES];
+//    if (self.navigationPopoverController)
+//        [self.navigationPopoverController dismissPopoverAnimated:YES];
 }
 
 #pragma mark -

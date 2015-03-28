@@ -27,7 +27,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    [self.loadingIndicator startAnimating];
+//    [self.loadingIndicator startAnimating];
 }
 
 - (void)didReceiveMemoryWarning
@@ -35,9 +35,9 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-- (IBAction)loadingDone:(id)sender {
-    [self.loadingIndicator stopAnimating];
-}
+//- (IBAction)loadingDone:(id)sender {
+//    [self.loadingIndicator stopAnimating];
+//}
 
 #pragma mark -
 #pragma mark SubstitutableDetailViewController

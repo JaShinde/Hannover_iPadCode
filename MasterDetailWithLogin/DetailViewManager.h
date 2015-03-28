@@ -12,7 +12,10 @@
 @class GVLoadingDetailViewController;
 @class GVDetailViewController;
 @class IncidentDetailsViewController;
-
+@class WaterDetailsViewController;
+@class AirDetailsViewController;
+@class WasteDetailsViewController;
+@class EnergyDetailsViewController;
 /*
  SubstitutableDetailViewController defines the protocol that detail view controllers must adopt.
  The protocol specifies aproperty for the bar button item controlling the navigation pane.
@@ -42,5 +45,18 @@
 
 // This is the nav controller that will contain the loadedDetailViewController.
 @property (strong, nonatomic) UINavigationController *detailNavCtrl;
+
+// This controller will be displayed whenever we have data to display Water Details.
+@property (strong, nonatomic) WaterDetailsViewController *waterDetails;
+
+// This controller will be displayed whenever we have data to display Waste Details.
+@property (strong, nonatomic) WasteDetailsViewController *wasteDetails;
+
+// This controller will be displayed whenever we have data to display Air Details.
+@property (strong, nonatomic) AirDetailsViewController *airDetails;
+
+// This controller will be displayed whenever we have data to display Energy Details.
+@property (strong, nonatomic) EnergyDetailsViewController *energyDetails;
+
 
 @end

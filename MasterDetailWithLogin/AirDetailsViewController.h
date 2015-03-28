@@ -8,6 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AirDetailsViewController : UIViewController
+#import "DetailViewManager.h"
+
+@interface AirDetailsViewController : UIViewController<SubstitutableDetailViewController>
+
+
+@property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
+@property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 
 @end

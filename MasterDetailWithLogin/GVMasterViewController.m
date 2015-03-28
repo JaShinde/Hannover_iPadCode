@@ -12,6 +12,11 @@
 #import "GVLoadingDetailViewController.h"
 #import "GVAppDelegate.h"
 #import "IncidentDetailsViewController.h"
+#import "WaterDetailsViewController.h"
+#import "WasteDetailsViewController.h"
+#import "AirDetailsViewController.h"
+#import "EnergyDetailsViewController.h"
+
 
 @interface GVMasterViewController () {
     NSMutableArray *_objects;
@@ -48,7 +53,7 @@
             [_objects insertObject:[NSString stringWithFormat:@"Waste"] atIndex:2];
             [_objects insertObject:[NSString stringWithFormat:@"Air"] atIndex:3];
             [_objects insertObject:[NSString stringWithFormat:@"Water"] atIndex:4];
-    
+            [_objects insertObject:[NSString stringWithFormat:@"Incidents"] atIndex:5];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
    
@@ -67,6 +72,23 @@
         // load up the alternate loading detail... we'll need it shortly!
         self.detailViewManager.incidentDetails = (IncidentDetailsViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"IncidentDetails"];
         [self.detailViewManager.incidentDetails view]; // force the outlets to be bound.
+
+        
+        // load up the alternate loading detail... we'll need it shortly!
+        self.detailViewManager.waterDetails = (WaterDetailsViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"waterDetails"];
+        [self.detailViewManager.waterDetails view]; // force the outlets to be bound.
+        
+        // load up the alternate loading detail... we'll need it shortly!
+        self.detailViewManager.wasteDetails = (WasteDetailsViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"wasteDetails"];
+        [self.detailViewManager.wasteDetails view]; // force the outlets to be bound.
+
+        // load up the alternate loading detail... we'll need it shortly!
+        self.detailViewManager.energyDetails = (EnergyDetailsViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"energyDetails"];
+        [self.detailViewManager.energyDetails view]; // force the outlets to be bound.
+        
+        // load up the alternate loading detail... we'll need it shortly!
+        self.detailViewManager.airDetails = (AirDetailsViewController*)[self.storyboard instantiateViewControllerWithIdentifier:@"airDetails"];
+        [self.detailViewManager.airDetails view]; // force the outlets to be bound.
 
         
     }
@@ -208,43 +230,40 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-   // GVAppDelegate *appDelegate = (GVAppDelegate *)[[UIApplication sharedApplication] delegate];
-    
-//UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"MainStoryboard_iPad" bundle:nil];
-
-
-   // DetailViewManager *detailViewManager = (DetailViewManager*)self.splitViewController.delegate;
-    
     NSUInteger row = indexPath.row;
-
-    if (row == 0) {
-        NSDate *object = _objects[indexPath.row];
-        self.detailViewManager.loadedDetailViewController.detailItem = [_objects objectAtIndex:0];
-        self.detailViewManager.detailViewController = self.detailViewManager.loadedDetailViewController;
-        //self.detailViewManager.loadedDetailViewController.detailItem = object;
-    }
-    else {
-        if(row== 2){
-            self.detailViewManager.detailViewController = self.detailViewManager.incidentDetails;
-
-        }else{
-                      self.detailViewManager.detailViewController = self.detailViewManager.loadingDetailViewController;
-        // Create and configure a new detail view controller appropriate for the selection.
-//            UIViewController <SubstitutableDetailViewController> *detailViewController = nil;
-        
-//        IncidentDetailsViewController *newDetailViewController = [storyboard instantiateViewControllerWithIdentifier:@"IncidentDetails"];
-//         GVLoadingDetailViewController *newDetailViewController = [[GVLoadingDetailViewController alloc]init];
-//        self.detailViewManager.detailViewController = self.detailViewManager.loadingDetailViewController;
-//            detailViewController = newDetailViewController;
-//        detailViewController.title = [tableView   cellForRowAtIndexPath:indexPath].textLabel.text;
-        // DetailViewManager exposes a property, detailViewController.  Set this property
-        // to the detail view controller we want displayed.  Configuring the detail view
-        // controller to display the navigation button (if needed) and presenting it
-        // happens inside DetailViewManager.
-//        [self.detailViewManager setDetailViewController:newDetailViewController];
-        
-//        [newDetailViewController release];
+    switch (row) {
+        case 0:
+        {
+            self.detailViewManager.detailViewController = self.detailViewManager.loadedDetailViewController;
+            break;
         }
+        case 1:{
+            self.detailViewManager.detailViewController = self.detailViewManager.energyDetails;
+            break;
+        }
+        case 2:{
+            self.detailViewManager.detailViewController = self.detailViewManager.wasteDetails;
+            break;
+        }
+        case 3:{
+            self.detailViewManager.detailViewController = self.detailViewManager.airDetails;
+            break;
+        }
+        case 4:{
+            self.detailViewManager.detailViewController = self.detailViewManager.waterDetails;
+            break;
+        }
+        case 5:{
+            self.detailViewManager.detailViewController = self.detailViewManager.incidentDetails;
+            break;
+        }
+            
+        default:
+        {
+            self.detailViewManager.detailViewController = self.detailViewManager.loadedDetailViewController;
+            break;
+        }
+        
     }
     
 //    self.detailViewManager.detailViewController = self.detailViewManager.incidentDetails;

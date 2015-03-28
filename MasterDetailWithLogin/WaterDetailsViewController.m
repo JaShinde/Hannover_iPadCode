@@ -46,4 +46,29 @@
 }
 */
 
+
+#pragma mark -
+#pragma mark SubstitutableDetailViewController
+
+// -------------------------------------------------------------------------------
+//	setNavigationPaneBarButtonItem:
+//  Custom implementation for the navigationPaneBarButtonItem setter.
+//  In addition to updating the _navigationPaneBarButtonItem ivar, it
+//  reconfigures the toolbar to either show or hide the
+//  navigationPaneBarButtonItem.
+// -------------------------------------------------------------------------------
+- (void)setNavigationPaneBarButtonItem:(UIBarButtonItem *)navigationPaneBarButtonItem
+{
+    [self.navigationItem setLeftItemsSupplementBackButton:YES];
+    if (navigationPaneBarButtonItem != _navigationPaneBarButtonItem) {
+        if (navigationPaneBarButtonItem) {
+            [self.navigationItem setLeftBarButtonItems:[NSArray arrayWithObject:navigationPaneBarButtonItem]  animated:NO];
+        } else {
+            [self.navigationItem setLeftBarButtonItem:nil animated:NO];
+        }
+        _navigationPaneBarButtonItem = navigationPaneBarButtonItem;
+    }
+}
+
+
 @end
