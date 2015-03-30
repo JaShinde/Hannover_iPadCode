@@ -1,0 +1,266 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        title:{
+                            text: "Toxic VOC Emission (MT)"
+                        },
+                        axisX: {
+                            title: "Years"
+                        },
+                        axisY: {
+                            title: "MT"
+                        },
+                        legend: {
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        animationEnabled: true,
+                        zoomEnabled: true,
+                        data: [
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Paint Shop",
+                                name: "Paint Shop",
+                                dataPoints: [
+                                    { label: "2011",y: 15},
+                                    { label: "2012",y: 12},
+                                    { label: "2013",y: 16},
+                                    { label: "2014",y: 14}
+                                ]
+                            },
+                            {
+
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Body Shop",
+                                type: "column",
+                                name: "Body Shop",
+                                dataPoints: [
+                                    { label: "2011",y: 3},
+                                    { label: "2012",y: 3},
+                                    { label: "2013",y: 4},
+                                    { label: "2014",y: 3}
+                                ]
+                            },
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Stamping",
+                                name: "Stamping",
+                                dataPoints: [
+                                    { label: "2011",y: 4},
+                                    { label: "2012",y: 3},
+                                    { label: "2013",y: 4},
+                                    { label: "2014",y: 5}
+                                ]
+                            },
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Plant Engineering",
+                                name: "Plant Engineering",
+                                dataPoints: [
+                                    { label: "2011",y: 8},
+                                    { label: "2012",y: 5},
+                                    { label: "2013",y: 20},
+                                    { label: "2014",y: 17}
+                                ]
+                            },
+                        ]
+
+                    });
+            chart.render();
+
+            var chart2 = new CanvasJS.Chart("chartContainer2",
+                    {
+                        title:{
+                            text: "VOC Intensity (per car)"
+                        },
+                        axisX: {
+                            title: "Years"
+                        },
+                        axisY: {
+                            title: "VOC Intensity"
+                        },
+                        legend: {
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        animationEnabled: true,
+                        data: [
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                markerType: "triangle",
+                                legendMarkerType: "square",
+                                legendText: "Paint Shop",
+                                name: "Paint Shop",
+                                dataPoints: [
+                                    { label: "2011",y: 60},
+                                    { label: "2012",y: 80},
+                                    { label: "2013",y: 50},
+                                    { label: "2014",y: 70}
+                                ]
+                            },
+                            {
+
+                                type: "line",
+                                showInLegend: true,
+                                markerType: "square",
+                                legendMarkerType: "square",
+                                legendText: "Body Shop",
+                                name: "Body Shop",
+                                dataPoints: [
+                                    { label: "2011",y: 40},
+                                    { label: "2012",y: 35},
+                                    { label: "2013",y: 30},
+                                    { label: "2014",y: 35}
+                                ]
+                            },
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                markerType: "circle",
+                                legendText: "Stamping",
+                                name: "Stamping",
+                                dataPoints: [
+                                    { label: "2011",y: 45},
+                                    { label: "2012",y: 50},
+                                    { label: "2013",y: 40},
+                                    { label: "2014",y: 35}
+                                ]
+                            },
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                markerType: "cross",
+                                legendText: "Plant Engineering",
+                                name: "Plant Engineering",
+                                dataPoints: [
+                                    { label: "2011",y: 25},
+                                    { label: "2012",y: 20},
+                                    { label: "2013",y: 27},
+                                    { label: "2014",y: 30}
+                                ]
+                            },
+                        ]
+
+                    });
+
+            chart2.render();
+
+            var chart3 = new CanvasJS.Chart("chartContainer3",
+                    {
+                        title:{
+                            text: "2014, Total Toxic Air Emissions"
+                            //                            fontFamily: "Impact",
+                            //                            fontWeight: "normal"
+                        },
+                        animationEnabled: true,
+                        legend:{
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        data: [
+                            {
+                                indexLabelFontSize: 14,
+                                indexLabelFontFamily: "Garamond",
+                                indexLabelFontColor: "",
+                                indexLabelLineColor: "darkgrey",
+                                indexLabelPlacement: "outside",
+                                type: "doughnut",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                dataPoints: [
+                                    {  y: 20, legendText:"Ammonia", indexLabel: "Ammonia" },
+                                    {  y: 20, legendText:"Hexavalent Chromium", indexLabel: "Hexavalent Chromium" },
+                                    {  y: 50, legendText:"Formaldehyde", indexLabel: "Formaldehyde" },
+                                    {  y: 10, legendText:"Manganese", indexLabel: "Manganese" }
+                                ]
+                            }
+                        ]
+                    });
+
+            chart3.render();
+
+            var chart4 = new CanvasJS.Chart("chartContainer4",
+                    {
+                        title:{
+                            text: "Total Toxic Air Intensity (per car)"
+                            //                            fontFamily: "Impact",
+                            //                            fontWeight: "normal"
+                        },
+                        legend:{
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        animationEnabled: true,
+                        data: [
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                markerType: "triangle",
+                                legendMarkerType: "square",
+                                legendText: "Toxic Air Emission",
+                                name: "Toxic Air Emission",
+                                dataPoints: [
+                                    { label: "2011",y: 45},
+                                    { label: "2012",y: 30},
+                                    { label: "2013",y: 25},
+                                    { label: "2014",y: 40}
+                                ]
+                            }
+                        ]
+                    });
+
+            chart4.render();
+        }
+    </script>
+    <script type="text/javascript" src="canvasjs.min.js"></script></head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%; border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+
+<div id="chartContainer2" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+
+<div id="chartContainer4" style="height: 300px; width: 49%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+<div id="chartContainer3" style="height: 300px; width: 49%; float:right;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+
+
+
+</body>
+</html>

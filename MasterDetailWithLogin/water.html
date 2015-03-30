@@ -1,0 +1,267 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        title:{
+                            text: "Total Water Withdrawal (Cubic Meters)"
+                        },
+                        axisX: {
+                            title: "Years"
+                        },
+                        axisY: {
+                            title: "Cubic Meters"
+                        },
+                        legend: {
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        animationEnabled: true,
+                        zoomEnabled: true,
+                        data: [
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Paint Shop",
+                                name: "Paint Shop",
+                                dataPoints: [
+                                    { label: "2011",y: 160000.6},
+                                    { label: "2012",y: 100000.2},
+                                    { label: "2013",y: 120000.1},
+                                    { label: "2014",y: 220000.2}
+                                ]
+                            },
+                            {
+
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Body Shop",
+                                type: "column",
+                                name: "Body Shop",
+                                dataPoints: [
+                                    { label: "2011",y: 220000.6},
+                                    { label: "2012",y: 140000.2},
+                                    { label: "2013",y: 160000.1},
+                                    { label: "2014",y: 260000.2}
+                                ]
+                            },
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Stamping",
+                                name: "Stamping",
+                                dataPoints: [
+                                    { label: "2011",y: 360000.6},
+                                    { label: "2012",y: 300000.2},
+                                    { label: "2013",y: 320000.1},
+                                    { label: "2014",y: 350000.2}
+                                ]
+                            },
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Plant Engineering",
+                                name: "Plant Engineering",
+                                dataPoints: [
+                                    { label: "2011",y: 220000.6},
+                                    { label: "2012",y: 230000.2},
+                                    { label: "2013",y: 210000.1},
+                                    { label: "2014",y: 200000.2}
+                                ]
+                            },
+                        ]
+
+                    });
+            chart.render();
+
+            var chart2 = new CanvasJS.Chart("chartContainer2",
+                    {
+                        title:{
+                            text: "Water Withdrawal Intensity (per car)"
+                        },
+                        axisX: {
+                            title: "Years"
+                        },
+                        axisY: {
+                            title: "Intensity"
+                        },
+                        legend: {
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        animationEnabled: true,
+                        data: [
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                markerType: "triangle",
+                                legendMarkerType: "square",
+                                legendText: "Paint Shop",
+                                name: "Paint Shop",
+                                dataPoints: [
+                                    { label: "2011",y: 60},
+                                    { label: "2012",y: 80},
+                                    { label: "2013",y: 50},
+                                    { label: "2014",y: 70}
+                                ]
+                            },
+                            {
+
+                                type: "line",
+                                showInLegend: true,
+                                markerType: "square",
+                                legendMarkerType: "square",
+                                legendText: "Body Shop",
+                                name: "Body Shop",
+                                dataPoints: [
+                                    { label: "2011",y: 40},
+                                    { label: "2012",y: 35},
+                                    { label: "2013",y: 30},
+                                    { label: "2014",y: 35}
+                                ]
+                            },
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                markerType: "circle",
+                                legendText: "Stamping",
+                                name: "Stamping",
+                                dataPoints: [
+                                    { label: "2011",y: 45},
+                                    { label: "2012",y: 50},
+                                    { label: "2013",y: 40},
+                                    { label: "2014",y: 35}
+                                ]
+                            },
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                markerType: "cross",
+                                legendText: "Plant Engineering",
+                                name: "Plant Engineering",
+                                dataPoints: [
+                                    { label: "2011",y: 25},
+                                    { label: "2012",y: 20},
+                                    { label: "2013",y: 27},
+                                    { label: "2014",y: 30}
+                                ]
+                            },
+                        ]
+
+                    });
+
+            chart2.render();
+
+            var chart3 = new CanvasJS.Chart("chartContainer3",
+                    {
+                        title:{
+                            text: "2014, Water Withdrawal"
+                            //                            fontFamily: "Impact",
+                            //                            fontWeight: "normal"
+                        },
+                        animationEnabled: true,
+                        legend:{
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        data: [
+                            {
+                                indexLabelFontSize: 14,
+                                indexLabelFontFamily: "Garamond",
+                                indexLabelFontColor: "",
+                                indexLabelLineColor: "darkgrey",
+                                indexLabelPlacement: "outside",
+                                type: "doughnut",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                dataPoints: [
+                                    {  y: 20, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                    {  y: 20, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                    {  y: 50, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                    {  y: 10, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                ]
+                            }
+                        ]
+                    });
+
+            chart3.render();
+
+            var chart4 = new CanvasJS.Chart("chartContainer4",
+                    {
+                        title:{
+                            text: "2014, Water Discharge"
+                            //fontFamily: "Impact",
+                            //fontWeight: "normal"
+                        },
+                        animationEnabled: true,
+                        legend:{
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        data: [
+                            {
+                                indexLabelFontSize: 14,
+                                indexLabelFontFamily: "Garamond",
+                                indexLabelFontColor: "",
+                                indexLabelLineColor: "darkgrey",
+                                indexLabelPlacement: "outside",
+                                type: "doughnut",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                dataPoints: [
+                                    {  y: 20, legendText:"Discharge to Surface Water", indexLabel: "Discharge to Surface Water" },
+                                    {  y: 25, legendText:"Sent to Third Party", indexLabel: "Sent to Third Party" },
+                                    {  y: 55, legendText:"Municipal Discharge (POTW)", indexLabel: "Municipal Discharge (POTW)" }
+                                ]
+                            }
+                        ]
+                    });
+
+            chart4.render();
+        }
+    </script>
+    <script type="text/javascript" src="canvasjs.min.js"></script></head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%; border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+
+<div id="chartContainer2" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+
+<div id="chartContainer4" style="height: 300px; width: 49%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+<div id="chartContainer3" style="height: 300px; width: 49%; float:right;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+
+
+
+</body>
+</html>

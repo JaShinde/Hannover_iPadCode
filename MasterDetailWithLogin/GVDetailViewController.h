@@ -9,11 +9,12 @@
 #import <UIKit/UIKit.h>
 #include "DetailViewManager.h"
 
-@interface GVDetailViewController : UIViewController <SubstitutableDetailViewController>
+@interface GVDetailViewController : UIViewController <SubstitutableDetailViewController,UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 
-@property (strong, nonatomic) id detailItem;
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+//@property (strong, nonatomic) id detailItem;
+//@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 
 /// SubstitutableDetailViewController
 @property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
+@property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
 @end

@@ -10,10 +10,11 @@
 
 #import "DetailViewManager.h"
 
-@interface AirDetailsViewController : UIViewController<SubstitutableDetailViewController>
+@interface AirDetailsViewController : UIViewController<SubstitutableDetailViewController,UIWebViewDelegate>
 
 
 @property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UIWebView *dashboardView;
 
 @end

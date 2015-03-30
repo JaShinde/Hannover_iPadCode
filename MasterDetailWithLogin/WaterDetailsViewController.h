@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #include "DetailViewManager.h"
 
-@interface WaterDetailsViewController : UIViewController<SubstitutableDetailViewController>
+@interface WaterDetailsViewController : UIViewController<SubstitutableDetailViewController,UIWebViewDelegate>
 
 
 @property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UIWebView *dashboardView;
 
 @end

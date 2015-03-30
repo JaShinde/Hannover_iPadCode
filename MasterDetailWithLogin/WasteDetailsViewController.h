@@ -9,10 +9,11 @@
 #import <UIKit/UIKit.h>
 #import "DetailViewManager.h"
 
-@interface WasteDetailsViewController : UIViewController<SubstitutableDetailViewController>
+@interface WasteDetailsViewController : UIViewController<SubstitutableDetailViewController,UIWebViewDelegate>
 
 
 @property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UIWebView *dashboardView;
 
 @end

@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <script type="text/javascript">
+        window.onload = function () {
+            var chart = new CanvasJS.Chart("chartContainer",
+                    {
+                        title:{
+                            text: "Total Stationary Electricity (MWH)"
+                        },
+                        axisX: {
+                            title: "Years"
+                        },
+                        axisY: {
+                            title: "MWH"
+                        },
+                        legend: {
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        animationEnabled: true,
+                        zoomEnabled: true,
+                        data: [
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "London",
+                                name: "London",
+                                dataPoints: [
+                                    { label: "2011",y: 139487.8},
+                                    { label: "2012",y: 157863.2},
+                                    { label: "2013",y: 145689.7},
+                                    { label: "2014",y: 169175.8}
+                                ]
+                            },
+                            {
+
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Munich",
+                                type: "column",
+                                name: "Munich",
+                                dataPoints: [
+                                    { label: "2011",y: 320631.3},
+                                    { label: "2012",y: 323051.8},
+                                    { label: "2013",y: 300890.9},
+                                    { label: "2014",y: 318158.1}
+                                ]
+                            },
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Guangzhou",
+                                name: "Guangzhou",
+                                dataPoints: [
+                                    { label: "2011",y: 113504.6},
+                                    { label: "2012",y: 104798.7},
+                                    { label: "2013",y: 104208.8},
+                                    { label: "2014",y: 128432.3}
+                                ]
+                            },
+                            {
+                                type: "column",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                legendText: "Rajkot",
+                                name: "Rajkot",
+                                dataPoints: [
+                                    { label: "2011",y: 221929.3},
+                                    { label: "2012",y: 223035.4},
+                                    { label: "2013",y: 216234.1},
+                                    { label: "2014",y: 218855.6}
+                                ]
+                            },
+                        ]
+
+                    });
+           chart.render();
+
+            var chart2 = new CanvasJS.Chart("chartContainer2",
+                    {
+                        title:{
+                            text: "Stationary Electricity Intensity (per car)"
+                        },
+                        axisX: {
+                            title: "Years"
+                        },
+                        axisY: {
+                            title: "E (Electric Intensity Q)"
+                        },
+                        legend: {
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        animationEnabled: true,
+                        data: [
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                markerType: "triangle",
+                                legendMarkerType: "square",
+                                legendText: "Munich",
+                                name: "Munich",
+                                dataPoints: [
+                                    { label: "2011",y: 59.7},
+                                    { label: "2012",y: 82.6},
+                                    { label: "2013",y: 49.5},
+                                    { label: "2014",y: 76.4}
+                                ]
+                            },
+                            {
+
+                                type: "line",
+                                showInLegend: true,
+                                markerType: "square",
+                                legendMarkerType: "square",
+                                legendText: "London",
+                                name: "London",
+                                dataPoints: [
+                                    { label: "2011",y: 36.4},
+                                    { label: "2012",y: 32.0},
+                                    { label: "2013",y: 27.5},
+                                    { label: "2014",y: 34.5}
+                                ]
+                            },
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                markerType: "circle",
+                                legendText: "Guangzhou",
+                                name: "Guangzhou",
+                                dataPoints: [
+                                    { label: "2011",y: 25.4},
+                                    { label: "2012",y: 18.9},
+                                    { label: "2013",y: 20.7},
+                                    { label: "2014",y: 29.8}
+                                ]
+                            },
+                            {
+                                type: "line",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                markerType: "cross",
+                                legendText: "Rajkot",
+                                name: "Rajkot",
+                                dataPoints: [
+                                    { label: "2011",y: 45.4},
+                                    { label: "2012",y: 48.7},
+                                    { label: "2013",y: 43.4},
+                                    { label: "2014",y: 39.8}
+                                ]
+                            },
+                        ]
+
+                    });
+
+            chart2.render();
+
+            var chart3 = new CanvasJS.Chart("chartContainer3",
+                    {
+                        title:{
+                            text: "2014, Consumption By Geographic"
+//                            fontFamily: "Impact",
+//                            fontWeight: "normal"
+                        },
+                        animationEnabled: true,
+                        legend:{
+                            verticalAlign: "bottom",
+                            horizontalAlign: "center",
+                            fontSize: 15,
+                            fontFamily: "helvetica",
+                            fontStyle: "normal",
+                            fontColor: "Sienna"
+                        },
+                        data: [
+                            {
+                                //startAngle: 45,
+                                indexLabelFontSize: 14,
+                                indexLabelFontFamily: "Garamond",
+//                                indexLabelFontColor: "",
+//                                indexLabelLineColor: "darkgrey",
+                                indexLabelPlacement: "outside",
+                                type: "doughnut",
+                                showInLegend: true,
+                                legendMarkerType: "square",
+                                dataPoints: [
+                                    {  y: 128432.3, legendText:"China", indexLabel: "China" },
+                                    {  y: 169175.6, legendText:"England", indexLabel: "England" },
+                                    {  y: 318158.1, legendText:"Germany", indexLabel: "Germany" },
+                                    {  y: 218855.6, legendText:"India", indexLabel: "India" }
+                                ]
+                            }
+                        ]
+                    });
+
+            chart3.render();
+
+
+        }
+    </script>
+    <script type="text/javascript" src="canvasjs.min.js"></script></head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+
+<div id="chartContainer2" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+
+<div id="chartContainer3" style="height: 300px; width: 80%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript">
+            window.onload = function () {
+                var chart = new CanvasJS.Chart("chartContainer",
+                                               {
+                                               title:{
+                                               text: "SBU - RPN"
+                                               },
+                                               axisX: {
+                                               title: "Months"
+                                               },
+                                               axisY: {
+                                               title: "Incidents"
+                                               },
+                                               legend: {
+                                               verticalAlign: "bottom",
+                                               horizontalAlign: "center"
+                                               },
+                                               animationEnabled: true,
+                                               data: [
+                                                      {color: "#B0D0B0",
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "RPN > 5",
+                                                      name: "RPN > 5",
+                                                      dataPoints: [
+                                                                   { label: "JAN",y: 3},
+                                                                   { label: "FEB",y: 4},
+                                                                   { label: "MAR",y: 6},
+                                                                   { label: "APR",y: 4},
+                                                                   { label: "MAY",y: 5},
+                                                                   { label: "JUN",y: 3},
+                                                                   { label: "JUL",y: 4},
+                                                                   { label: "AUG",y: 5},
+                                                                   { label: "SEP",y: 8},
+                                                                   { label: "OCT",y: 2},
+                                                                   { label: "NOV",y: 3},
+                                                                   { label: "DEC",y: 1}
+                                                                   ]
+                                                      },
+                                                      {
+                                                      color: "#9370DB",
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendMarkerColor: "black",
+                                                      legendText: "RPN > 6",
+                                                      type: "column",
+                                                      name: "RPN > 6",
+                                                      dataPoints: [
+                                                                   { label: "JAN",y: 3},
+                                                                   { label: "FEB",y: 5},
+                                                                   { label: "MAR",y: 6},
+                                                                   { label: "APR",y: 4},
+                                                                   { label: "MAY",y: 5},
+                                                                   { label: "JUN",y: 3},
+                                                                   { label: "JUL",y: 4},
+                                                                   { label: "AUG",y: 5},
+                                                                   { label: "SEP",y: 6},
+                                                                   { label: "OCT",y: 2},
+                                                                   { label: "NOV",y: 3},
+                                                                   { label: "DEC",y: 1}
+                                                                   ]
+                                                      },
+                                                      {color: "#369EAD",
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "RPN > 7",
+                                                      name: "RPN > 7",
+                                                      dataPoints: [
+                                                                   { label: "JAN",y: 3},
+                                                                   { label: "FEB",y: 4},
+                                                                   { label: "MAR",y: 6},
+                                                                   { label: "APR",y: 4},
+                                                                   { label: "MAY",y: 5},
+                                                                   { label: "JUN",y: 3},
+                                                                   { label: "JUL",y: 4},
+                                                                   { label: "AUG",y: 5},
+                                                                   { label: "SEP",y: 8},
+                                                                   { label: "OCT",y: 2},
+                                                                   { label: "NOV",y: 3},
+                                                                   { label: "DEC",y: 1}
+                                                                   ]
+                                                      },
+                                                      ]
+                                               
+                                               });
+                                               
+                                               chart.render();
+            }
+        </script>
+        <script type="text/javascript" src="canvasjs.min.js"></script></head>
+    <body>
+        <div id="chartContainer" style="height: 300px; width: 100%;">
+        </div>
+    </body>
+</html>

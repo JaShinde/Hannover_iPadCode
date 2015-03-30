@@ -1,0 +1,228 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript">
+            window.onload = function () {
+                var chart = new CanvasJS.Chart("chartContainer",
+                                               {
+                                               title:{
+                                               text: "Total Waste to Landfill (MT)"
+                                               },
+                                               axisX: {
+                                               title: "Years"
+                                               },
+                                               axisY: {
+                                               title: "MT"
+                                               },
+                                               legend: {
+                                               verticalAlign: "bottom",
+                                               horizontalAlign: "center",
+                                               fontSize: 15,
+                                               fontFamily: "helvetica",
+                                               fontStyle: "normal",
+                                               fontColor: "Sienna"
+                                               },
+                                               animationEnabled: true,
+                                               zoomEnabled: true,
+                                               data: [
+                                                      {
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "London",
+                                                      name: "London",
+                                                      dataPoints: [
+                                                                   { label: "2011",y: 27956.5},
+                                                                   { label: "2012",y: 29556.8},
+                                                                   { label: "2013",y: 37324.2},
+                                                                   { label: "2014",y: 28817.7}
+                                                                   ]
+                                                      },
+                                                      {
+                                                      
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "Munich",
+                                                      type: "column",
+                                                      name: "Munich",
+                                                      dataPoints: [
+                                                                   { label: "2011",y: 36236.2},
+                                                                   { label: "2012",y: 34389.8},
+                                                                   { label: "2013",y: 36001.1},
+                                                                   { label: "2014",y: 36354.2}
+                                                                   ]
+                                                      },
+                                                      {
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "Guangzhou",
+                                                      name: "Guangzhou",
+                                                      dataPoints: [
+                                                                   { label: "2011",y: 7852.2},
+                                                                   { label: "2012",y: 5669.8},
+                                                                   { label: "2013",y: 11217.7},
+                                                                   { label: "2014",y: 14057.6}
+                                                                   ]
+                                                      },
+                                                      {
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "Rajkot",
+                                                      name: "Rajkot",
+                                                      dataPoints: [
+                                                                   { label: "2011",y: 20753.1},
+                                                                   { label: "2012",y: 13033.1},
+                                                                   { label: "2013",y: 16093.3},
+                                                                   { label: "2014",y: 10442.7}
+                                                                   ]
+                                                      },
+                                                      ]
+                                               
+                                               });
+                                               chart.render();
+                                               
+                                               var chart2 = new CanvasJS.Chart("chartContainer2",
+                                                                               {
+                                                                               title:{
+                                                                               text: "Waste to Landfill Intensity (per car)"
+                                                                               },
+                                                                               axisX: {
+                                                                               title: "Years"
+                                                                               },
+                                                                               axisY: {
+                                                                               title: "Landfill Intensity"
+                                                                               },
+                                                                               legend: {
+                                                                               verticalAlign: "bottom",
+                                                                               horizontalAlign: "center",
+                                                                               fontSize: 15,
+                                                                               fontFamily: "helvetica",
+                                                                               fontStyle: "normal",
+                                                                               fontColor: "Sienna"
+                                                                               },
+                                                                               animationEnabled: true,
+                                                                               data: [
+                                                                                      {
+                                                                                      type: "line",
+                                                                                      showInLegend: true,
+                                                                                      markerType: "triangle",
+                                                                                      legendMarkerType: "square",
+                                                                                      legendText: "Munich",
+                                                                                      name: "Munich",
+                                                                                      dataPoints: [
+                                                                                                   { label: "2011",y: 6.75},
+                                                                                                   { label: "2012",y: 8.75},
+                                                                                                   { label: "2013",y: 5.87},
+                                                                                                   { label: "2014",y: 8.73}
+                                                                                                   ]
+                                                                                      },
+                                                                                      {
+                                                                                      
+                                                                                      type: "line",
+                                                                                      showInLegend: true,
+                                                                                      markerType: "square",
+                                                                                      legendMarkerType: "square",
+                                                                                      legendText: "London",
+                                                                                      name: "London",
+                                                                                      dataPoints: [
+                                                                                                   { label: "2011",y: 7.30},
+                                                                                                   { label: "2012",y: 5.99},
+                                                                                                   { label: "2013",y: 7.03},
+                                                                                                   { label: "2014",y: 5.88}
+                                                                                                   ]
+                                                                                      },
+                                                                                      {
+                                                                                      type: "line",
+                                                                                      showInLegend: true,
+                                                                                      legendMarkerType: "square",
+                                                                                      markerType: "circle",
+                                                                                      legendText: "Guangzhou",
+                                                                                      name: "Guangzhou",
+                                                                                      dataPoints: [
+                                                                                                   { label: "2011",y: 1.75},
+                                                                                                   { label: "2012",y: 1.02},
+                                                                                                   { label: "2013",y: 2.23},
+                                                                                                   { label: "2014",y: 3.27}
+                                                                                                   ]
+                                                                                      },
+                                                                                      {
+                                                                                      type: "line",
+                                                                                      showInLegend: true,
+                                                                                      legendMarkerType: "square",
+                                                                                      markerType: "cross",
+                                                                                      legendText: "Rajkot",
+                                                                                      name: "Rajkot",
+                                                                                      dataPoints: [
+                                                                                                   { label: "2011",y: 4.24},
+                                                                                                   { label: "2012",y: 2.85},
+                                                                                                   { label: "2013",y: 3.23},
+                                                                                                   { label: "2014",y: 1.90}
+                                                                                                   ]
+                                                                                      },
+                                                                                      ]
+                                                                               
+                                                                               });
+                                                                               
+                                                                               chart2.render();
+                                                                               
+                                                                               var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                                                                               {
+                                                                                                               title:{
+                                                                                                               text: "2014, Total Waste to Landfill"
+                                                                                                               //                            fontFamily: "Impact",
+                                                                                                               //                            fontWeight: "normal"
+                                                                                                               },
+                                                                                                               animationEnabled: true,
+                                                                                                               legend:{
+                                                                                                               verticalAlign: "bottom",
+                                                                                                               horizontalAlign: "center",
+                                                                                                               fontSize: 15,
+                                                                                                               fontFamily: "helvetica",
+                                                                                                               fontStyle: "normal",
+                                                                                                               fontColor: "Sienna"
+                                                                                                               },
+                                                                                                               data: [
+                                                                                                                      {
+                                                                                                                      //startAngle: 45,
+                                                                                                                      indexLabelFontSize: 14,
+                                                                                                                      indexLabelFontFamily: "Garamond",
+                                                                                                                      //                                indexLabelFontColor: "",
+                                                                                                                      //                                indexLabelLineColor: "darkgrey",
+                                                                                                                      indexLabelPlacement: "outside",
+                                                                                                                      type: "doughnut",
+                                                                                                                      showInLegend: true,
+                                                                                                                      legendMarkerType: "square",
+                                                                                                                      dataPoints: [
+                                                                                                                                   {  y: 38894.2, legendText:"Munich", indexLabel: "Munich" },
+                                                                                                                                   {  y: 57756.5, legendText:"London", indexLabel: "London" },
+                                                                                                                                   {  y: 40107.1, legendText:"Guangzhou", indexLabel: "Guangzhou" },
+                                                                                                                                   {  y: 15355.1, legendText:"Rajkot", indexLabel: "Rajkot" }
+                                                                                                                                   ]
+                                                                                                                      }
+                                                                                                                      ]
+                                                                                                               });
+                                                                                                               
+                                                                                                               chart3.render();
+                                                                                                               
+                                                                                                               
+            }
+        </script>
+        <script type="text/javascript" src="canvasjs.min.js"></script></head>
+    <body>
+        <div id="chartContainer" style="height: 300px; width: 100%; border: 2px solid #a1a1a1;border-radius: 0px;">
+            
+        </div>
+        
+        <div id="chartContainer2" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+            
+        </div>
+        
+        <div id="chartContainer3" style="height: 300px; width: 50%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
+            
+        </div>
+        
+    </body>
+</html>

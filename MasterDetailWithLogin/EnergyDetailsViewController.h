@@ -9,11 +9,13 @@
 #import <UIKit/UIKit.h>
 #import "DetailViewManager.h"
 
-@interface EnergyDetailsViewController : UIViewController<SubstitutableDetailViewController>
+@interface EnergyDetailsViewController : UIViewController<SubstitutableDetailViewController,UIWebViewDelegate>
 
 
 
 @property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
+@property (weak, nonatomic) IBOutlet UIWebView *dashboardView;
+
 
 @end

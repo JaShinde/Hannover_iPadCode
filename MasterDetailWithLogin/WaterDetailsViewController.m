@@ -23,11 +23,44 @@
     return self;
 }
 
+- (void)viewWillAppear:(BOOL)animated{
+    
+    
+    [super viewWillAppear:YES];
+    NSString *filePath=[[NSBundle mainBundle]pathForResource:@"water" ofType:@"html" inDirectory:nil];
+    NSLog(@"%@",filePath);
+    //    NSString *htmlstring=[NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    [self.dashboardView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]]];
+    
+}
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 }
+
+-(BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+    
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    
+    
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
+    
+}
+
 
 - (void)didReceiveMemoryWarning
 {
