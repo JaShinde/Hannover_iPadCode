@@ -1,6 +1,81 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <style>
+
+        #switch {
+            width: 500px;
+            height: 50px;
+            background-color: #3498db;
+            color: white;
+            cursor: pointer;
+            padding: 13px 10px;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            -webkit-transition: background-color 0.5s ease 0s;
+            -moz-transition: background-color 0.5s ease 0s;
+            -ms-transition: background-color 0.5s ease 0s;
+            -o-transition: background-color 0.5s ease 0s;
+            transition: background-color 0.5s ease 0s;
+        }
+
+        .btn {
+            background: #3498db;
+            background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+            background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+            background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+            background-image: -o-linear-gradient(top, #3498db, #2980b9);
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            border: solid #1f628d 2px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background: #3cb0fd;
+            background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+
+        .btn-graph {
+            background: #9344c7;
+            background-image: -webkit-linear-gradient(top, #9344c7, #4932cf);
+            background-image: -moz-linear-gradient(top, #9344c7, #4932cf);
+            background-image: -ms-linear-gradient(top, #9344c7, #4932cf);
+            background-image: -o-linear-gradient(top, #9344c7, #4932cf);
+            background-image: linear-gradient(to bottom, #9344c7, #4932cf);
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            border: solid #1f628d 2px;
+            text-decoration: none;
+        }
+
+        .btn-graph:hover {
+            background: #3cb0fd;
+            background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+</style>
     <script type="text/javascript">
         window.onload = function () {
             var chart = new CanvasJS.Chart("chartContainer",
@@ -210,10 +285,203 @@
             chart3.render();
 
 
+            $("button").click(function(){
+               //alert(this.id);
+                switch(this.id){
+                    case "2014":{
+
+                        var chart3 = new CanvasJS.Chart("chartContainer3",
+                                {
+                                    title:{
+                                        text: "2014, Consumption By Geographic"
+//                            fontFamily: "Impact",
+//                            fontWeight: "normal"
+                                    },
+                                    animationEnabled: true,
+                                    zoomEnabled:true,
+                                    legend:{
+                                        verticalAlign: "bottom",
+                                        horizontalAlign: "center",
+                                        fontSize: 15,
+                                        fontFamily: "helvetica",
+                                        fontStyle: "normal",
+                                        fontColor: "Sienna"
+                                    },
+                                    data: [
+                                        {
+                                            //startAngle: 45,
+                                            indexLabelFontSize: 14,
+                                            indexLabelFontFamily: "Garamond",
+//                                indexLabelFontColor: "",
+//                                indexLabelLineColor: "darkgrey",
+                                            indexLabelPlacement: "outside",
+                                            type: "doughnut",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            dataPoints: [
+                                                {  y: 128432.3, legendText:"China", indexLabel: "China" },
+                                                {  y: 169175.6, legendText:"England", indexLabel: "England" },
+                                                {  y: 318158.1, legendText:"Germany", indexLabel: "Germany" },
+                                                {  y: 218855.6, legendText:"India", indexLabel: "India" }
+                                            ]
+                                        }
+                                    ]
+                                });
+
+                        chart3.render();
+
+                        break;
+                    }
+                    case "2012":
+                    {
+                        var chart3 = new CanvasJS.Chart("chartContainer3",
+                                {
+                                    title:{
+                                        text: "2012, Consumption By Geographic"
+//                            fontFamily: "Impact",
+//                            fontWeight: "normal"
+                                    },
+                                    animationEnabled: true,
+                                    zoomEnabled:true,
+                                    legend:{
+                                        verticalAlign: "bottom",
+                                        horizontalAlign: "center",
+                                        fontSize: 15,
+                                        fontFamily: "helvetica",
+                                        fontStyle: "normal",
+                                        fontColor: "Sienna"
+                                    },
+                                    data: [
+                                        {
+                                            //startAngle: 45,
+                                            indexLabelFontSize: 14,
+                                            indexLabelFontFamily: "Garamond",
+//                                indexLabelFontColor: "",
+//                                indexLabelLineColor: "darkgrey",
+                                            indexLabelPlacement: "outside",
+                                            type: "doughnut",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            dataPoints: [
+                                                {  y: 158432.3, legendText:"China", indexLabel: "China" },
+                                                {  y: 269175.6, legendText:"England", indexLabel: "England" },
+                                                {  y: 218158.1, legendText:"Germany", indexLabel: "Germany" },
+                                                {  y: 418855.6, legendText:"India", indexLabel: "India" }
+                                            ]
+                                        }
+                                    ]
+                                });
+
+                        chart3.render();
+
+                        break;
+                    }
+
+                    case "2011":
+                    {
+                        var chart3 = new CanvasJS.Chart("chartContainer3",
+                                {
+                                    title:{
+                                        text: "2011, Consumption By Geographic"
+//                            fontFamily: "Impact",
+//                            fontWeight: "normal"
+                                    },
+                                    animationEnabled: true,
+                                    zoomEnabled:true,
+                                    legend:{
+                                        verticalAlign: "bottom",
+                                        horizontalAlign: "center",
+                                        fontSize: 15,
+                                        fontFamily: "helvetica",
+                                        fontStyle: "normal",
+                                        fontColor: "Sienna"
+                                    },
+                                    data: [
+                                        {
+                                            //startAngle: 45,
+                                            indexLabelFontSize: 14,
+                                            indexLabelFontFamily: "Garamond",
+//                                indexLabelFontColor: "",
+//                                indexLabelLineColor: "darkgrey",
+                                            indexLabelPlacement: "outside",
+                                            type: "doughnut",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            dataPoints: [
+                                                {  y: 188432.3, legendText:"China", indexLabel: "China" },
+                                                {  y: 189175.6, legendText:"England", indexLabel: "England" },
+                                                {  y: 278158.1, legendText:"Germany", indexLabel: "Germany" },
+                                                {  y: 198855.6, legendText:"India", indexLabel: "India" }
+                                            ]
+                                        }
+                                    ]
+                                });
+
+                        chart3.render();
+
+
+                        break;
+                    }
+                    case "2013":
+                    {
+                        var chart3 = new CanvasJS.Chart("chartContainer3",
+                                {
+                                    title:{
+                                        text: "2013, Consumption By Geographic"
+//                            fontFamily: "Impact",
+//                            fontWeight: "normal"
+                                    },
+                                    animationEnabled: true,
+                                    zoomEnabled:true,
+                                    legend:{
+                                        verticalAlign: "bottom",
+                                        horizontalAlign: "center",
+                                        fontSize: 15,
+                                        fontFamily: "helvetica",
+                                        fontStyle: "normal",
+                                        fontColor: "Sienna"
+                                    },
+                                    data: [
+                                        {
+                                            //startAngle: 45,
+                                            indexLabelFontSize: 14,
+                                            indexLabelFontFamily: "Garamond",
+//                                indexLabelFontColor: "",
+//                                indexLabelLineColor: "darkgrey",
+                                            indexLabelPlacement: "outside",
+                                            type: "doughnut",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            dataPoints: [
+                                                {  y: 148432.3, legendText:"China", indexLabel: "China" },
+                                                {  y: 199175.6, legendText:"England", indexLabel: "England" },
+                                                {  y: 348158.1, legendText:"Germany", indexLabel: "Germany" },
+                                                {  y: 258855.6, legendText:"India", indexLabel: "India" }
+                                            ]
+                                        }
+                                    ]
+                                });
+
+                        chart3.render();
+
+                        break;
+                    }
+                }
+            });
+
         }
     </script>
     <script type="text/javascript" src="canvasjs.min.js"></script></head>
+    <script type="text/javascript" src="jquery-2.1.3.min.js"></script></head>
 <body>
+
+<div style="height: 50px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+    <button type="button" class="btn" id="elesta" >ELECTRIC STATIONARY</button>
+    <button type="button" class="btn" id="natgas" >NATURAL GAS STATIONARY</button>
+    <button type="button" class="btn" id="gas" >GASOLINE STATIONARY</button>
+
+</div>
+
 <div id="chartContainer" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
 
 </div>
@@ -222,7 +490,16 @@
 
 </div>
 
-<div id="chartContainer3" style="height: 300px; width: 80%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+<div style="height: 50px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+<label id="switch"> Years </label>
+    <button type="button" class="btn-graph" id="2011">2011</button>
+    <button type="button" class="btn-graph" id="2012">2012</button>
+    <button type="button" class="btn-graph" id="2013">2013</button>
+    <button type="button" class="btn-graph" id="2014">2014</button>
+</div>
+
+<div id="chartContainer3" style="height: 300px; width: 100%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
 
 </div>
 
