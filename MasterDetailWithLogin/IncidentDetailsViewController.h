@@ -9,13 +9,13 @@
 #import <UIKit/UIKit.h>
 #include "DetailViewManager.h"
 
-@interface IncidentDetailsViewController : UIViewController<SubstitutableDetailViewController>
+@interface IncidentDetailsViewController : UIViewController<SubstitutableDetailViewController,UIWebViewDelegate>
 
 
 /// SubstitutableDetailViewController
 @property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
-
+@property (weak, nonatomic) IBOutlet UIWebView *dashboardView;
 
 
 @end

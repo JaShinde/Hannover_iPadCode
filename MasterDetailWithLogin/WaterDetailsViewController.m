@@ -24,8 +24,7 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-    
-    
+ 
     [super viewWillAppear:YES];
     NSString *filePath=[[NSBundle mainBundle]pathForResource:@"water" ofType:@"html" inDirectory:nil];
     NSLog(@"%@",filePath);

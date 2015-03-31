@@ -1,6 +1,27 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+   <style>
+
+
+       #switch {
+           width: 500px;
+           height: 50px;
+           background-color: #3498db;
+           color: white;
+           cursor: pointer;
+           padding: 13px 10px;
+           -webkit-box-sizing: border-box;
+           -moz-box-sizing: border-box;
+           box-sizing: border-box;
+           -webkit-transition: background-color 0.5s ease 0s;
+           -moz-transition: background-color 0.5s ease 0s;
+           -ms-transition: background-color 0.5s ease 0s;
+           -o-transition: background-color 0.5s ease 0s;
+           transition: background-color 0.5s ease 0s;
+       }
+
+   </style>
     <script type="text/javascript">
         window.onload = function () {
             var chart = new CanvasJS.Chart("chartContainer",
@@ -104,6 +125,7 @@
                             fontColor: "Sienna"
                         },
                         animationEnabled: true,
+                        zoomEnabled:true,
                         data: [
                             {
                                 type: "line",
@@ -176,6 +198,7 @@
                             //                            fontWeight: "normal"
                         },
                         animationEnabled: true,
+                        zoomEnabled:true,
                         legend:{
                             verticalAlign: "bottom",
                             horizontalAlign: "center",
@@ -214,6 +237,7 @@
                             //fontWeight: "normal"
                         },
                         animationEnabled: true,
+                        zoomEnabled:true,
                         legend:{
                             verticalAlign: "bottom",
                             horizontalAlign: "center",
@@ -243,9 +267,178 @@
 
             chart4.render();
 
+
+$("#chart3").change(function(){
+                    var id = $(this).find("option:selected").attr("id");
+                    //alert("id"+id);
+                    switch(id) {
+                    case "2011":
+                    {
+                        var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                    {
+                                                    title:{
+                                                    text: "2011, Water Withdrawal"
+                                                    //                            fontFamily: "Impact",
+                                                    //                            fontWeight: "normal"
+                                                    },
+                                                    animationEnabled: true,
+                                                    legend:{
+                                                    verticalAlign: "bottom",
+                                                    horizontalAlign: "center",
+                                                    fontSize: 15,
+                                                    fontFamily: "helvetica",
+                                                    fontStyle: "normal",
+                                                    fontColor: "Sienna"
+                                                    },
+                                                    data: [
+                                                           {
+                                                           indexLabelFontSize: 14,
+                                                           indexLabelFontFamily: "Garamond",
+                                                           indexLabelFontColor: "",
+                                                           indexLabelLineColor: "darkgrey",
+                                                           indexLabelPlacement: "outside",
+                                                           type: "doughnut",
+                                                           showInLegend: true,
+                                                           legendMarkerType: "square",
+                                                           dataPoints: [
+                                                                        {  y: 24, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                                                        {  y: 22, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                                                        {  y: 44, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                                                        {  y: 10, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                                                        ]
+                                                           }
+                                                           ]
+                                                    });
+                    
+                    chart3.render();
+                    break;
+                    }
+                    case "2012":{
+                    var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                    {
+                                                    title:{
+                                                    text: "2012, Water Withdrawal"
+                                                    //                            fontFamily: "Impact",
+                                                    //                            fontWeight: "normal"
+                                                    },
+                                                    animationEnabled: true,
+                                                    legend:{
+                                                    verticalAlign: "bottom",
+                                                    horizontalAlign: "center",
+                                                    fontSize: 15,
+                                                    fontFamily: "helvetica",
+                                                    fontStyle: "normal",
+                                                    fontColor: "Sienna"
+                                                    },
+                                                    data: [
+                                                           {
+                                                           indexLabelFontSize: 14,
+                                                           indexLabelFontFamily: "Garamond",
+                                                           indexLabelFontColor: "",
+                                                           indexLabelLineColor: "darkgrey",
+                                                           indexLabelPlacement: "outside",
+                                                           type: "doughnut",
+                                                           showInLegend: true,
+                                                           legendMarkerType: "square",
+                                                           dataPoints: [
+                                                                        {  y: 16, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                                                        {  y: 18, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                                                        {  y: 54, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                                                        {  y: 12, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                                                        ]
+                                                           }
+                                                           ]
+                                                    });
+                    
+                    chart3.render();
+                    break;
+                    }
+                    case "2013":{
+                    var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                    {
+                                                    title:{
+                                                    text: "2013, Water Withdrawal"
+                                                    //                            fontFamily: "Impact",
+                                                    //                            fontWeight: "normal"
+                                                    },
+                                                    animationEnabled: true,
+                                                    legend:{
+                                                    verticalAlign: "bottom",
+                                                    horizontalAlign: "center",
+                                                    fontSize: 15,
+                                                    fontFamily: "helvetica",
+                                                    fontStyle: "normal",
+                                                    fontColor: "Sienna"
+                                                    },
+                                                    data: [
+                                                           {
+                                                           indexLabelFontSize: 14,
+                                                           indexLabelFontFamily: "Garamond",
+                                                           indexLabelFontColor: "",
+                                                           indexLabelLineColor: "darkgrey",
+                                                           indexLabelPlacement: "outside",
+                                                           type: "doughnut",
+                                                           showInLegend: true,
+                                                           legendMarkerType: "square",
+                                                           dataPoints: [
+                                                                        {  y: 26, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                                                        {  y: 22, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                                                        {  y: 44, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                                                        {  y: 8, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                                                        ]
+                                                           }
+                                                           ]
+                                                    });
+                    
+                    chart3.render();
+                    break;
+                    }
+                    case "2014":
+                    {
+                    var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                    {
+                                                    title:{
+                                                    text: "2014, Water Withdrawal"
+                                                    //                            fontFamily: "Impact",
+                                                    //                            fontWeight: "normal"
+                                                    },
+                                                    animationEnabled: true,
+                                                    legend:{
+                                                    verticalAlign: "bottom",
+                                                    horizontalAlign: "center",
+                                                    fontSize: 15,
+                                                    fontFamily: "helvetica",
+                                                    fontStyle: "normal",
+                                                    fontColor: "Sienna"
+                                                    },
+                                                    data: [
+                                                           {
+                                                           indexLabelFontSize: 14,
+                                                           indexLabelFontFamily: "Garamond",
+                                                           indexLabelFontColor: "",
+                                                           indexLabelLineColor: "darkgrey",
+                                                           indexLabelPlacement: "outside",
+                                                           type: "doughnut",
+                                                           showInLegend: true,
+                                                           legendMarkerType: "square",
+                                                           dataPoints: [
+                                                                        {  y: 20, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                                                        {  y: 20, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                                                        {  y: 50, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                                                        {  y: 10, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                                                        ]
+                                                           }
+                                                           ]
+                                                    });
+                    
+                    chart3.render();
+                    break;
+                    }
+                    
+}});
             $("#chart4").change(function(){
                 var id = $(this).find("option:selected").attr("id");
-                                //alert("id"+id);
+            //alert("id"+id);
                 switch(id) {
                     case "2011":
                         {
@@ -439,26 +632,29 @@
 
 
 
-<div style="height: 330px; width: 100%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
-   <label for="type"> Years</label> <select name='type' id='chart4'>
+<div style="height: 330px; width: 100%; float:left; border:2px solid #a1a1a1; border-radius: 0px;">
+   <label id="switch" for="type"> Select Year </label>
+   <select name='type' id='chart4'>
         <option value="2011" id="2011">2011</option>
         <option value="2012" id="2012">2012</option>
         <option value="2013" id="2013">2013</option>
         <option value="2014" id="2014">2014</option>
-    </select>
+   </select>
 
 <div id="chartContainer4" style="height: 300px; width: 100%; float:right;border: 2px solid #a1a1a1;border-radius: 0px;">
 
 </div>
 </div>
-<div style="height: 330px; width: 100%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
-     <select>
-        <option value="2011">2011</option>
-        <option value="2012">2012</option>
-        <option value="2013">2013</option>
-        <option value="2014">2014</option>
-    </select>
 
+<div style="height: 330px; width: 100%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
+
+    <label id="switch" for="charttype"> Select Year </label>
+    <select name='charttype' id='chart3'>
+        <option value="2011" id="2011">2011</option>
+        <option value="2012" id="2012">2012</option>
+        <option value="2013" id="2013">2013</option>
+        <option value="2014" id="2014">2014</option>
+    </select>
 <div id="chartContainer3" style="height: 300px; width: 100%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
 </div>
 </div>

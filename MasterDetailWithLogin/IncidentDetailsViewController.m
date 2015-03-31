@@ -29,9 +29,32 @@
    //  self.splitViewController.delegate = self;
     // Do any additional setup after loading the view.
 }
+
 - (void)viewWillAppear:(BOOL)animated{
     
     [super viewWillAppear:YES];
+    NSString *filePath=[[NSBundle mainBundle]pathForResource:@"incidents" ofType:@"html" inDirectory:nil];
+    NSLog(@"%@",filePath);
+    //    NSString *htmlstring=[NSString stringWithContentsOfFile:filePath encoding:NSUTF8StringEncoding error:nil];
+    [self.dashboardView loadRequest:[NSURLRequest requestWithURL:[NSURL fileURLWithPath:filePath]]];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    return YES;
+}
+
+- (void)webViewDidStartLoad:(UIWebView *)webView
+{
+
+}
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    
+}
+
+- (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     
 }
 
