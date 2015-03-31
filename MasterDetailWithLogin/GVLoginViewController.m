@@ -8,7 +8,7 @@
 
 #import "GVLoginViewController.h"
 #import "GVAppDelegate.h"
-#import "btRippleButtton.h"
+//#import "btRippleButtton.h"
 
 
 @interface GVLoginViewController ()
@@ -33,13 +33,10 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    BTRippleButtton *rippleButton = [[BTRippleButtton alloc]initWithImage:[UIImage imageNamed:@"login.jpg"]
-                                                                 andFrame:CGRectMake(450, 500, 60, 60)
-                                                                andTarget:@selector(loginPressed:)
-                                                                    andID:self];
-    [rippleButton setRippeEffectEnabled:NO];
-//    [rippleButton setRippleEffectWithColor:[UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1]];
-    [self.view addSubview:rippleButton];
+//    BTRippleButtton *rippleButton = [[BTRippleButtton alloc]initWithImage:[UIImage imageNamed:@"login_button_2x.png"]                                                                 andFrame:CGRectMake(450, 500, 60, 60)                                                                andTarget:@selector(loginPressed:)                                                                    andID:self];
+//    [rippleButton setRippeEffectEnabled:NO];
+////    [rippleButton setRippleEffectWithColor:[UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1]];
+//    [self.view addSubview:rippleButton];
 
     CGRect layerFrame = CGRectMake(0, 0, self.userName.frame.size.width, self.userName.frame.size.height);
     CGMutablePathRef path = CGPathCreateMutable();
@@ -51,7 +48,7 @@
     line.path = path;
     line.lineWidth = 2;
     line.frame = layerFrame;
-    line.strokeColor = [UIColor blackColor].CGColor;
+    line.strokeColor = [UIColor whiteColor].CGColor;
     
     [self.userName.layer addSublayer:line];
     
@@ -65,7 +62,7 @@
     line.path = path;
     line.lineWidth = 2;
     line.frame = layerFrame;
-    line.strokeColor = [UIColor blackColor].CGColor;
+    line.strokeColor = [UIColor whiteColor].CGColor;
     [self.userPassword.layer addSublayer:line];
     
 }
