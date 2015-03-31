@@ -23,6 +23,8 @@
 		7EE4A6B91AC918C7008EFB90 /* waste.html in Resources */ = {isa = PBXBuildFile; fileRef = 7EE4A6B61AC918C7008EFB90 /* waste.html */; };
 		7EE4A6BA1AC918C7008EFB90 /* water.html in Resources */ = {isa = PBXBuildFile; fileRef = 7EE4A6B71AC918C7008EFB90 /* water.html */; };
 		7EE4A6BB1AC91CC7008EFB90 /* canvasjs.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EE4A6AE1AC91833008EFB90 /* canvasjs.min.js */; };
+		7EE4A6BD1AC9770E008EFB90 /* jquery-2.1.3.min.js in Sources */ = {isa = PBXBuildFile; fileRef = 7EE4A6BC1AC9770E008EFB90 /* jquery-2.1.3.min.js */; };
+		7EE4A6BE1AC97718008EFB90 /* jquery-2.1.3.min.js in Resources */ = {isa = PBXBuildFile; fileRef = 7EE4A6BC1AC9770E008EFB90 /* jquery-2.1.3.min.js */; };
 		9E32DD16180ECA2A00D38DD4 /* GVLoadingDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E32DD15180ECA2A00D38DD4 /* GVLoadingDetailViewController.m */; };
 		9E32DD19180ECACF00D38DD4 /* DetailViewManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E32DD18180ECACF00D38DD4 /* DetailViewManager.m */; };
 		9E85464D18119CCA00D2229B /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 9E85464C18119CCA00D2229B /* README.md */; };
@@ -64,6 +66,7 @@
 		7EE4A6B51AC918C7008EFB90 /* air.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = air.html; sourceTree = "<group>"; };
 		7EE4A6B61AC918C7008EFB90 /* waste.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = waste.html; sourceTree = "<group>"; };
 		7EE4A6B71AC918C7008EFB90 /* water.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = water.html; sourceTree = "<group>"; };
+		7EE4A6BC1AC9770E008EFB90 /* jquery-2.1.3.min.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "jquery-2.1.3.min.js"; sourceTree = "<group>"; };
 		9E32DD14180ECA2A00D38DD4 /* GVLoadingDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GVLoadingDetailViewController.h; sourceTree = "<group>"; };
 		9E32DD15180ECA2A00D38DD4 /* GVLoadingDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GVLoadingDetailViewController.m; sourceTree = "<group>"; };
 		9E32DD17180ECACF00D38DD4 /* DetailViewManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewManager.h; sourceTree = "<group>"; };
@@ -152,6 +155,7 @@
 		9E9FD1C017DA502500A3D1EC /* MasterDetailWithLogin */ = {
 			isa = PBXGroup;
 			children = (
+				7EE4A6BC1AC9770E008EFB90 /* jquery-2.1.3.min.js */,
 				7EE4A6B41AC91840008EFB90 /* Graphs */,
 				7E1C6CBF1AC6F20F0028D5B8 /* album-bb.jpg */,
 				7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */,
@@ -257,6 +261,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE4A6BE1AC97718008EFB90 /* jquery-2.1.3.min.js in Resources */,
 				7EE4A6BB1AC91CC7008EFB90 /* canvasjs.min.js in Resources */,
 				7EE4A6B91AC918C7008EFB90 /* waste.html in Resources */,
 				9E9FD1C517DA502500A3D1EC /* InfoPlist.strings in Resources */,
@@ -282,6 +287,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7EE4A6BD1AC9770E008EFB90 /* jquery-2.1.3.min.js in Sources */,
 				9E9FD1C717DA502500A3D1EC /* main.m in Sources */,
 				9E9FD1CB17DA502500A3D1EC /* GVAppDelegate.m in Sources */,
 				9E9FD1DA17DA502500A3D1EC /* GVMasterViewController.m in Sources */,
