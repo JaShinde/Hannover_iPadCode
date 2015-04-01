@@ -20,7 +20,7 @@
 
 @interface GVMasterViewController () {
     NSMutableArray *_objects;
-//    NSMutableArray *_selectedObjects;
+   // NSMutableArray *_selectedObjects;
 }
 @end
 

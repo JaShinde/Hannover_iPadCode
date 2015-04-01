@@ -17,4 +17,6 @@
 /// SubstitutableDetailViewController
 @property (nonatomic, retain) UIBarButtonItem *navigationPaneBarButtonItem;
 @property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
+
+
 @end

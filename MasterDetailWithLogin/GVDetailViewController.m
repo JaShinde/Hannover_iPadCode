@@ -11,9 +11,11 @@
 #import "GVLoadingDetailViewController.h"
 #import "GVAppDelegate.h"
 
-@interface GVDetailViewController ()
-@property (strong, nonatomic) UIPopoverController *masterPopoverController;
-- (void)configureView;
+@interface GVDetailViewController (){
+//@property (strong, nonatomic) UIPopoverController *masterPopoverController;
+//- (void)configureView;
+    NSMutableArray *_selectedCells;
+}
 @end
 
 @implementation GVDetailViewController
@@ -43,13 +45,43 @@
 //    }
 //}
 
+- (void)insertNewObject{
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
 //    [self configureView];
     
-    self.collectionView.backgroundColor = [UIColor grayColor];
+    self.collectionView.backgroundColor = [UIColor whiteColor];
+    
+    if (!_selectedCells) {
+        _selectedCells = [[NSMutableArray alloc] init];
+    }
+    
+    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+    UIImage *buttonImage = [UIImage imageNamed:@"top_user_info@2x.png"];
+    button.frame = CGRectMake(0, 0, 150, 33);
+    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
+
+    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    
+    self.navigationItem.rightBarButtonItem = addButton;
+    
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user1@2x.png"] atIndex:0];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:1];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:2];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:3];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user1@2x.png"] atIndex:4];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:5];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:6];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:7];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user1@2x.png"] atIndex:8];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:9];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:10];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:11];
     
 }
 
@@ -71,7 +103,7 @@
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
-    return 9;
+    return [_selectedCells count];
 }
 
 - (UICollectionViewCell *) collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -83,7 +115,7 @@
     cell.backgroundColor = [UIColor whiteColor];
     UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
 //    recipeImageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
-    recipeImageView.image = [UIImage imageNamed:@"album-bb.jpg"];
+    recipeImageView.image = [UIImage imageNamed:[_selectedCells objectAtIndex:indexPath.row]];
     
     return cell;
 }

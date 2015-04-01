@@ -27,6 +27,7 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -89,6 +90,17 @@
 // -------------------------------------------------------------------------------
 - (void)setNavigationPaneBarButtonItem:(UIBarButtonItem *)navigationPaneBarButtonItem
 {
+    
+//    UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
+//    UIImage *buttonImage = [UIImage imageNamed:@"top_user_info@2x.png"];
+//    button.frame = CGRectMake(0, 0, 150, 33);
+//    [button setBackgroundImage:buttonImage forState:UIControlStateNormal];
+//    
+//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+//    
+//    self.navigationItem.rightBarButtonItem = addButton;
+    
+    
     [self.navigationItem setLeftItemsSupplementBackButton:YES];
     if (navigationPaneBarButtonItem != _navigationPaneBarButtonItem) {
         if (navigationPaneBarButtonItem) {
@@ -98,6 +110,7 @@
         }
         _navigationPaneBarButtonItem = navigationPaneBarButtonItem;
     }
+    
 }
 
 @end

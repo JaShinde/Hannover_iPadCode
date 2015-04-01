@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7E1C6CC01AC6F20F0028D5B8 /* album-bb.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7E1C6CBF1AC6F20F0028D5B8 /* album-bb.jpg */; };
 		7E53E52D1ACA5F1F00809385 /* login_app_name_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E52A1ACA5F1F00809385 /* login_app_name_2x.png */; };
 		7E53E52E1ACA5F1F00809385 /* login_bg_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E52B1ACA5F1F00809385 /* login_bg_2x.png */; };
 		7E53E52F1ACA5F1F00809385 /* login_box_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E52C1ACA5F1F00809385 /* login_box_2x.png */; };
@@ -24,7 +23,11 @@
 		7E53E5471ACBAB1700809385 /* tab_waste@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E53B1ACBAB1700809385 /* tab_waste@2x.png */; };
 		7E53E5481ACBAB1700809385 /* tab_water_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E53C1ACBAB1700809385 /* tab_water_active@2x.png */; };
 		7E53E5491ACBAB1700809385 /* tab_water@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E53D1ACBAB1700809385 /* tab_water@2x.png */; };
-		7E9D51C41AC2F54600DB63D5 /* login.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7E9D51C31AC2F54600DB63D5 /* login.jpg */; };
+		7E53E54E1ACBD40800809385 /* user3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E54A1ACBD40800809385 /* user3@2x.png */; };
+		7E53E54F1ACBD40800809385 /* user1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E54B1ACBD40800809385 /* user1@2x.png */; };
+		7E53E5501ACBD40800809385 /* user2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E54C1ACBD40800809385 /* user2@2x.png */; };
+		7E53E5511ACBD40800809385 /* user4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E54D1ACBD40800809385 /* user4@2x.png */; };
+		7E53E5531ACBE87D00809385 /* top_user_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5521ACBE87D00809385 /* top_user_info@2x.png */; };
 		7E9D51C71AC2F91E00DB63D5 /* btRippleButtton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */; };
 		7E9D51C91AC2FA7400DB63D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */; };
 		7EC2B8D51AC53D2600883BF8 /* EnergyDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8D41AC53D2600883BF8 /* EnergyDetailsViewController.m */; };
@@ -61,7 +64,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7E1C6CBF1AC6F20F0028D5B8 /* album-bb.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "album-bb.jpg"; sourceTree = "<group>"; };
 		7E53E52A1ACA5F1F00809385 /* login_app_name_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_app_name_2x.png; sourceTree = "<group>"; };
 		7E53E52B1ACA5F1F00809385 /* login_bg_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg_2x.png; sourceTree = "<group>"; };
 		7E53E52C1ACA5F1F00809385 /* login_box_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_box_2x.png; sourceTree = "<group>"; };
@@ -78,7 +80,11 @@
 		7E53E53B1ACBAB1700809385 /* tab_waste@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_waste@2x.png"; sourceTree = "<group>"; };
 		7E53E53C1ACBAB1700809385 /* tab_water_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_water_active@2x.png"; sourceTree = "<group>"; };
 		7E53E53D1ACBAB1700809385 /* tab_water@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "tab_water@2x.png"; sourceTree = "<group>"; };
-		7E9D51C31AC2F54600DB63D5 /* login.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = login.jpg; sourceTree = "<group>"; };
+		7E53E54A1ACBD40800809385 /* user3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user3@2x.png"; sourceTree = "<group>"; };
+		7E53E54B1ACBD40800809385 /* user1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user1@2x.png"; sourceTree = "<group>"; };
+		7E53E54C1ACBD40800809385 /* user2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user2@2x.png"; sourceTree = "<group>"; };
+		7E53E54D1ACBD40800809385 /* user4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user4@2x.png"; sourceTree = "<group>"; };
+		7E53E5521ACBE87D00809385 /* top_user_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_user_info@2x.png"; sourceTree = "<group>"; };
 		7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btRippleButtton.m; sourceTree = "<group>"; };
 		7E9D51C61AC2F91E00DB63D5 /* btRippleButtton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btRippleButtton.h; sourceTree = "<group>"; };
 		7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -145,6 +151,11 @@
 		7E53E5291ACA5ED000809385 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7E53E5521ACBE87D00809385 /* top_user_info@2x.png */,
+				7E53E54A1ACBD40800809385 /* user3@2x.png */,
+				7E53E54B1ACBD40800809385 /* user1@2x.png */,
+				7E53E54C1ACBD40800809385 /* user2@2x.png */,
+				7E53E54D1ACBD40800809385 /* user4@2x.png */,
 				7E53E5321ACBAB1700809385 /* tab_air_active@2x.png */,
 				7E53E5331ACBAB1700809385 /* tab_air@2x.png */,
 				7E53E5341ACBAB1700809385 /* tab_energy_active@2x.png */,
@@ -213,10 +224,8 @@
 			children = (
 				7E53E5291ACA5ED000809385 /* images */,
 				7EE4A6B41AC91840008EFB90 /* Graphs */,
-				7E1C6CBF1AC6F20F0028D5B8 /* album-bb.jpg */,
 				7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */,
 				7E9D51C61AC2F91E00DB63D5 /* btRippleButtton.h */,
-				7E9D51C31AC2F54600DB63D5 /* login.jpg */,
 				9E32DD17180ECACF00D38DD4 /* DetailViewManager.h */,
 				9E32DD18180ECACF00D38DD4 /* DetailViewManager.m */,
 				9E9FD1C917DA502500A3D1EC /* GVAppDelegate.h */,
@@ -322,15 +331,16 @@
 				7E53E5401ACBAB1700809385 /* tab_energy_active@2x.png in Resources */,
 				7EE4A6BB1AC91CC7008EFB90 /* canvasjs.min.js in Resources */,
 				7E53E5421ACBAB1700809385 /* tab_incident_reporting_active@2x.png in Resources */,
+				7E53E54F1ACBD40800809385 /* user1@2x.png in Resources */,
 				7EE4A6B91AC918C7008EFB90 /* waste.html in Resources */,
+				7E53E54E1ACBD40800809385 /* user3@2x.png in Resources */,
 				7E53E5491ACBAB1700809385 /* tab_water@2x.png in Resources */,
 				9E9FD1C517DA502500A3D1EC /* InfoPlist.strings in Resources */,
-				7E1C6CC01AC6F20F0028D5B8 /* album-bb.jpg in Resources */,
 				7E53E52D1ACA5F1F00809385 /* login_app_name_2x.png in Resources */,
 				7E53E5441ACBAB1700809385 /* tab_incidents_active@2x.png in Resources */,
-				7E9D51C41AC2F54600DB63D5 /* login.jpg in Resources */,
 				7E53E5481ACBAB1700809385 /* tab_water_active@2x.png in Resources */,
 				7E53E5471ACBAB1700809385 /* tab_waste@2x.png in Resources */,
+				7E53E5531ACBE87D00809385 /* top_user_info@2x.png in Resources */,
 				7E53E5431ACBAB1700809385 /* tab_incident_reporting@2x.png in Resources */,
 				7E53E53E1ACBAB1700809385 /* tab_air_active@2x.png in Resources */,
 				9E9FD1CD17DA502500A3D1EC /* Default.png in Resources */,
@@ -345,7 +355,9 @@
 				7EE4A6B31AC91833008EFB90 /* energy.html in Resources */,
 				7E53E5311ACA5F3200809385 /* login_button_2x.png in Resources */,
 				7E53E52E1ACA5F1F00809385 /* login_bg_2x.png in Resources */,
+				7E53E5501ACBD40800809385 /* user2@2x.png in Resources */,
 				9E9FD1D717DA502500A3D1EC /* MainStoryboard_iPad.storyboard in Resources */,
+				7E53E5511ACBD40800809385 /* user4@2x.png in Resources */,
 				7EE4A6BA1AC918C7008EFB90 /* water.html in Resources */,
 				7E53E5411ACBAB1700809385 /* tab_energy@2x.png in Resources */,
 				7EE4A6B81AC918C7008EFB90 /* air.html in Resources */,

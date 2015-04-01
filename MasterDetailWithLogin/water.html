@@ -1,664 +1,733 @@
 <!DOCTYPE HTML>
 <html>
-<head>
-   <style>
-
-
-       #switch {
-           width: 500px;
-           height: 50px;
-           background-color: #3498db;
-           color: white;
-           cursor: pointer;
-           padding: 13px 10px;
-           -webkit-box-sizing: border-box;
-           -moz-box-sizing: border-box;
-           box-sizing: border-box;
-           -webkit-transition: background-color 0.5s ease 0s;
-           -moz-transition: background-color 0.5s ease 0s;
-           -ms-transition: background-color 0.5s ease 0s;
-           -o-transition: background-color 0.5s ease 0s;
-           transition: background-color 0.5s ease 0s;
-       }
-
-   </style>
-    <script type="text/javascript">
-        window.onload = function () {
-            var chart = new CanvasJS.Chart("chartContainer",
-                    {
-                        title:{
-                            text: "Total Water Withdrawal (Cubic Meters)"
-                        },
-                        axisX: {
-                            title: "Years"
-                        },
-                        axisY: {
-                            title: "Cubic Meters"
-                        },
-                        legend: {
-                            verticalAlign: "bottom",
-                            horizontalAlign: "center",
-                            fontSize: 15,
-                            fontFamily: "helvetica",
-                            fontStyle: "normal",
-                            fontColor: "Sienna"
-                        },
-                        animationEnabled: true,
-                        zoomEnabled: true,
-                        data: [
-                            {
-                                type: "column",
-                                showInLegend: true,
-                                legendMarkerType: "square",
-                                legendText: "Paint Shop",
-                                name: "Paint Shop",
-                                dataPoints: [
-                                    { label: "2011",y: 160000.6},
-                                    { label: "2012",y: 100000.2},
-                                    { label: "2013",y: 120000.1},
-                                    { label: "2014",y: 220000.2}
-                                ]
-                            },
-                            {
-
-                                type: "column",
-                                showInLegend: true,
-                                legendMarkerType: "square",
-                                legendText: "Body Shop",
-                                type: "column",
-                                name: "Body Shop",
-                                dataPoints: [
-                                    { label: "2011",y: 220000.6},
-                                    { label: "2012",y: 140000.2},
-                                    { label: "2013",y: 160000.1},
-                                    { label: "2014",y: 260000.2}
-                                ]
-                            },
-                            {
-                                type: "column",
-                                showInLegend: true,
-                                legendMarkerType: "square",
-                                legendText: "Stamping",
-                                name: "Stamping",
-                                dataPoints: [
-                                    { label: "2011",y: 360000.6},
-                                    { label: "2012",y: 300000.2},
-                                    { label: "2013",y: 320000.1},
-                                    { label: "2014",y: 350000.2}
-                                ]
-                            },
-                            {
-                                type: "column",
-                                showInLegend: true,
-                                legendMarkerType: "square",
-                                legendText: "Plant Engineering",
-                                name: "Plant Engineering",
-                                dataPoints: [
-                                    { label: "2011",y: 220000.6},
-                                    { label: "2012",y: 230000.2},
-                                    { label: "2013",y: 210000.1},
-                                    { label: "2014",y: 200000.2}
-                                ]
-                            },
-                        ]
-
-                    });
-            chart.render();
-
-            var chart2 = new CanvasJS.Chart("chartContainer2",
-                    {
-                        title:{
-                            text: "Water Withdrawal Intensity (per car)"
-                        },
-                        axisX: {
-                            title: "Years"
-                        },
-                        axisY: {
-                            title: "Intensity"
-                        },
-                        legend: {
-                            verticalAlign: "bottom",
-                            horizontalAlign: "center",
-                            fontSize: 15,
-                            fontFamily: "helvetica",
-                            fontStyle: "normal",
-                            fontColor: "Sienna"
-                        },
-                        animationEnabled: true,
-                        zoomEnabled:true,
-                        data: [
-                            {
-                                type: "line",
-                                showInLegend: true,
-                                markerType: "triangle",
-                                legendMarkerType: "square",
-                                legendText: "Paint Shop",
-                                name: "Paint Shop",
-                                dataPoints: [
-                                    { label: "2011",y: 60},
-                                    { label: "2012",y: 80},
-                                    { label: "2013",y: 50},
-                                    { label: "2014",y: 70}
-                                ]
-                            },
-                            {
-
-                                type: "line",
-                                showInLegend: true,
-                                markerType: "square",
-                                legendMarkerType: "square",
-                                legendText: "Body Shop",
-                                name: "Body Shop",
-                                dataPoints: [
-                                    { label: "2011",y: 40},
-                                    { label: "2012",y: 35},
-                                    { label: "2013",y: 30},
-                                    { label: "2014",y: 35}
-                                ]
-                            },
-                            {
-                                type: "line",
-                                showInLegend: true,
-                                legendMarkerType: "square",
-                                markerType: "circle",
-                                legendText: "Stamping",
-                                name: "Stamping",
-                                dataPoints: [
-                                    { label: "2011",y: 45},
-                                    { label: "2012",y: 50},
-                                    { label: "2013",y: 40},
-                                    { label: "2014",y: 35}
-                                ]
-                            },
-                            {
-                                type: "line",
-                                showInLegend: true,
-                                legendMarkerType: "square",
-                                markerType: "cross",
-                                legendText: "Plant Engineering",
-                                name: "Plant Engineering",
-                                dataPoints: [
-                                    { label: "2011",y: 25},
-                                    { label: "2012",y: 20},
-                                    { label: "2013",y: 27},
-                                    { label: "2014",y: 30}
-                                ]
-                            },
-                        ]
-
-                    });
-
-            chart2.render();
-
-            var chart3 = new CanvasJS.Chart("chartContainer3",
-                    {
-                        title:{
-                            text: "2014, Water Withdrawal"
-                            //                            fontFamily: "Impact",
-                            //                            fontWeight: "normal"
-                        },
-                        animationEnabled: true,
-                        zoomEnabled:true,
-                        legend:{
-                            verticalAlign: "bottom",
-                            horizontalAlign: "center",
-                            fontSize: 15,
-                            fontFamily: "helvetica",
-                            fontStyle: "normal",
-                            fontColor: "Sienna"
-                        },
-                        data: [
-                            {
-                                indexLabelFontSize: 14,
-                                indexLabelFontFamily: "Garamond",
-                                indexLabelFontColor: "",
-                                indexLabelLineColor: "darkgrey",
-                                indexLabelPlacement: "outside",
-                                type: "doughnut",
-                                showInLegend: true,
-                                legendMarkerType: "square",
-                                dataPoints: [
-                                    {  y: 20, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
-                                    {  y: 20, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
-                                    {  y: 50, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
-                                    {  y: 10, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
-                                ]
-                            }
-                        ]
-                    });
-
-            chart3.render();
-
-            var chart4 = new CanvasJS.Chart("chartContainer4",
-                    {
-                        title:{
-                            text: "2014, Water Discharge"
-                            //fontFamily: "Impact",
-                            //fontWeight: "normal"
-                        },
-                        animationEnabled: true,
-                        zoomEnabled:true,
-                        legend:{
-                            verticalAlign: "bottom",
-                            horizontalAlign: "center",
-                            fontSize: 15,
-                            fontFamily: "helvetica",
-                            fontStyle: "normal",
-                            fontColor: "Sienna"
-                        },
-                        data: [
-                            {
-                                indexLabelFontSize: 14,
-                                indexLabelFontFamily: "Garamond",
-                                indexLabelFontColor: "",
-                                indexLabelLineColor: "darkgrey",
-                                indexLabelPlacement: "outside",
-                                type: "doughnut",
-                                showInLegend: true,
-                                legendMarkerType: "square",
-                                dataPoints: [
-                                    {  y: 20, legendText:"Discharge to Surface Water", indexLabel: "Discharge to Surface Water" },
-                                    {  y: 25, legendText:"Sent to Third Party", indexLabel: "Sent to Third Party" },
-                                    {  y: 55, legendText:"Municipal Discharge (POTW)", indexLabel: "Municipal Discharge (POTW)" }
-                                ]
-                            }
-                        ]
-                    });
-
-            chart4.render();
-
-
-$("#chart3").change(function(){
-                    var id = $(this).find("option:selected").attr("id");
-                    //alert("id"+id);
-                    switch(id) {
-                    case "2011":
-                    {
-                        var chart3 = new CanvasJS.Chart("chartContainer3",
-                                                    {
-                                                    title:{
-                                                    text: "2011, Water Withdrawal"
-                                                    //                            fontFamily: "Impact",
-                                                    //                            fontWeight: "normal"
-                                                    },
-                                                    animationEnabled: true,
-                                                    legend:{
-                                                    verticalAlign: "bottom",
-                                                    horizontalAlign: "center",
-                                                    fontSize: 15,
-                                                    fontFamily: "helvetica",
-                                                    fontStyle: "normal",
-                                                    fontColor: "Sienna"
-                                                    },
-                                                    data: [
-                                                           {
-                                                           indexLabelFontSize: 14,
-                                                           indexLabelFontFamily: "Garamond",
-                                                           indexLabelFontColor: "",
-                                                           indexLabelLineColor: "darkgrey",
-                                                           indexLabelPlacement: "outside",
-                                                           type: "doughnut",
-                                                           showInLegend: true,
-                                                           legendMarkerType: "square",
-                                                           dataPoints: [
-                                                                        {  y: 24, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
-                                                                        {  y: 22, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
-                                                                        {  y: 44, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
-                                                                        {  y: 10, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
-                                                                        ]
-                                                           }
-                                                           ]
-                                                    });
-                    
-                    chart3.render();
-                    break;
-                    }
-                    case "2012":{
-                    var chart3 = new CanvasJS.Chart("chartContainer3",
-                                                    {
-                                                    title:{
-                                                    text: "2012, Water Withdrawal"
-                                                    //                            fontFamily: "Impact",
-                                                    //                            fontWeight: "normal"
-                                                    },
-                                                    animationEnabled: true,
-                                                    legend:{
-                                                    verticalAlign: "bottom",
-                                                    horizontalAlign: "center",
-                                                    fontSize: 15,
-                                                    fontFamily: "helvetica",
-                                                    fontStyle: "normal",
-                                                    fontColor: "Sienna"
-                                                    },
-                                                    data: [
-                                                           {
-                                                           indexLabelFontSize: 14,
-                                                           indexLabelFontFamily: "Garamond",
-                                                           indexLabelFontColor: "",
-                                                           indexLabelLineColor: "darkgrey",
-                                                           indexLabelPlacement: "outside",
-                                                           type: "doughnut",
-                                                           showInLegend: true,
-                                                           legendMarkerType: "square",
-                                                           dataPoints: [
-                                                                        {  y: 16, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
-                                                                        {  y: 18, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
-                                                                        {  y: 54, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
-                                                                        {  y: 12, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
-                                                                        ]
-                                                           }
-                                                           ]
-                                                    });
-                    
-                    chart3.render();
-                    break;
-                    }
-                    case "2013":{
-                    var chart3 = new CanvasJS.Chart("chartContainer3",
-                                                    {
-                                                    title:{
-                                                    text: "2013, Water Withdrawal"
-                                                    //                            fontFamily: "Impact",
-                                                    //                            fontWeight: "normal"
-                                                    },
-                                                    animationEnabled: true,
-                                                    legend:{
-                                                    verticalAlign: "bottom",
-                                                    horizontalAlign: "center",
-                                                    fontSize: 15,
-                                                    fontFamily: "helvetica",
-                                                    fontStyle: "normal",
-                                                    fontColor: "Sienna"
-                                                    },
-                                                    data: [
-                                                           {
-                                                           indexLabelFontSize: 14,
-                                                           indexLabelFontFamily: "Garamond",
-                                                           indexLabelFontColor: "",
-                                                           indexLabelLineColor: "darkgrey",
-                                                           indexLabelPlacement: "outside",
-                                                           type: "doughnut",
-                                                           showInLegend: true,
-                                                           legendMarkerType: "square",
-                                                           dataPoints: [
-                                                                        {  y: 26, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
-                                                                        {  y: 22, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
-                                                                        {  y: 44, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
-                                                                        {  y: 8, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
-                                                                        ]
-                                                           }
-                                                           ]
-                                                    });
-                    
-                    chart3.render();
-                    break;
-                    }
-                    case "2014":
-                    {
-                    var chart3 = new CanvasJS.Chart("chartContainer3",
-                                                    {
-                                                    title:{
-                                                    text: "2014, Water Withdrawal"
-                                                    //                            fontFamily: "Impact",
-                                                    //                            fontWeight: "normal"
-                                                    },
-                                                    animationEnabled: true,
-                                                    legend:{
-                                                    verticalAlign: "bottom",
-                                                    horizontalAlign: "center",
-                                                    fontSize: 15,
-                                                    fontFamily: "helvetica",
-                                                    fontStyle: "normal",
-                                                    fontColor: "Sienna"
-                                                    },
-                                                    data: [
-                                                           {
-                                                           indexLabelFontSize: 14,
-                                                           indexLabelFontFamily: "Garamond",
-                                                           indexLabelFontColor: "",
-                                                           indexLabelLineColor: "darkgrey",
-                                                           indexLabelPlacement: "outside",
-                                                           type: "doughnut",
-                                                           showInLegend: true,
-                                                           legendMarkerType: "square",
-                                                           dataPoints: [
-                                                                        {  y: 20, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
-                                                                        {  y: 20, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
-                                                                        {  y: 50, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
-                                                                        {  y: 10, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
-                                                                        ]
-                                                           }
-                                                           ]
-                                                    });
-                    
-                    chart3.render();
-                    break;
-                    }
-                    
-}});
-            $("#chart4").change(function(){
-                var id = $(this).find("option:selected").attr("id");
-            //alert("id"+id);
-                switch(id) {
-                    case "2011":
-                        {
-                                var chart4 = new CanvasJS.Chart("chartContainer4",
-                                                                {
-                                                                title:{
-                                                                text: "2011, Water Discharge"
-                                                                //fontFamily: "Impact",
-                                                                //fontWeight: "normal"
-                                                                },
-                                                                animationEnabled: true,
-                                                                legend:{
-                                                                verticalAlign: "bottom",
-                                                                horizontalAlign: "center",
-                                                                fontSize: 15,
-                                                                fontFamily: "helvetica",
-                                                                fontStyle: "normal",
-                                                                fontColor: "Sienna"
-                                                                },
-                                                                data: [
-                                                                       {
-                                                                       indexLabelFontSize: 14,
-                                                                       indexLabelFontFamily: "Garamond",
-                                                                       indexLabelFontColor: "",
-                                                                       indexLabelLineColor: "darkgrey",
-                                                                       indexLabelPlacement: "outside",
-                                                                       type: "doughnut",
-                                                                       showInLegend: true,
-                                                                       legendMarkerType: "square",
-                                                                       dataPoints: [
-                                                                                    {  y: 15, legendText:"Discharge to Surface Water", indexLabel: "Discharge to Surface Water" },
-                                                                                    {  y: 25, legendText:"Sent to Third Party", indexLabel: "Sent to Third Party" },
-                                                                                    {  y: 60, legendText:"Municipal Discharge (POTW)", indexLabel: "Municipal Discharge (POTW)" }
-                                                                                    ]
-                                                                       }
-                                                                       ]
-                                                                });
-                                
-                                chart4.render();
-                        }
-                        break;
-                    case "2012":
-                    {
-                        var chart4 = new CanvasJS.Chart("chartContainer4",
-                                {
-                                    title:{
-                                        text: "2012, Water Discharge"
-                                        //fontFamily: "Impact",
-                                        //fontWeight: "normal"
-                                    },
-                                    animationEnabled: true,
-                                    legend:{
-                                        verticalAlign: "bottom",
-                                        horizontalAlign: "center",
-                                        fontSize: 15,
-                                        fontFamily: "helvetica",
-                                        fontStyle: "normal",
-                                        fontColor: "Sienna"
-                                    },
-                                    data: [
-                                        {
-                                            indexLabelFontSize: 14,
-                                            indexLabelFontFamily: "Garamond",
-                                            indexLabelFontColor: "",
-                                            indexLabelLineColor: "darkgrey",
-                                            indexLabelPlacement: "outside",
-                                            type: "doughnut",
-                                            showInLegend: true,
-                                            legendMarkerType: "square",
-                                            dataPoints: [
-                                                {  y: 25, legendText:"Discharge to Surface Water", indexLabel: "Discharge to Surface Water" },
-                                                {  y: 21, legendText:"Sent to Third Party", indexLabel: "Sent to Third Party" },
-                                                {  y: 54, legendText:"Municipal Discharge (POTW)", indexLabel: "Municipal Discharge (POTW)" }
-                                            ]
-                                        }
-                                    ]
-                                });
-
-                        chart4.render();
-                    }
-                        break;
-                    case "2013":
-                    {
-                        var chart4 = new CanvasJS.Chart("chartContainer4", {
-                            title: {
-                                text: "2013, Water Discharge"
-                                //fontFamily: "Impact",
-                                //fontWeight: "normal"
-                            },
-                            animationEnabled: true,
-                            legend: {
-                                verticalAlign: "bottom",
-                                horizontalAlign: "center",
-                                fontSize: 15,
-                                fontFamily: "helvetica",
-                                fontStyle: "normal",
-                                fontColor: "Sienna"
-                            },
-                            data: [
-                                {
-                                    indexLabelFontSize: 14,
-                                    indexLabelFontFamily: "Garamond",
-                                    indexLabelFontColor: "",
-                                    indexLabelLineColor: "darkgrey",
-                                    indexLabelPlacement: "outside",
-                                    type: "doughnut",
-                                    showInLegend: true,
-                                    legendMarkerType: "square",
-                                    dataPoints: [
-                                        {
-                                            y: 14,
-                                            legendText: "Discharge to Surface Water",
-                                            indexLabel: "Discharge to Surface Water"
-                                        },
-                                        {y: 26, legendText: "Sent to Third Party", indexLabel: "Sent to Third Party"},
-                                        {
-                                            y: 60,
-                                            legendText: "Municipal Discharge (POTW)",
-                                            indexLabel: "Municipal Discharge (POTW)"
-                                        }
-                                    ]
-                                }
-                            ]
-                        });
-
-                        chart4.render();
-                    }
-                        break;
-                    case "2014":
-                    {
-                        var chart4 = new CanvasJS.Chart("chartContainer4", {
-                            title: {
-                                text: "2014, Water Discharge"
-                                //fontFamily: "Impact",
-                                //fontWeight: "normal"
-                            },
-                            animationEnabled: true,
-                            legend: {
-                                verticalAlign: "bottom",
-                                horizontalAlign: "center",
-                                fontSize: 15,
-                                fontFamily: "helvetica",
-                                fontStyle: "normal",
-                                fontColor: "Sienna"
-                            },
-                            data: [
-                                {
-                                    indexLabelFontSize: 14,
-                                    indexLabelFontFamily: "Garamond",
-                                    indexLabelFontColor: "",
-                                    indexLabelLineColor: "darkgrey",
-                                    indexLabelPlacement: "outside",
-                                    type: "doughnut",
-                                    showInLegend: true,
-                                    legendMarkerType: "square",
-                                    dataPoints: [
-                                        {
-                                            y: 14,
-                                            legendText: "Discharge to Surface Water",
-                                            indexLabel: "Discharge to Surface Water"
-                                        },
-                                        {y: 26, legendText: "Sent to Third Party", indexLabel: "Sent to Third Party"},
-                                        {
-                                            y: 60,
-                                            legendText: "Municipal Discharge (POTW)",
-                                            indexLabel: "Municipal Discharge (POTW)"
-                                        }
-                                    ]
-                                }
-                            ]
-                        });
-
-                        chart4.render();
-                        break;
-                    }
-                }
-                                
-            });
+    <head>
+        <style>
+            
+            
+            #switch {
+                width: 500px;
+                height: 50px;
+                background-color: #3498db;
+                color: white;
+                cursor: pointer;
+                padding: 13px 10px;
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-transition: background-color 0.5s ease 0s;
+                -moz-transition: background-color 0.5s ease 0s;
+                -ms-transition: background-color 0.5s ease 0s;
+                -o-transition: background-color 0.5s ease 0s;
+                transition: background-color 0.5s ease 0s;
+            }
+        .btn {
+            background: #3498db;
+            background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+            background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+            background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+            background-image: -o-linear-gradient(top, #3498db, #2980b9);
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            border: solid #1f628d 2px;
+            text-decoration: none;
         }
-    </script>
-    <script type="text/javascript" src="canvasjs.min.js"></script></head>
-<script type="text/javascript" src="jquery-2.1.3.min.js"></script></head>
-<body>
-<div id="chartContainer" style="height: 300px; width: 100%; border: 2px solid #a1a1a1;border-radius: 0px;">
-
-</div>
-
-<div id="chartContainer2" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
-
-</div>
-
-
-
-<div style="height: 330px; width: 100%; float:left; border:2px solid #a1a1a1; border-radius: 0px;">
-   <label id="switch" for="type"> Select Year </label>
-   <select name='type' id='chart4'>
-        <option value="2014" id="2014">2014</option>
-        <option value="2013" id="2013">2013</option>
-        <option value="2012" id="2012">2012</option>
-        <option value="2011" id="2011">2011</option>
-   </select>
-
-<div id="chartContainer4" style="height: 300px; width: 100%; float:right;border: 2px solid #a1a1a1;border-radius: 0px;">
-
-</div>
-</div>
-
-<div style="height: 330px; width: 100%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
-
-    <label id="switch" for="charttype"> Select Year </label>
-    <select name='charttype' id='chart3'>
-        <option value="2014" id="2014">2014</option>
-        <option value="2013" id="2013">2013</option>
-        <option value="2012" id="2012">2012</option>
-        <option value="2011" id="2011">2011</option>
-    </select>
-<div id="chartContainer3" style="height: 300px; width: 100%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
-</div>
-</div>
-
-
-</body>
+        
+        .btn:hover {
+            background: #3cb0fd;
+            background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+        
+        .btn-graph {
+            background: #9344c7;
+            background-image: -webkit-linear-gradient(top, #9344c7, #4932cf);
+            background-image: -moz-linear-gradient(top, #9344c7, #4932cf);
+            background-image: -ms-linear-gradient(top, #9344c7, #4932cf);
+            background-image: -o-linear-gradient(top, #9344c7, #4932cf);
+            background-image: linear-gradient(to bottom, #9344c7, #4932cf);
+            -webkit-border-radius: 0;
+            -moz-border-radius: 0;
+            border-radius: 0px;
+            font-family: Arial;
+            color: #ffffff;
+            font-size: 20px;
+            padding: 10px 20px 10px 20px;
+            border: solid #1f628d 2px;
+            text-decoration: none;
+        }
+        
+        .btn-graph:hover {
+            background: #3cb0fd;
+            background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -moz-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -ms-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: -o-linear-gradient(top, #3cb0fd, #3498db);
+            background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
+            text-decoration: none;
+        }
+        
+            </style>
+        <script type="text/javascript">
+            window.onload = function () {
+                var chart = new CanvasJS.Chart("chartContainer",
+                                               {
+                                               title:{
+                                               text: "Total Water Withdrawal (Cubic Meters)"
+                                               },
+                                               axisX: {
+                                               title: "Years"
+                                               },
+                                               axisY: {
+                                               title: "Cubic Meters"
+                                               },
+                                               legend: {
+                                               verticalAlign: "bottom",
+                                               horizontalAlign: "center",
+                                               fontSize: 15,
+                                               fontFamily: "helvetica",
+                                               fontStyle: "normal",
+                                               fontColor: "Sienna"
+                                               },
+                                               animationEnabled: true,
+                                               zoomEnabled: true,
+                                               data: [
+                                                      {
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "Paint Shop",
+                                                      name: "Paint Shop",
+                                                      dataPoints: [
+                                                                   { label: "2011",y: 160000.6},
+                                                                   { label: "2012",y: 100000.2},
+                                                                   { label: "2013",y: 120000.1},
+                                                                   { label: "2014",y: 220000.2}
+                                                                   ]
+                                                      },
+                                                      {
+                                                      
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "Body Shop",
+                                                      type: "column",
+                                                      name: "Body Shop",
+                                                      dataPoints: [
+                                                                   { label: "2011",y: 220000.6},
+                                                                   { label: "2012",y: 140000.2},
+                                                                   { label: "2013",y: 160000.1},
+                                                                   { label: "2014",y: 260000.2}
+                                                                   ]
+                                                      },
+                                                      {
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "Stamping",
+                                                      name: "Stamping",
+                                                      dataPoints: [
+                                                                   { label: "2011",y: 360000.6},
+                                                                   { label: "2012",y: 300000.2},
+                                                                   { label: "2013",y: 320000.1},
+                                                                   { label: "2014",y: 350000.2}
+                                                                   ]
+                                                      },
+                                                      {
+                                                      type: "column",
+                                                      showInLegend: true,
+                                                      legendMarkerType: "square",
+                                                      legendText: "Plant Engineering",
+                                                      name: "Plant Engineering",
+                                                      dataPoints: [
+                                                                   { label: "2011",y: 220000.6},
+                                                                   { label: "2012",y: 230000.2},
+                                                                   { label: "2013",y: 210000.1},
+                                                                   { label: "2014",y: 200000.2}
+                                                                   ]
+                                                      },
+                                                      ]
+                                               
+                                               });
+                                               chart.render();
+                                               
+                                               var chart2 = new CanvasJS.Chart("chartContainer2",
+                                                                               {
+                                                                               title:{
+                                                                               text: "Water Withdrawal Intensity (per car)"
+                                                                               },
+                                                                               axisX: {
+                                                                               title: "Years"
+                                                                               },
+                                                                               axisY: {
+                                                                               title: "Intensity"
+                                                                               },
+                                                                               legend: {
+                                                                               verticalAlign: "bottom",
+                                                                               horizontalAlign: "center",
+                                                                               fontSize: 15,
+                                                                               fontFamily: "helvetica",
+                                                                               fontStyle: "normal",
+                                                                               fontColor: "Sienna"
+                                                                               },
+                                                                               animationEnabled: true,
+                                                                               zoomEnabled:true,
+                                                                               data: [
+                                                                                      {
+                                                                                      type: "line",
+                                                                                      showInLegend: true,
+                                                                                      markerType: "triangle",
+                                                                                      legendMarkerType: "square",
+                                                                                      legendText: "Paint Shop",
+                                                                                      name: "Paint Shop",
+                                                                                      dataPoints: [
+                                                                                                   { label: "2011",y: 60},
+                                                                                                   { label: "2012",y: 80},
+                                                                                                   { label: "2013",y: 50},
+                                                                                                   { label: "2014",y: 70}
+                                                                                                   ]
+                                                                                      },
+                                                                                      {
+                                                                                      
+                                                                                      type: "line",
+                                                                                      showInLegend: true,
+                                                                                      markerType: "square",
+                                                                                      legendMarkerType: "square",
+                                                                                      legendText: "Body Shop",
+                                                                                      name: "Body Shop",
+                                                                                      dataPoints: [
+                                                                                                   { label: "2011",y: 40},
+                                                                                                   { label: "2012",y: 35},
+                                                                                                   { label: "2013",y: 30},
+                                                                                                   { label: "2014",y: 35}
+                                                                                                   ]
+                                                                                      },
+                                                                                      {
+                                                                                      type: "line",
+                                                                                      showInLegend: true,
+                                                                                      legendMarkerType: "square",
+                                                                                      markerType: "circle",
+                                                                                      legendText: "Stamping",
+                                                                                      name: "Stamping",
+                                                                                      dataPoints: [
+                                                                                                   { label: "2011",y: 45},
+                                                                                                   { label: "2012",y: 50},
+                                                                                                   { label: "2013",y: 40},
+                                                                                                   { label: "2014",y: 35}
+                                                                                                   ]
+                                                                                      },
+                                                                                      {
+                                                                                      type: "line",
+                                                                                      showInLegend: true,
+                                                                                      legendMarkerType: "square",
+                                                                                      markerType: "cross",
+                                                                                      legendText: "Plant Engineering",
+                                                                                      name: "Plant Engineering",
+                                                                                      dataPoints: [
+                                                                                                   { label: "2011",y: 25},
+                                                                                                   { label: "2012",y: 20},
+                                                                                                   { label: "2013",y: 27},
+                                                                                                   { label: "2014",y: 30}
+                                                                                                   ]
+                                                                                      },
+                                                                                      ]
+                                                                               
+                                                                               });
+                                                                               
+                                                                               chart2.render();
+                                                                               
+                                                                               var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                                                                               {
+                                                                                                               title:{
+                                                                                                               text: "2014, Water Withdrawal"
+                                                                                                               //                            fontFamily: "Impact",
+                                                                                                               //                            fontWeight: "normal"
+                                                                                                               },
+                                                                                                               animationEnabled: true,
+                                                                                                               zoomEnabled:true,
+                                                                                                               legend:{
+                                                                                                               verticalAlign: "bottom",
+                                                                                                               horizontalAlign: "center",
+                                                                                                               fontSize: 15,
+                                                                                                               fontFamily: "helvetica",
+                                                                                                               fontStyle: "normal",
+                                                                                                               fontColor: "Sienna"
+                                                                                                               },
+                                                                                                               data: [
+                                                                                                                      {
+                                                                                                                      indexLabelFontSize: 14,
+                                                                                                                      indexLabelFontFamily: "Garamond",
+                                                                                                                      indexLabelFontColor: "",
+                                                                                                                      indexLabelLineColor: "darkgrey",
+                                                                                                                      indexLabelPlacement: "outside",
+                                                                                                                      type: "doughnut",
+                                                                                                                      showInLegend: true,
+                                                                                                                      legendMarkerType: "square",
+                                                                                                                      dataPoints: [
+                                                                                                                                   {  y: 20, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                                                                                                                   {  y: 20, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                                                                                                                   {  y: 50, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                                                                                                                   {  y: 10, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                                                                                                                   ]
+                                                                                                                      }
+                                                                                                                      ]
+                                                                                                               });
+                                                                                                               
+                                                                                                               chart3.render();
+                                                                                                               
+                                                                                                               var chart4 = new CanvasJS.Chart("chartContainer4",
+                                                                                                                                               {
+                                                                                                                                               title:{
+                                                                                                                                               text: "2014, Water Discharge"
+                                                                                                                                               //fontFamily: "Impact",
+                                                                                                                                               //fontWeight: "normal"
+                                                                                                                                               },
+                                                                                                                                               animationEnabled: true,
+                                                                                                                                               zoomEnabled:true,
+                                                                                                                                               legend:{
+                                                                                                                                               verticalAlign: "bottom",
+                                                                                                                                               horizontalAlign: "center",
+                                                                                                                                               fontSize: 15,
+                                                                                                                                               fontFamily: "helvetica",
+                                                                                                                                               fontStyle: "normal",
+                                                                                                                                               fontColor: "Sienna"
+                                                                                                                                               },
+                                                                                                                                               data: [
+                                                                                                                                                      {
+                                                                                                                                                      indexLabelFontSize: 14,
+                                                                                                                                                      indexLabelFontFamily: "Garamond",
+                                                                                                                                                      indexLabelFontColor: "",
+                                                                                                                                                      indexLabelLineColor: "darkgrey",
+                                                                                                                                                      indexLabelPlacement: "outside",
+                                                                                                                                                      type: "doughnut",
+                                                                                                                                                      showInLegend: true,
+                                                                                                                                                      legendMarkerType: "square",
+                                                                                                                                                      dataPoints: [
+                                                                                                                                                                   {  y: 20, legendText:"Discharge to Surface Water", indexLabel: "Discharge to Surface Water" },
+                                                                                                                                                                   {  y: 25, legendText:"Sent to Third Party", indexLabel: "Sent to Third Party" },
+                                                                                                                                                                   {  y: 55, legendText:"Municipal Discharge (POTW)", indexLabel: "Municipal Discharge (POTW)" }
+                                                                                                                                                                   ]
+                                                                                                                                                      }
+                                                                                                                                                      ]
+                                                                                                                                               });
+                                                                                                                                               
+                                                                                                                                               chart4.render();
+                                                                                                                                               
+                                                                                                                                               
+                                                                                                                                               
+                                                                                                                                               $("button").click(function(){
+                                                                                                                                                                 //alert(this.id);
+                                                                                                                                                                 switch(this.id){
+                                                                                                                                                                 
+                                                                                                                                                                 case "2014":{
+                                                                                                                                                                 var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                                                                                                                                                                 {
+                                                                                                                                                                                                 title:{
+                                                                                                                                                                                                 text: "2014, Water Withdrawal"
+                                                                                                                                                                                                 //                            fontFamily: "Impact",
+                                                                                                                                                                                                 //                            fontWeight: "normal"
+                                                                                                                                                                                                 },
+                                                                                                                                                                                                 animationEnabled: true,
+                                                                                                                                                                                                 legend:{
+                                                                                                                                                                                                 verticalAlign: "bottom",
+                                                                                                                                                                                                 horizontalAlign: "center",
+                                                                                                                                                                                                 fontSize: 15,
+                                                                                                                                                                                                 fontFamily: "helvetica",
+                                                                                                                                                                                                 fontStyle: "normal",
+                                                                                                                                                                                                 fontColor: "Sienna"
+                                                                                                                                                                                                 },
+                                                                                                                                                                                                 data: [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                        indexLabelFontSize: 14,
+                                                                                                                                                                                                        indexLabelFontFamily: "Garamond",
+                                                                                                                                                                                                        indexLabelFontColor: "",
+                                                                                                                                                                                                        indexLabelLineColor: "darkgrey",
+                                                                                                                                                                                                        indexLabelPlacement: "outside",
+                                                                                                                                                                                                        type: "doughnut",
+                                                                                                                                                                                                        showInLegend: true,
+                                                                                                                                                                                                        legendMarkerType: "square",
+                                                                                                                                                                                                        dataPoints: [
+                                                                                                                                                                                                                     {  y: 20, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                                                                                                                                                                                                     {  y: 20, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                                                                                                                                                                                                     {  y: 50, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                                                                                                                                                                                                     {  y: 10, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                                                                                                                                                                                                     ]
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                        ]
+                                                                                                                                                                                                 });
+                                                                                                                                                                 
+                                                                                                                                                                 chart3.render();
+                                                                                                                                                                 
+                                                                                                                                                                 break;
+                                                                                                                                                                 }
+                                                                                                                                                                 case "2012":
+                                                                                                                                                                 {
+                                                                                                                                                                 var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                                                                                                                                                                 {
+                                                                                                                                                                                                 title:{
+                                                                                                                                                                                                 text: "2012, Water Withdrawal"
+                                                                                                                                                                                                 //                            fontFamily: "Impact",
+                                                                                                                                                                                                 //                            fontWeight: "normal"
+                                                                                                                                                                                                 },
+                                                                                                                                                                                                 animationEnabled: true,
+                                                                                                                                                                                                 legend:{
+                                                                                                                                                                                                 verticalAlign: "bottom",
+                                                                                                                                                                                                 horizontalAlign: "center",
+                                                                                                                                                                                                 fontSize: 15,
+                                                                                                                                                                                                 fontFamily: "helvetica",
+                                                                                                                                                                                                 fontStyle: "normal",
+                                                                                                                                                                                                 fontColor: "Sienna"
+                                                                                                                                                                                                 },
+                                                                                                                                                                                                 data: [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                        indexLabelFontSize: 14,
+                                                                                                                                                                                                        indexLabelFontFamily: "Garamond",
+                                                                                                                                                                                                        indexLabelFontColor: "",
+                                                                                                                                                                                                        indexLabelLineColor: "darkgrey",
+                                                                                                                                                                                                        indexLabelPlacement: "outside",
+                                                                                                                                                                                                        type: "doughnut",
+                                                                                                                                                                                                        showInLegend: true,
+                                                                                                                                                                                                        legendMarkerType: "square",
+                                                                                                                                                                                                        dataPoints: [
+                                                                                                                                                                                                                     {  y: 16, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                                                                                                                                                                                                     {  y: 18, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                                                                                                                                                                                                     {  y: 54, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                                                                                                                                                                                                     {  y: 12, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                                                                                                                                                                                                     ]
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                        ]
+                                                                                                                                                                                                 });
+                                                                                                                                                                 
+                                                                                                                                                                 chart3.render();
+                                                                                                                                                                 
+                                                                                                                                                                 break;
+                                                                                                                                                                 }
+                                                                                                                                                                 
+                                                                                                                                                                 case "2011":
+                                                                                                                                                                 {
+                                                                                                                                                                 var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                                                                                                                                                                 {
+                                                                                                                                                                                                 title:{
+                                                                                                                                                                                                 text: "2011, Water Withdrawal"
+                                                                                                                                                                                                 //                            fontFamily: "Impact",
+                                                                                                                                                                                                 //                            fontWeight: "normal"
+                                                                                                                                                                                                 },
+                                                                                                                                                                                                 animationEnabled: true,
+                                                                                                                                                                                                 legend:{
+                                                                                                                                                                                                 verticalAlign: "bottom",
+                                                                                                                                                                                                 horizontalAlign: "center",
+                                                                                                                                                                                                 fontSize: 15,
+                                                                                                                                                                                                 fontFamily: "helvetica",
+                                                                                                                                                                                                 fontStyle: "normal",
+                                                                                                                                                                                                 fontColor: "Sienna"
+                                                                                                                                                                                                 },
+                                                                                                                                                                                                 data: [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                        indexLabelFontSize: 14,
+                                                                                                                                                                                                        indexLabelFontFamily: "Garamond",
+                                                                                                                                                                                                        indexLabelFontColor: "",
+                                                                                                                                                                                                        indexLabelLineColor: "darkgrey",
+                                                                                                                                                                                                        indexLabelPlacement: "outside",
+                                                                                                                                                                                                        type: "doughnut",
+                                                                                                                                                                                                        showInLegend: true,
+                                                                                                                                                                                                        legendMarkerType: "square",
+                                                                                                                                                                                                        dataPoints: [
+                                                                                                                                                                                                                     {  y: 24, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                                                                                                                                                                                                     {  y: 22, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                                                                                                                                                                                                     {  y: 44, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                                                                                                                                                                                                     {  y: 10, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                                                                                                                                                                                                     ]
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                        ]
+                                                                                                                                                                                                 });
+                                                                                                                                                                 
+                                                                                                                                                                 chart3.render(); 
+                                                                                                                                                                 
+                                                                                                                                                                 break;
+                                                                                                                                                                 }
+                                                                                                                                                                 case "2013":
+                                                                                                                                                                 {
+                                                                                                                                                                 var chart3 = new CanvasJS.Chart("chartContainer3",
+                                                                                                                                                                                                 {
+                                                                                                                                                                                                 title:{
+                                                                                                                                                                                                 text: "2013, Water Withdrawal"
+                                                                                                                                                                                                 //                            fontFamily: "Impact",
+                                                                                                                                                                                                 //                            fontWeight: "normal"
+                                                                                                                                                                                                 },
+                                                                                                                                                                                                 animationEnabled: true,
+                                                                                                                                                                                                 legend:{
+                                                                                                                                                                                                 verticalAlign: "bottom",
+                                                                                                                                                                                                 horizontalAlign: "center",
+                                                                                                                                                                                                 fontSize: 15,
+                                                                                                                                                                                                 fontFamily: "helvetica",
+                                                                                                                                                                                                 fontStyle: "normal",
+                                                                                                                                                                                                 fontColor: "Sienna"
+                                                                                                                                                                                                 },
+                                                                                                                                                                                                 data: [
+                                                                                                                                                                                                        {
+                                                                                                                                                                                                        indexLabelFontSize: 14,
+                                                                                                                                                                                                        indexLabelFontFamily: "Garamond",
+                                                                                                                                                                                                        indexLabelFontColor: "",
+                                                                                                                                                                                                        indexLabelLineColor: "darkgrey",
+                                                                                                                                                                                                        indexLabelPlacement: "outside",
+                                                                                                                                                                                                        type: "doughnut",
+                                                                                                                                                                                                        showInLegend: true,
+                                                                                                                                                                                                        legendMarkerType: "square",
+                                                                                                                                                                                                        dataPoints: [
+                                                                                                                                                                                                                     {  y: 26, legendText:"Municipal/ City Water", indexLabel: "Municipal/ City Water" },
+                                                                                                                                                                                                                     {  y: 22, legendText:"Onsite Wells/ GroundWater", indexLabel: "Onsite Wells/ GroundWater" },
+                                                                                                                                                                                                                     {  y: 44, legendText:"Surface Water(Lake,River,etc)", indexLabel: "Surface Water" },
+                                                                                                                                                                                                                     {  y: 8, legendText:"Stormwater/Rainwater", indexLabel: "StormWater" }
+                                                                                                                                                                                                                     ]
+                                                                                                                                                                                                        }
+                                                                                                                                                                                                        ]
+                                                                                                                                                                                                 });
+                                                                                                                                                                 
+                                                                                                                                                                 chart3.render();
+                                                                                                                                                                 
+                                                                                                                                                                 break;
+                                                                                                                                                                 }
+                                                                                                                                                                 }
+                                                                                                                                                                 });         
+                                                                                                                                                                 
+                                                                                                                                                                 
+                                                                                                                                                                 
+                                                                                                                                                                 $("button").click(function(){
+                                                                                                                                                                                   //alert(this.id);
+                                                                                                                                                                                   switch(this.id){
+                                                                                                                                                                                   case "2014C4":{
+                                                                                                                                                                                   
+                                                                                                                                                                                   var chart4 = new CanvasJS.Chart("chartContainer4", {
+                                                                                                                                                                                                                   title: {
+                                                                                                                                                                                                                   text: "2014, Water Discharge"
+                                                                                                                                                                                                                   //fontFamily: "Impact",
+                                                                                                                                                                                                                   //fontWeight: "normal"
+                                                                                                                                                                                                                   },
+                                                                                                                                                                                                                   animationEnabled: true,
+                                                                                                                                                                                                                   legend: {
+                                                                                                                                                                                                                   verticalAlign: "bottom",
+                                                                                                                                                                                                                   horizontalAlign: "center",
+                                                                                                                                                                                                                   fontSize: 15,
+                                                                                                                                                                                                                   fontFamily: "helvetica",
+                                                                                                                                                                                                                   fontStyle: "normal",
+                                                                                                                                                                                                                   fontColor: "Sienna"
+                                                                                                                                                                                                                   },
+                                                                                                                                                                                                                   data: [
+                                                                                                                                                                                                                          {
+                                                                                                                                                                                                                          indexLabelFontSize: 14,
+                                                                                                                                                                                                                          indexLabelFontFamily: "Garamond",
+                                                                                                                                                                                                                          indexLabelFontColor: "",
+                                                                                                                                                                                                                          indexLabelLineColor: "darkgrey",
+                                                                                                                                                                                                                          indexLabelPlacement: "outside",
+                                                                                                                                                                                                                          type: "doughnut",
+                                                                                                                                                                                                                          showInLegend: true,
+                                                                                                                                                                                                                          legendMarkerType: "square",
+                                                                                                                                                                                                                          dataPoints: [
+                                                                                                                                                                                                                                       {
+                                                                                                                                                                                                                                       y: 14,
+                                                                                                                                                                                                                                       legendText: "Discharge to Surface Water",
+                                                                                                                                                                                                                                       indexLabel: "Discharge to Surface Water"
+                                                                                                                                                                                                                                       },
+                                                                                                                                                                                                                                       {y: 26, legendText: "Sent to Third Party", indexLabel: "Sent to Third Party"},
+                                                                                                                                                                                                                                       {
+                                                                                                                                                                                                                                       y: 60,
+                                                                                                                                                                                                                                       legendText: "Municipal Discharge (POTW)",
+                                                                                                                                                                                                                                       indexLabel: "Municipal Discharge (POTW)"
+                                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                                       ]
+                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                          ]
+                                                                                                                                                                                                                   });
+                                                                                                                                                                                   
+                                                                                                                                                                                   chart4.render();
+                                                                                                                                                                                   
+                                                                                                                                                                                   }
+                                                                                                                                                                                   break;    
+                                                                                                                                                                                   case "2012C4":
+                                                                                                                                                                                   {
+                                                                                                                                                                                   var chart4 = new CanvasJS.Chart("chartContainer4",
+                                                                                                                                                                                                                   {
+                                                                                                                                                                                                                   title:{
+                                                                                                                                                                                                                   text: "2012, Water Discharge"
+                                                                                                                                                                                                                   //fontFamily: "Impact",
+                                                                                                                                                                                                                   //fontWeight: "normal"
+                                                                                                                                                                                                                   },
+                                                                                                                                                                                                                   animationEnabled: true,
+                                                                                                                                                                                                                   legend:{
+                                                                                                                                                                                                                   verticalAlign: "bottom",
+                                                                                                                                                                                                                   horizontalAlign: "center",
+                                                                                                                                                                                                                   fontSize: 15,
+                                                                                                                                                                                                                   fontFamily: "helvetica",
+                                                                                                                                                                                                                   fontStyle: "normal",
+                                                                                                                                                                                                                   fontColor: "Sienna"
+                                                                                                                                                                                                                   },
+                                                                                                                                                                                                                   data: [
+                                                                                                                                                                                                                          {
+                                                                                                                                                                                                                          indexLabelFontSize: 14,
+                                                                                                                                                                                                                          indexLabelFontFamily: "Garamond",
+                                                                                                                                                                                                                          indexLabelFontColor: "",
+                                                                                                                                                                                                                          indexLabelLineColor: "darkgrey",
+                                                                                                                                                                                                                          indexLabelPlacement: "outside",
+                                                                                                                                                                                                                          type: "doughnut",
+                                                                                                                                                                                                                          showInLegend: true,
+                                                                                                                                                                                                                          legendMarkerType: "square",
+                                                                                                                                                                                                                          dataPoints: [
+                                                                                                                                                                                                                                       {  y: 25, legendText:"Discharge to Surface Water", indexLabel: "Discharge to Surface Water" },
+                                                                                                                                                                                                                                       {  y: 21, legendText:"Sent to Third Party", indexLabel: "Sent to Third Party" },
+                                                                                                                                                                                                                                       {  y: 54, legendText:"Municipal Discharge (POTW)", indexLabel: "Municipal Discharge (POTW)" }
+                                                                                                                                                                                                                                       ]
+                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                          ]
+                                                                                                                                                                                                                   });
+                                                                                                                                                                                   
+                                                                                                                                                                                   chart4.render();
+                                                                                                                                                                                   
+                                                                                                                                                                                   } break;
+                                                                                                                                                                                   
+                                                                                                                                                                                   case "2011C4":
+                                                                                                                                                                                   {
+                                                                                                                                                                                   var chart4 = new CanvasJS.Chart("chartContainer4",
+                                                                                                                                                                                                                   {
+                                                                                                                                                                                                                   title:{
+                                                                                                                                                                                                                   text: "2011, Water Discharge"
+                                                                                                                                                                                                                   //fontFamily: "Impact",
+                                                                                                                                                                                                                   //fontWeight: "normal"
+                                                                                                                                                                                                                   },
+                                                                                                                                                                                                                   animationEnabled: true,
+                                                                                                                                                                                                                   legend:{
+                                                                                                                                                                                                                   verticalAlign: "bottom",
+                                                                                                                                                                                                                   horizontalAlign: "center",
+                                                                                                                                                                                                                   fontSize: 15,
+                                                                                                                                                                                                                   fontFamily: "helvetica",
+                                                                                                                                                                                                                   fontStyle: "normal",
+                                                                                                                                                                                                                   fontColor: "Sienna"
+                                                                                                                                                                                                                   },
+                                                                                                                                                                                                                   data: [
+                                                                                                                                                                                                                          {
+                                                                                                                                                                                                                          indexLabelFontSize: 14,
+                                                                                                                                                                                                                          indexLabelFontFamily: "Garamond",
+                                                                                                                                                                                                                          indexLabelFontColor: "",
+                                                                                                                                                                                                                          indexLabelLineColor: "darkgrey",
+                                                                                                                                                                                                                          indexLabelPlacement: "outside",
+                                                                                                                                                                                                                          type: "doughnut",
+                                                                                                                                                                                                                          showInLegend: true,
+                                                                                                                                                                                                                          legendMarkerType: "square",
+                                                                                                                                                                                                                          dataPoints: [
+                                                                                                                                                                                                                                       {  y: 15, legendText:"Discharge to Surface Water", indexLabel: "Discharge to Surface Water" },
+                                                                                                                                                                                                                                       {  y: 25, legendText:"Sent to Third Party", indexLabel: "Sent to Third Party" },
+                                                                                                                                                                                                                                       {  y: 60, legendText:"Municipal Discharge (POTW)", indexLabel: "Municipal Discharge (POTW)" }
+                                                                                                                                                                                                                                       ]
+                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                          ]
+                                                                                                                                                                                                                   });
+                                                                                                                                                                                   
+                                                                                                                                                                                   chart4.render();
+                                                                                                                                                                                   
+                                                                                                                                                                                   } break;
+                                                                                                                                                                                   case "2013C4":
+                                                                                                                                                                                   {
+                                                                                                                                                                                   var chart4 = new CanvasJS.Chart("chartContainer4", {
+                                                                                                                                                                                                                   title: {
+                                                                                                                                                                                                                   text: "2013, Water Discharge"
+                                                                                                                                                                                                                   //fontFamily: "Impact",
+                                                                                                                                                                                                                   //fontWeight: "normal"
+                                                                                                                                                                                                                   },
+                                                                                                                                                                                                                   animationEnabled: true,
+                                                                                                                                                                                                                   legend: {
+                                                                                                                                                                                                                   verticalAlign: "bottom",
+                                                                                                                                                                                                                   horizontalAlign: "center",
+                                                                                                                                                                                                                   fontSize: 15,
+                                                                                                                                                                                                                   fontFamily: "helvetica",
+                                                                                                                                                                                                                   fontStyle: "normal",
+                                                                                                                                                                                                                   fontColor: "Sienna"
+                                                                                                                                                                                                                   },
+                                                                                                                                                                                                                   data: [
+                                                                                                                                                                                                                          {
+                                                                                                                                                                                                                          indexLabelFontSize: 14,
+                                                                                                                                                                                                                          indexLabelFontFamily: "Garamond",
+                                                                                                                                                                                                                          indexLabelFontColor: "",
+                                                                                                                                                                                                                          indexLabelLineColor: "darkgrey",
+                                                                                                                                                                                                                          indexLabelPlacement: "outside",
+                                                                                                                                                                                                                          type: "doughnut",
+                                                                                                                                                                                                                          showInLegend: true,
+                                                                                                                                                                                                                          legendMarkerType: "square",
+                                                                                                                                                                                                                          dataPoints: [
+                                                                                                                                                                                                                                       {
+                                                                                                                                                                                                                                       y: 14,
+                                                                                                                                                                                                                                       legendText: "Discharge to Surface Water",
+                                                                                                                                                                                                                                       indexLabel: "Discharge to Surface Water"
+                                                                                                                                                                                                                                       },
+                                                                                                                                                                                                                                       {y: 26, legendText: "Sent to Third Party", indexLabel: "Sent to Third Party"},
+                                                                                                                                                                                                                                       {
+                                                                                                                                                                                                                                       y: 60,
+                                                                                                                                                                                                                                       legendText: "Municipal Discharge (POTW)",
+                                                                                                                                                                                                                                       indexLabel: "Municipal Discharge (POTW)"
+                                                                                                                                                                                                                                       }
+                                                                                                                                                                                                                                       ]
+                                                                                                                                                                                                                          }
+                                                                                                                                                                                                                          ]
+                                                                                                                                                                                                                   });
+                                                                                                                                                                                   
+                                                                                                                                                                                   chart4.render();
+                                                                                                                                                                                   
+                                                                                                                                                                                   } break;
+                                                                                                                                                                                   }
+                                                                                                                                                                                   });    
+                                                                                                                                                                                   
+                                                                                                                                                                                   
+                                                                                                                                                                                   
+                                                                                                                                                                                   
+                                                                                                                                                                                   
+            }
+        </script>
+        <script type="text/javascript" src="canvasjs.min.js"></script></head>
+    <script type="text/javascript" src="jquery-2.1.3.min.js"></script></head>
+    <body>
+        <div id="chartContainer" style="height: 300px; width: 100%; border: 2px solid #a1a1a1;border-radius: 0px;">
+            
+        </div>
+        
+        <div id="chartContainer2" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+            
+        </div>
+        
+        
+        
+        <div style="height: 50px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+            <label id="switch" for="type">Year </label>
+            
+            <button type="button" class="btn-graph" id="2011C4">2011</button>
+            <button type="button" class="btn-graph" id="2012C4">2012</button>
+            <button type="button" class="btn-graph" id="2013C4">2013</button>
+            <button type="button" class="btn-graph" id="2014C4">2014</button>
+            
+            <div id="chartContainer4" style="height: 300px; width: 100%; float:right;border: 2px solid #a1a1a1;border-radius: 0px;">
+                
+            </div>
+        </div>
+        
+        <div style="height: 345px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+            
+            <label id="switch"> Years </label>
+            <button type="button" class="btn-graph" id="2011">2011</button>
+            <button type="button" class="btn-graph" id="2012">2012</button>
+            <button type="button" class="btn-graph" id="2013">2013</button>
+            <button type="button" class="btn-graph" id="2014">2014</button>
+        </div>
+        
+        <div id="chartContainer3" style="height: 300px; width: 100%; float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
+        </div>
+        </div>
+        
+        
+    </body>
 </html>
