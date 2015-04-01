@@ -28,6 +28,8 @@
 		7E53E5501ACBD40800809385 /* user2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E54C1ACBD40800809385 /* user2@2x.png */; };
 		7E53E5511ACBD40800809385 /* user4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E54D1ACBD40800809385 /* user4@2x.png */; };
 		7E53E5531ACBE87D00809385 /* top_user_info@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5521ACBE87D00809385 /* top_user_info@2x.png */; };
+		7E53E5561ACBF7B500809385 /* Icon-76.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5541ACBF7B500809385 /* Icon-76.png */; };
+		7E53E5571ACBF7B500809385 /* icon-76@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5551ACBF7B500809385 /* icon-76@2x.png */; };
 		7E9D51C71AC2F91E00DB63D5 /* btRippleButtton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */; };
 		7E9D51C91AC2FA7400DB63D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */; };
 		7EC2B8D51AC53D2600883BF8 /* EnergyDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8D41AC53D2600883BF8 /* EnergyDetailsViewController.m */; };
@@ -85,6 +87,8 @@
 		7E53E54C1ACBD40800809385 /* user2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user2@2x.png"; sourceTree = "<group>"; };
 		7E53E54D1ACBD40800809385 /* user4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user4@2x.png"; sourceTree = "<group>"; };
 		7E53E5521ACBE87D00809385 /* top_user_info@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "top_user_info@2x.png"; sourceTree = "<group>"; };
+		7E53E5541ACBF7B500809385 /* Icon-76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-76.png"; sourceTree = "<group>"; };
+		7E53E5551ACBF7B500809385 /* icon-76@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-76@2x.png"; sourceTree = "<group>"; };
 		7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btRippleButtton.m; sourceTree = "<group>"; };
 		7E9D51C61AC2F91E00DB63D5 /* btRippleButtton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btRippleButtton.h; sourceTree = "<group>"; };
 		7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -193,6 +197,8 @@
 		9E9FD1AE17DA502500A3D1EC = {
 			isa = PBXGroup;
 			children = (
+				7E53E5541ACBF7B500809385 /* Icon-76.png */,
+				7E53E5551ACBF7B500809385 /* icon-76@2x.png */,
 				9E85464C18119CCA00D2229B /* README.md */,
 				9E9FD1C017DA502500A3D1EC /* MasterDetailWithLogin */,
 				9E9FD1B917DA502500A3D1EC /* Frameworks */,
@@ -343,8 +349,10 @@
 				7E53E5531ACBE87D00809385 /* top_user_info@2x.png in Resources */,
 				7E53E5431ACBAB1700809385 /* tab_incident_reporting@2x.png in Resources */,
 				7E53E53E1ACBAB1700809385 /* tab_air_active@2x.png in Resources */,
+				7E53E5561ACBF7B500809385 /* Icon-76.png in Resources */,
 				9E9FD1CD17DA502500A3D1EC /* Default.png in Resources */,
 				9E9FD1CF17DA502500A3D1EC /* Default@2x.png in Resources */,
+				7E53E5571ACBF7B500809385 /* icon-76@2x.png in Resources */,
 				7EE4A6B21AC91833008EFB90 /* incidents.html in Resources */,
 				9E85464D18119CCA00D2229B /* README.md in Resources */,
 				7E53E5451ACBAB1700809385 /* tab_incidents@2x.png in Resources */,
@@ -431,7 +439,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tata Consultancy Services Limited";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tata Consultancy Services Limited";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -463,7 +472,8 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tata Consultancy Services Limited";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Tata Consultancy Services Limited";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -480,7 +490,7 @@
 		9E9FD1E117DA502500A3D1EC /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tata Consultancy Services Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MasterDetailWithLogin/eNIM-Prefix.pch";
 				INFOPLIST_FILE = "MasterDetailWithLogin/eNIM-Info.plist";
@@ -493,7 +503,7 @@
 		9E9FD1E217DA502500A3D1EC /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Tata Consultancy Services Limited";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "MasterDetailWithLogin/eNIM-Prefix.pch";
 				INFOPLIST_FILE = "MasterDetailWithLogin/eNIM-Info.plist";
