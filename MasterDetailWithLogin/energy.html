@@ -4,12 +4,12 @@
     <style>
 
         #switch {
-            width: 500px;
+            width: 50px;
             height: 50px;
             background-color: #3498db;
             color: white;
             cursor: pointer;
-            padding: 13px 10px;
+            padding: 0.91em 0.6em;
             -webkit-box-sizing: border-box;
             -moz-box-sizing: border-box;
             box-sizing: border-box;
@@ -38,6 +38,9 @@
             text-decoration: none;
         }
 
+        .btn:focus {
+            background: #951dee;
+        }
         .btn:hover {
             background: #3cb0fd;
             background-image: -webkit-linear-gradient(top, #3cb0fd, #3498db);
@@ -49,12 +52,12 @@
         }
 
         .btn-graph {
-            background: #9344c7;
-            background-image: -webkit-linear-gradient(top, #9344c7, #4932cf);
-            background-image: -moz-linear-gradient(top, #9344c7, #4932cf);
-            background-image: -ms-linear-gradient(top, #9344c7, #4932cf);
-            background-image: -o-linear-gradient(top, #9344c7, #4932cf);
-            background-image: linear-gradient(to bottom, #9344c7, #4932cf);
+            background: #3498db;
+            background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+            background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+            background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+            background-image: -o-linear-gradient(top, #3498db, #2980b9);
+            background-image: linear-gradient(to bottom, #3498db, #2980b9);
             -webkit-border-radius: 0;
             -moz-border-radius: 0;
             border-radius: 0px;
@@ -75,13 +78,17 @@
             background-image: linear-gradient(to bottom, #3cb0fd, #3498db);
             text-decoration: none;
         }
+        .btn-graph:focus {
+            background: #951dee;
+        }
+
 </style>
     <script type="text/javascript">
         window.onload = function () {
             var chart = new CanvasJS.Chart("chartContainer",
                     {
                         title:{
-                            text: "Total Stationary Electricity (MWH)"
+                            text: "Total Electric Stationary (MWH)"
                         },
                         axisX: {
                             title: "Years"
@@ -107,10 +114,10 @@
                                 legendText: "London",
                                 name: "London",
                                 dataPoints: [
-                                    { label: "2011",y: 139487.8},
-                                    { label: "2012",y: 157863.2},
-                                    { label: "2013",y: 145689.7},
-                                    { label: "2014",y: 169175.8}
+                                    { label: "2011",y: 159487.8},
+                                    { label: "2012",y: 167863.2},
+                                    { label: "2013",y: 175689.7},
+                                    { label: "2014",y: 149175.8}
                                 ]
                             },
                             {
@@ -122,10 +129,10 @@
                                 type: "column",
                                 name: "Munich",
                                 dataPoints: [
-                                    { label: "2011",y: 320631.3},
-                                    { label: "2012",y: 323051.8},
-                                    { label: "2013",y: 300890.9},
-                                    { label: "2014",y: 318158.1}
+                                    { label: "2011",y: 340631.3},
+                                    { label: "2012",y: 313051.8},
+                                    { label: "2013",y: 330890.9},
+                                    { label: "2014",y: 358158.1}
                                 ]
                             },
                             {
@@ -135,10 +142,10 @@
                                 legendText: "Guangzhou",
                                 name: "Guangzhou",
                                 dataPoints: [
-                                    { label: "2011",y: 113504.6},
-                                    { label: "2012",y: 104798.7},
-                                    { label: "2013",y: 104208.8},
-                                    { label: "2014",y: 128432.3}
+                                    { label: "2011",y: 153504.6},
+                                    { label: "2012",y: 134798.7},
+                                    { label: "2013",y: 124208.8},
+                                    { label: "2014",y: 148432.3}
                                 ]
                             },
                             {
@@ -148,10 +155,10 @@
                                 legendText: "Rajkot",
                                 name: "Rajkot",
                                 dataPoints: [
-                                    { label: "2011",y: 221929.3},
-                                    { label: "2012",y: 223035.4},
+                                    { label: "2011",y: 241929.3},
+                                    { label: "2012",y: 233035.4},
                                     { label: "2013",y: 216234.1},
-                                    { label: "2014",y: 218855.6}
+                                    { label: "2014",y: 258855.6}
                                 ]
                             },
                         ]
@@ -464,6 +471,258 @@
 
                         chart3.render();
 
+                        break;
+                    }
+                    case "gas":{
+
+                        var chart = new CanvasJS.Chart("chartContainer",
+                                {
+                                    title:{
+                                        text: "Total Natural Gas Stationary(MWH)"
+                                    },
+                                    axisX: {
+                                        title: "Years"
+                                    },
+                                    axisY: {
+                                        title: "MWH"
+                                    },
+                                    legend: {
+                                        verticalAlign: "bottom",
+                                        horizontalAlign: "center",
+                                        fontSize: 15,
+                                        fontFamily: "helvetica",
+                                        fontStyle: "normal",
+                                        fontColor: "Sienna"
+                                    },
+                                    animationEnabled: true,
+                                    zoomEnabled: true,
+                                    data: [
+                                        {
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "London",
+                                            name: "London",
+                                            dataPoints: [
+                                                { label: "2011",y: 149487.8},
+                                                { label: "2012",y: 177863.2},
+                                                { label: "2013",y: 185689.7},
+                                                { label: "2014",y: 129175.8}
+                                            ]
+                                        },
+                                        {
+
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "Munich",
+                                            type: "column",
+                                            name: "Munich",
+                                            dataPoints: [
+                                                { label: "2011",y: 350631.3},
+                                                { label: "2012",y: 323051.8},
+                                                { label: "2013",y: 320890.9},
+                                                { label: "2014",y: 348158.1}
+                                            ]
+                                        },
+                                        {
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "Guangzhou",
+                                            name: "Guangzhou",
+                                            dataPoints: [
+                                                { label: "2011",y: 133504.6},
+                                                { label: "2012",y: 124798.7},
+                                                { label: "2013",y: 114208.8},
+                                                { label: "2014",y: 108432.3}
+                                            ]
+                                        },
+                                        {
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "Rajkot",
+                                            name: "Rajkot",
+                                            dataPoints: [
+                                                { label: "2011",y: 231929.3},
+                                                { label: "2012",y: 223035.4},
+                                                { label: "2013",y: 206234.1},
+                                                { label: "2014",y: 248855.6}
+                                            ]
+                                        },
+                                    ]
+
+                                });
+                        chart.render();
+                     break;
+                    }
+                    case "natgas":{
+
+                        var chart = new CanvasJS.Chart("chartContainer",
+                                {
+                                    title:{
+                                        text: "Total Natural Gas Stationary(MWH)"
+                                    },
+                                    axisX: {
+                                        title: "Years"
+                                    },
+                                    axisY: {
+                                        title: "MWH"
+                                    },
+                                    legend: {
+                                        verticalAlign: "bottom",
+                                        horizontalAlign: "center",
+                                        fontSize: 15,
+                                        fontFamily: "helvetica",
+                                        fontStyle: "normal",
+                                        fontColor: "Sienna"
+                                    },
+                                    animationEnabled: true,
+                                    zoomEnabled: true,
+                                    data: [
+                                        {
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "London",
+                                            name: "London",
+                                            dataPoints: [
+                                                { label: "2011",y: 149487.8},
+                                                { label: "2012",y: 177863.2},
+                                                { label: "2013",y: 185689.7},
+                                                { label: "2014",y: 129175.8}
+                                            ]
+                                        },
+                                        {
+
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "Munich",
+                                            type: "column",
+                                            name: "Munich",
+                                            dataPoints: [
+                                                { label: "2011",y: 350631.3},
+                                                { label: "2012",y: 323051.8},
+                                                { label: "2013",y: 320890.9},
+                                                { label: "2014",y: 348158.1}
+                                            ]
+                                        },
+                                        {
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "Guangzhou",
+                                            name: "Guangzhou",
+                                            dataPoints: [
+                                                { label: "2011",y: 133504.6},
+                                                { label: "2012",y: 124798.7},
+                                                { label: "2013",y: 114208.8},
+                                                { label: "2014",y: 108432.3}
+                                            ]
+                                        },
+                                        {
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "Rajkot",
+                                            name: "Rajkot",
+                                            dataPoints: [
+                                                { label: "2011",y: 231929.3},
+                                                { label: "2012",y: 223035.4},
+                                                { label: "2013",y: 206234.1},
+                                                { label: "2014",y: 248855.6}
+                                            ]
+                                        },
+                                    ]
+
+                                });
+                        chart.render();
+                        break;
+                    }
+                    case "elesta":{
+
+                        var chart = new CanvasJS.Chart("chartContainer",
+                                {
+                                    title:{
+                                        text: "Total Electric Stationary(MWH)"
+                                    },
+                                    axisX: {
+                                        title: "Years"
+                                    },
+                                    axisY: {
+                                        title: "MWH"
+                                    },
+                                    legend: {
+                                        verticalAlign: "bottom",
+                                        horizontalAlign: "center",
+                                        fontSize: 15,
+                                        fontFamily: "helvetica",
+                                        fontStyle: "normal",
+                                        fontColor: "Sienna"
+                                    },
+                                    animationEnabled: true,
+                                    zoomEnabled: true,
+                                    data: [
+                                        {
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "London",
+                                            name: "London",
+                                            dataPoints: [
+                                                { label: "2011",y: 159487.8},
+                                                { label: "2012",y: 167863.2},
+                                                { label: "2013",y: 175689.7},
+                                                { label: "2014",y: 149175.8}
+                                            ]
+                                        },
+                                        {
+
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "Munich",
+                                            type: "column",
+                                            name: "Munich",
+                                            dataPoints: [
+                                                { label: "2011",y: 340631.3},
+                                                { label: "2012",y: 313051.8},
+                                                { label: "2013",y: 330890.9},
+                                                { label: "2014",y: 358158.1}
+                                            ]
+                                        },
+                                        {
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "Guangzhou",
+                                            name: "Guangzhou",
+                                            dataPoints: [
+                                                { label: "2011",y: 153504.6},
+                                                { label: "2012",y: 134798.7},
+                                                { label: "2013",y: 124208.8},
+                                                { label: "2014",y: 148432.3}
+                                            ]
+                                        },
+                                        {
+                                            type: "column",
+                                            showInLegend: true,
+                                            legendMarkerType: "square",
+                                            legendText: "Rajkot",
+                                            name: "Rajkot",
+                                            dataPoints: [
+                                                { label: "2011",y: 241929.3},
+                                                { label: "2012",y: 233035.4},
+                                                { label: "2013",y: 216234.1},
+                                                { label: "2014",y: 258855.6}
+                                            ]
+                                        },
+                                    ]
+
+                                });
+                        chart.render();
                         break;
                     }
                 }

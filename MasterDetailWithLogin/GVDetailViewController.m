@@ -70,18 +70,26 @@
     
     self.navigationItem.rightBarButtonItem = addButton;
     
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user1@2x.png"] atIndex:0];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:1];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:2];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:3];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user1@2x.png"] atIndex:4];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:5];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:6];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:7];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user1@2x.png"] atIndex:8];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:9];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:10];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:11];
+    
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:0];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:1];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:2];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user7@2x.png"] atIndex:3];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user8@2x.png"] atIndex:4];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user9@2x.png"] atIndex:5];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user10@2x.png"] atIndex:6];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user11@2x.png"] atIndex:7];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user5@2x.png"] atIndex:8];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user6@2x.png"] atIndex:9];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user12@2x.png"] atIndex:10];
+
+    
+//    self.collectionView.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageWithContentsOfFile: @"background_view.png"]];
+ 
+    [self.navigationController.navigationBar setBackgroundImage:[UIImage new]
+                             forBarMetrics:UIBarMetricsDefault];
+//    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.navigationController.navigationBar.translucent = YES;
     
 }
 
@@ -138,7 +146,41 @@
     return 1;
 }
 
+- (void)collectionView:(UICollectionView *)collectionView
+didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
 
+}
+
+- (BOOL)collectionView:(UICollectionView *)collectionView
+shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+    return YES;
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView
+didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    
+}
+
+-(BOOL)collectionView:(UICollectionView *)collectionView
+shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+
+    return YES;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView
+didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    
+}
+
+- (void)collectionView:(UICollectionView *)collectionView
+didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+
+
+}
 
 #pragma mark -
 #pragma mark SubstitutableDetailViewController
