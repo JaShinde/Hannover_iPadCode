@@ -20,6 +20,7 @@
 
 @interface GVMasterViewController () {
     NSMutableArray *_objects;
+//    NSMutableArray *_selectedObjects;
 }
 @end
 
@@ -43,17 +44,27 @@
 //
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
 //    self.navigationItem.rightBarButtonItem = addButton;
-
+  
 
     if (!_objects) {
            _objects = [[NSMutableArray alloc] init];
         }
-            [_objects insertObject:[NSString stringWithFormat:@"Incident Reporting"] atIndex:0];
-            [_objects insertObject:[NSString stringWithFormat:@"Energy"] atIndex:1];
-            [_objects insertObject:[NSString stringWithFormat:@"Waste"] atIndex:2];
-            [_objects insertObject:[NSString stringWithFormat:@"Air"] atIndex:3];
-            [_objects insertObject:[NSString stringWithFormat:@"Water"] atIndex:4];
-            [_objects insertObject:[NSString stringWithFormat:@"Incidents"] atIndex:5];
+//    if (!_selectedObjects) {
+//        _selectedObjects = [[NSMutableArray alloc] init];
+//    }
+            [_objects insertObject:[NSString stringWithFormat:@"tab_incident_reporting_active@2x.png"] atIndex:0];
+            [_objects insertObject:[NSString stringWithFormat:@"tab_energy@2x.png"] atIndex:1];
+            [_objects insertObject:[NSString stringWithFormat:@"tab_waste@2x.png"] atIndex:2];
+            [_objects insertObject:[NSString stringWithFormat:@"tab_air@2x.png"] atIndex:3];
+            [_objects insertObject:[NSString stringWithFormat:@"tab_water@2x.png"] atIndex:4];
+            [_objects insertObject:[NSString stringWithFormat:@"tab_incidents@2x.png"] atIndex:5];
+    
+//    [_selectedObjects insertObject:[NSString stringWithFormat:@"tab_incident_reporting_active@2x.png"] atIndex:0];
+//    [_selectedObjects insertObject:[NSString stringWithFormat:@"tab_energy_active@2x.png"] atIndex:1];
+//    [_selectedObjects insertObject:[NSString stringWithFormat:@"tab_waste_active@2x.png"] atIndex:2];
+//    [_selectedObjects insertObject:[NSString stringWithFormat:@"tab_air_active@2x.png"] atIndex:3];
+//    [_selectedObjects insertObject:[NSString stringWithFormat:@"tab_water_active@2x.png"] atIndex:4];
+//    [_selectedObjects insertObject:[NSString stringWithFormat:@"tab_incidents_active@2x.png"] atIndex:5];
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
    
@@ -113,6 +124,13 @@
     }
 
 
+//    [_objects insertObject:[NSString stringWithFormat:@"tab_incident_reporting_active@2x.png"] atIndex:0];
+//    [_objects insertObject:[NSString stringWithFormat:@"tab_energy@2x.png"] atIndex:1];
+//    [_objects insertObject:[NSString stringWithFormat:@"tab_waste@2x.png"] atIndex:2];
+//    [_objects insertObject:[NSString stringWithFormat:@"tab_air@2x.png"] atIndex:3];
+//    [_objects insertObject:[NSString stringWithFormat:@"tab_water@2x.png"] atIndex:4];
+//    [_objects insertObject:[NSString stringWithFormat:@"tab_incidents@2x.png"] atIndex:5];
+//    
 }
 
 //-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
@@ -184,7 +202,7 @@
     imgView = nil;
 
     UIImageView *_imgView = (UIImageView *)[cell.contentView viewWithTag:1];
-    _imgView.image = [UIImage imageNamed:@"album-bb.jpg"]; // repace the same with array of imwage names.
+    _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of imwage names.
 //    
 //    
 //    NSString *object = _objects[indexPath.row];
@@ -240,40 +258,104 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     NSUInteger row = indexPath.row;
+    UITableViewCell *swipedCell  = [self.tableView cellForRowAtIndexPath:indexPath];
     switch (row) {
         case 0:
         {
+
+            [_objects replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"tab_incident_reporting_active@2x.png"]];
+            [_objects replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"tab_energy@2x.png"]];
+            [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
+            [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
+            [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
+            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+            
+            UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
+            _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
+            // Need to change the color of rest of the images.
+            
             self.detailViewManager.detailViewController = self.detailViewManager.loadedDetailViewController;
             break;
         }
         case 1:{
+            
+            [_objects replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"tab_incident_reporting@2x.png"]];
+            [_objects replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"tab_energy_active@2x.png"]];
+            [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
+            [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
+            [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
+            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+            
+            UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
+            _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
             self.detailViewManager.detailViewController = self.detailViewManager.energyDetails;
             break;
         }
         case 2:{
+            
+            [_objects replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"tab_incident_reporting@2x.png"]];
+            [_objects replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"tab_energy@2x.png"]];
+            [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste_active@2x.png"]];
+            [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
+            [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
+            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+            
+            UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
+            _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
             self.detailViewManager.detailViewController = self.detailViewManager.wasteDetails;
             break;
         }
         case 3:{
+            
+            [_objects replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"tab_incident_reporting@2x.png"]];
+            [_objects replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"tab_energy@2x.png"]];
+            [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
+            [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air_active@2x.png"]];
+            [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
+            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+
+            UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
+            _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
             self.detailViewManager.detailViewController = self.detailViewManager.airDetails;
             break;
         }
         case 4:{
+            [_objects replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"tab_incident_reporting@2x.png"]];
+            [_objects replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"tab_energy@2x.png"]];
+            [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
+            [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
+            [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water_active@2x.png"]];
+            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+            UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
+            _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
             self.detailViewManager.detailViewController = self.detailViewManager.waterDetails;
             break;
         }
         case 5:{
+            [_objects replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"tab_incident_reporting@2x.png"]];
+            [_objects replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"tab_energy@2x.png"]];
+            [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
+            [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
+            [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
+            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents_active@2x.png"]];
+
+            UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
+            _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
             self.detailViewManager.detailViewController = self.detailViewManager.incidentDetails;
             break;
         }
             
         default:
         {
+            UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
+            _imgView.image = [UIImage imageNamed:_objects[0]]; // repace the same with array of
             self.detailViewManager.detailViewController = self.detailViewManager.loadedDetailViewController;
             break;
         }
         
     }
+    
+    [self.tableView reloadData];
     
 //    self.detailViewManager.detailViewController = self.detailViewManager.incidentDetails;
     
