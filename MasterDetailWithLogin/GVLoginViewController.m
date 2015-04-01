@@ -29,6 +29,8 @@
     return self;
 }
 
+
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,6 +39,16 @@
 //    [rippleButton setRippeEffectEnabled:NO];
 ////    [rippleButton setRippleEffectWithColor:[UIColor colorWithRed:240/255.f green:159/255.f blue:10/255.f alpha:1]];
 //    [self.view addSubview:rippleButton];
+    
+    UIColor *color = [UIColor whiteColor];
+    
+    
+    self.userName.attributedPlaceholder =[[NSAttributedString alloc] initWithString:@"Username"
+                                                                         attributes:@{NSForegroundColorAttributeName: color,
+                                                                                      NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:17.0]}];
+    self.userPassword.attributedPlaceholder =[[NSAttributedString alloc] initWithString:@"Password"
+                                                                         attributes:@{NSForegroundColorAttributeName: color,
+                                                                                      NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-UltraLight" size:17.0]}];
 
     CGRect layerFrame = CGRectMake(0, 0, self.userName.frame.size.width, self.userName.frame.size.height);
     CGMutablePathRef path = CGPathCreateMutable();
@@ -82,5 +94,28 @@
     [self dismissViewControllerAnimated:NO completion:nil];
     
 }
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    
+    if(textField == userName)
+    {
+        [userPassword becomeFirstResponder];
+        
+    }else{
+        [textField resignFirstResponder];
+    }
+    
+    return YES;
+    
+}
+
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+
+}
+
+
+
 
 @end

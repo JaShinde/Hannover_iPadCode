@@ -12,11 +12,11 @@
 
 
 
-@interface GVLoginViewController : UIViewController
+@interface GVLoginViewController : UIViewController<UITextFieldDelegate>
 {
   //  IBOutlet UIButton *loginButton;
-    IBOutlet UITextField *userName;
-    IBOutlet UITextField *userPassword;
+//    IBOutlet UITextField *userName;
+//    IBOutlet UITextField *userPassword;
     
 }
 
