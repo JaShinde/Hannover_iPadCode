@@ -39,7 +39,12 @@
 {
     // Clear any bar button item from the detail view controller that is about to
     // no longer be displayed.
-    self.detailViewController.navigationPaneBarButtonItem = nil;
+    //self.detailViewController.navigationPaneBarButtonItem = nil;
+//    [self.detailViewController.navigationPaneBarButtonItem setBackgroundImage:[UIImage new]
+//                                                  forBarMetrics:UIBarMetricsDefault];
+//    //    self.navigationController.navigationBar.shadowImage = [UIImage new];
+    self.detailViewController.navigationController.navigationBar.translucent = YES;
+    
     
     // Set the new detailViewController's navigationPaneBarButtonItem to the value of our
     // navigationPaneButtonItem.  If navigationPaneButtonItem is not nil, then the button

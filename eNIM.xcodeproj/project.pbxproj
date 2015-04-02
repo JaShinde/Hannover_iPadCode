@@ -38,6 +38,7 @@
 		7E53E5741ACC24AF00809385 /* user10@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5691ACC24AF00809385 /* user10@2x.png */; };
 		7E53E5751ACC24AF00809385 /* user11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E56A1ACC24AF00809385 /* user11@2x.png */; };
 		7E53E5761ACC24AF00809385 /* user12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E56B1ACC24AF00809385 /* user12@2x.png */; };
+		7E53E5781ACD0F0400809385 /* user1_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5771ACD0F0400809385 /* user1_selected@2x.png */; };
 		7E9D51C71AC2F91E00DB63D5 /* btRippleButtton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */; };
 		7E9D51C91AC2FA7400DB63D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */; };
 		7EC2B8D51AC53D2600883BF8 /* EnergyDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8D41AC53D2600883BF8 /* EnergyDetailsViewController.m */; };
@@ -105,6 +106,7 @@
 		7E53E5691ACC24AF00809385 /* user10@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user10@2x.png"; sourceTree = "<group>"; };
 		7E53E56A1ACC24AF00809385 /* user11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user11@2x.png"; sourceTree = "<group>"; };
 		7E53E56B1ACC24AF00809385 /* user12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user12@2x.png"; sourceTree = "<group>"; };
+		7E53E5771ACD0F0400809385 /* user1_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user1_selected@2x.png"; sourceTree = "<group>"; };
 		7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btRippleButtton.m; sourceTree = "<group>"; };
 		7E9D51C61AC2F91E00DB63D5 /* btRippleButtton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btRippleButtton.h; sourceTree = "<group>"; };
 		7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -171,6 +173,7 @@
 		7E53E5291ACA5ED000809385 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7E53E5771ACD0F0400809385 /* user1_selected@2x.png */,
 				7E53E5611ACC24AF00809385 /* user2@2x.png */,
 				7E53E5621ACC24AF00809385 /* user3@2x.png */,
 				7E53E5631ACC24AF00809385 /* user4@2x.png */,
@@ -394,6 +397,7 @@
 				7E53E5311ACA5F3200809385 /* login_button_2x.png in Resources */,
 				7E53E52E1ACA5F1F00809385 /* login_bg_2x.png in Resources */,
 				7E53E56C1ACC24AF00809385 /* user2@2x.png in Resources */,
+				7E53E5781ACD0F0400809385 /* user1_selected@2x.png in Resources */,
 				7E53E5761ACC24AF00809385 /* user12@2x.png in Resources */,
 				9E9FD1D717DA502500A3D1EC /* MainStoryboard_iPad.storyboard in Resources */,
 				7E53E5701ACC24AF00809385 /* user6@2x.png in Resources */,
