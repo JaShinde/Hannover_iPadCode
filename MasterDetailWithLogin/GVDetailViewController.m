@@ -10,11 +10,14 @@
 #import "GVLoginViewController.h"
 #import "GVLoadingDetailViewController.h"
 #import "GVAppDelegate.h"
+#import "TeamSelectionViewController.h"
+
+
 
 @interface GVDetailViewController (){
 //@property (strong, nonatomic) UIPopoverController *masterPopoverController;
 //- (void)configureView;
-    NSMutableArray *_selectedCells;
+
 }
 @end
 
@@ -45,9 +48,7 @@
 //    }
 //}
 
-- (void)insertNewObject{
 
-}
 
 - (void)viewDidLoad
 {
@@ -55,11 +56,24 @@
 	// Do any additional setup after loading the view, typically from a nib.
 //    [self configureView];
     
+    self.teamSelect.hidden = YES;
     self.collectionView.backgroundColor = [UIColor whiteColor];
     
-    if (!_selectedCells) {
-        _selectedCells = [[NSMutableArray alloc] init];
+    if (!self.selectedCells) {
+        self.selectedCells = [[NSMutableArray alloc] init];
     }
+    
+//    UITapGestureRecognizer* tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleTapGesture:)];
+//    tapGesture.delaysTouchesBegan = YES;
+//    tapGesture.numberOfTapsRequired = 2;
+//    [self.collectionView addGestureRecognizer:tapGesture];
+
+    UILongPressGestureRecognizer* longGesture = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(handleLongGesture:)];
+    longGesture.delaysTouchesBegan = YES;
+    longGesture.numberOfTouchesRequired = 1;
+
+    [self.collectionView addGestureRecognizer:longGesture];
+    
     
     UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
     UIImage *buttonImage = [UIImage imageNamed:@"top_user_info@2x.png"];
@@ -70,19 +84,19 @@
     
     self.navigationItem.rightBarButtonItem = addButton;
     
-    
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:0];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:1];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:2];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user7@2x.png"] atIndex:3];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user8@2x.png"] atIndex:4];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user9@2x.png"] atIndex:5];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user10@2x.png"] atIndex:6];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user11@2x.png"] atIndex:7];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user5@2x.png"] atIndex:8];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user6@2x.png"] atIndex:9];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user12@2x.png"] atIndex:10];
-
+     [_selectedCells insertObject:[NSString stringWithFormat:@"user1@2x.png"] atIndex:0];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:1];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:2];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:3];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user7@2x.png"] atIndex:4];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user8@2x.png"] atIndex:5];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user9@2x.png"] atIndex:6];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user10@2x.png"] atIndex:7];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user11@2x.png"] atIndex:8];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user5@2x.png"] atIndex:9];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user6@2x.png"] atIndex:10];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user12@2x.png"] atIndex:11];
+   
     
 //    self.collectionView.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageWithContentsOfFile: @"background_view.png"]];
  
@@ -90,14 +104,70 @@
                              forBarMetrics:UIBarMetricsDefault];
 //    self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
+
+}
+
+- (void)handleLongGesture:(UILongPressGestureRecognizer *)gestureRecognizer{
+
+    if (gestureRecognizer.state != UIGestureRecognizerStateEnded) {
+        return;
+    }
+    
+    CGPoint p = [gestureRecognizer locationInView:self.collectionView];
+    
+    NSIndexPath *indexPath = [self.collectionView indexPathForItemAtPoint:p];
+    
+    if (indexPath == nil){
+        NSLog(@"couldn't find index path");
+    } else {
+        if(indexPath.row == 0) {
+        // get the cell at indexPath (the one you long pressed)
+        UICollectionViewCell* cell = [self.collectionView cellForItemAtIndexPath:indexPath];
+        UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
+        //    recipeImageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
+        recipeImageView.image = [UIImage imageNamed:@"user1_selected@2x.png"];
+        [_selectedCells replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"user1_selected@2x.png"]];
+        // do stuff with the cell
+           [self.collectionView reloadData];
+              self.teamSelect.hidden = NO;
+
+//            TeamSelectionViewController *content = [self.storyboard instantiateViewControllerWithIdentifier:@"teamSelection"];
+//            content.modalPresentationStyle = UIModalPresentationFormSheet;
+//            content.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
+//            content.view.frame = CGRectMake(0, 500, 720,100);
+//            
+//            [self presentViewController:content animated:NO completion:nil];
+            
+            
+        }
+    }
+    
+//    UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"IncidentPhotoCell" forIndexPath:indexPath];
     
 }
+
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
+    self.teamSelect.hidden = YES;
+    
+    [_selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"user2@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"user3@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"user4@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"user7@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"user8@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:6 withObject:[NSString stringWithFormat:@"user9@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:7 withObject:[NSString stringWithFormat:@"user10@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:8 withObject:[NSString stringWithFormat:@"user11@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:9 withObject:[NSString stringWithFormat:@"user5@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:10 withObject:[NSString stringWithFormat:@"user6@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:11 withObject:[NSString stringWithFormat:@"user12@2x.png"]];
+    
     [self.collectionView reloadData];
+
 }
 
 - (void)didReceiveMemoryWarning
@@ -107,6 +177,14 @@
 }
 
 #pragma mark - collection view data source
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+    
+}
 
 
 - (NSInteger) collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
@@ -146,41 +224,140 @@
     return 1;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView
-didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
-
+//    if(indexPath.row == 0){
+//    UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"IncidentPhotoCell" forIndexPath:indexPath];
+//    
+//    UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
+//    //    recipeImageView.image = [UIImage imageNamed:[recipeImages objectAtIndex:indexPath.row]];
+//    recipeImageView.image = [UIImage imageNamed:@"user1_selected@2x.png"];
+//    
+//    
+//    [_selectedCells replaceObjectAtIndex:indexPath.row withObject:[NSString stringWithFormat:@"user1_selected@2x.png"]];
+//    
+//        [self.collectionView reloadData];
+//    }
 }
 
-- (BOOL)collectionView:(UICollectionView *)collectionView
-shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+//- (BOOL)collectionView:(UICollectionView *)collectionView
+//shouldSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//    return YES;
+//    
+//}
+//
+//- (void)collectionView:(UICollectionView *)collectionView
+//didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
+//
+//    
+//}
+//
+//- (BOOL)collectionView:(UICollectionView *)collectionView
+//shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+//
+//    return YES;
+//}
+//
+//- (void)collectionView:(UICollectionView *)collectionView
+//didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+//    
+//}
+//
+//- (void)collectionView:(UICollectionView *)collectionView
+//didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+//
+//
+//}
+
+- (IBAction)dismissView:(id)sender{
+///    [self dismissViewControllerAnimated:YES completion:NO];
+    self.teamSelect.hidden = YES;
+}
+
+
+- (IBAction)Team1Select:(id)sender{
     
-    return YES;
+    [self.team1 setImage:[UIImage imageNamed:@"team1_active@2x.png"]
+                forState:UIControlStateNormal];
+    [self.team2 setImage:[UIImage imageNamed:@"team2@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team3 setImage:[UIImage imageNamed:@"team3@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team4 setImage:[UIImage imageNamed:@"team4@2x.png"]
+                forState:UIControlStateNormal];
+    
+    
+    [self.selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
+    
+    [self.collectionView reloadData];
+    
+       self.teamSelect.hidden = YES;
     
 }
 
-- (void)collectionView:(UICollectionView *)collectionView
-didDeselectItemAtIndexPath:(NSIndexPath *)indexPath{
-
+- (IBAction)Team2Select:(id)sender{
     
-}
-
--(BOOL)collectionView:(UICollectionView *)collectionView
-shouldHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
-
-    return YES;
-}
-
-- (void)collectionView:(UICollectionView *)collectionView
-didHighlightItemAtIndexPath:(NSIndexPath *)indexPath{
+    [self.team2 setImage:[UIImage imageNamed:@"team2_active@2x.png"]
+                forState:UIControlStateNormal];
     
+    [self.team1 setImage:[UIImage imageNamed:@"team1@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team3 setImage:[UIImage imageNamed:@"team3@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team4 setImage:[UIImage imageNamed:@"team4@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
+    
+    [self.collectionView reloadData];
+    
+       self.teamSelect.hidden = YES;
 }
 
-- (void)collectionView:(UICollectionView *)collectionView
-didUnhighlightItemAtIndexPath:(NSIndexPath *)indexPath{
-
-
+- (IBAction)Team3Select:(id)sender{
+    
+    [self.team3 setImage:[UIImage imageNamed:@"team3_active@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team1 setImage:[UIImage imageNamed:@"team1@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team2 setImage:[UIImage imageNamed:@"team2@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team4 setImage:[UIImage imageNamed:@"team4@2x.png"]
+                forState:UIControlStateNormal];
+    [self.selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
+    
+    [self.collectionView reloadData];
+    
+    self.teamSelect.hidden = YES;
 }
+
+- (IBAction)Team4Select:(id)sender{
+    
+    [self.team4 setImage:[UIImage imageNamed:@"team4_active@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team1 setImage:[UIImage imageNamed:@"team1@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team2 setImage:[UIImage imageNamed:@"team2@2x.png"]
+                forState:UIControlStateNormal];
+    
+    [self.team3 setImage:[UIImage imageNamed:@"team3@2x.png"]
+                forState:UIControlStateNormal];
+    [self.selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
+    
+    [self.collectionView reloadData];
+    self.teamSelect.hidden = YES;
+}
+
 
 #pragma mark -
 #pragma mark SubstitutableDetailViewController

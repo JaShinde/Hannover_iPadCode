@@ -72,6 +72,53 @@
                                     <outlet property="delegate" destination="4" id="ybH-FH-TZs"/>
                                 </connections>
                             </collectionView>
+                            <view alpha="0.79999999999999982" contentMode="scaleToFill" id="Jv5-zP-9gK">
+                                <rect key="frame" x="0.0" y="580" width="1024" height="144"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jsy-8b-CLQ">
+                                        <rect key="frame" x="47" y="90" width="165" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="team1.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Team1Select:" destination="4" eventType="touchUpInside" id="38z-kR-xhd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aG9-SV-LOd">
+                                        <rect key="frame" x="289" y="90" width="165" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="team2.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Team2Select:" destination="4" eventType="touchUpInside" id="sBd-0R-yh0"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YaI-q6-JNo">
+                                        <rect key="frame" x="540" y="90" width="165" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="team3.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Team3Select:" destination="4" eventType="touchUpInside" id="WZx-g2-Otr"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e5a-2y-FQy">
+                                        <rect key="frame" x="805" y="90" width="165" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="team4.png">
+                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="Team4Select:" destination="4" eventType="touchUpInside" id="QW6-u8-gnb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.027679711950931721" green="0.050238500034975486" blue="0.061483577806122458" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -84,6 +131,11 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="collectionView" destination="tlM-2Z-X1P" id="tav-FQ-cEc"/>
+                        <outlet property="team1" destination="jsy-8b-CLQ" id="PXG-oh-jAV"/>
+                        <outlet property="team2" destination="aG9-SV-LOd" id="9qy-gH-p8d"/>
+                        <outlet property="team3" destination="YaI-q6-JNo" id="jaD-BR-LYm"/>
+                        <outlet property="team4" destination="e5a-2y-FQy" id="bHs-CF-NKj"/>
+                        <outlet property="teamSelect" destination="Jv5-zP-9gK" id="zib-LA-egM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
@@ -442,6 +494,86 @@
             </objects>
             <point key="canvasLocation" x="789" y="925"/>
         </scene>
+        <!--Team Selection View Controller - TeamSelectionView-->
+        <scene sceneID="zEz-tM-vNC">
+            <objects>
+                <viewController storyboardIdentifier="teamSelection" title="TeamSelectionView" modalPresentationStyle="formSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KKD-xL-RJ8" customClass="TeamSelectionViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="15M-1N-hTc">
+                        <rect key="frame" x="0.0" y="0.0" width="720" height="100"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NGT-uh-7EJ">
+                                <rect key="frame" x="30" y="39" width="111" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="team1.png">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="titleShadowColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Team1Select:" destination="KKD-xL-RJ8" eventType="touchUpInside" id="uhl-Ue-zet"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="2Vc-tz-5Zx">
+                                <rect key="frame" x="201" y="39" width="111" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="team2.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Team2Select:" destination="KKD-xL-RJ8" eventType="touchUpInside" id="gsb-T0-pif"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="NXK-n6-gqd">
+                                <rect key="frame" x="387" y="39" width="111" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="team3.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Team3Select:" destination="KKD-xL-RJ8" eventType="touchUpInside" id="KaT-mT-SAh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CUU-nt-pRq">
+                                <rect key="frame" x="561" y="39" width="111" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="team4.png">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="Team4Select:" destination="KKD-xL-RJ8" eventType="touchUpInside" id="z84-RT-8Ke"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Yk5-lR-ogt">
+                                <rect key="frame" x="689" y="0.0" width="22" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="dismissView:" destination="KKD-xL-RJ8" eventType="touchUpInside" id="6Wl-hT-COS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    </view>
+                    <value key="contentSizeForViewInPopover" type="size" width="720" height="100"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="720" height="100"/>
+                    <connections>
+                        <outlet property="team1" destination="NGT-uh-7EJ" id="0LW-lD-JjX"/>
+                        <outlet property="team2" destination="2Vc-tz-5Zx" id="zgR-ks-HRo"/>
+                        <outlet property="team3" destination="NXK-n6-gqd" id="QMO-aZ-c40"/>
+                        <outlet property="team4" destination="CUU-nt-pRq" id="gTh-az-Y0P"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfn-7U-qfX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-156" y="574"/>
+        </scene>
     </scenes>
     <resources>
         <image name="background_view.png" width="1580" height="1534"/>
@@ -449,6 +581,10 @@
         <image name="login_bg_2x.png" width="2048" height="1536"/>
         <image name="login_box_2x.png" width="698" height="698"/>
         <image name="login_button_2x.png" width="64" height="76"/>
+        <image name="team1.png" width="111" height="32"/>
+        <image name="team2.png" width="111" height="32"/>
+        <image name="team3.png" width="111" height="32"/>
+        <image name="team4.png" width="111" height="32"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>

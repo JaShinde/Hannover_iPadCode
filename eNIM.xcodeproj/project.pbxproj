@@ -39,6 +39,17 @@
 		7E53E5751ACC24AF00809385 /* user11@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E56A1ACC24AF00809385 /* user11@2x.png */; };
 		7E53E5761ACC24AF00809385 /* user12@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E56B1ACC24AF00809385 /* user12@2x.png */; };
 		7E53E5781ACD0F0400809385 /* user1_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5771ACD0F0400809385 /* user1_selected@2x.png */; };
+		7E53E57A1ACD169200809385 /* user1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5791ACD169200809385 /* user1@2x.png */; };
+		7E53E57D1ACD3B3C00809385 /* TeamSelectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E53E57C1ACD3B3C00809385 /* TeamSelectionViewController.m */; };
+		7E53E5861ACD3C8D00809385 /* team1_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E57E1ACD3C8D00809385 /* team1_active@2x.png */; };
+		7E53E5871ACD3C8D00809385 /* team1@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E57F1ACD3C8D00809385 /* team1@2x.png */; };
+		7E53E5881ACD3C8D00809385 /* team2_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5801ACD3C8D00809385 /* team2_active@2x.png */; };
+		7E53E5891ACD3C8D00809385 /* team2@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5811ACD3C8D00809385 /* team2@2x.png */; };
+		7E53E58A1ACD3C8D00809385 /* team3_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5821ACD3C8D00809385 /* team3_active@2x.png */; };
+		7E53E58B1ACD3C8D00809385 /* team3@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5831ACD3C8D00809385 /* team3@2x.png */; };
+		7E53E58C1ACD3C8D00809385 /* team4_active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5841ACD3C8D00809385 /* team4_active@2x.png */; };
+		7E53E58D1ACD3C8D00809385 /* team4@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E5851ACD3C8D00809385 /* team4@2x.png */; };
+		7E53E58F1ACD6A3F00809385 /* user1_selectedonly@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E58E1ACD6A3F00809385 /* user1_selectedonly@2x.png */; };
 		7E9D51C71AC2F91E00DB63D5 /* btRippleButtton.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */; };
 		7E9D51C91AC2FA7400DB63D5 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */; };
 		7EC2B8D51AC53D2600883BF8 /* EnergyDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EC2B8D41AC53D2600883BF8 /* EnergyDetailsViewController.m */; };
@@ -107,6 +118,18 @@
 		7E53E56A1ACC24AF00809385 /* user11@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user11@2x.png"; sourceTree = "<group>"; };
 		7E53E56B1ACC24AF00809385 /* user12@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user12@2x.png"; sourceTree = "<group>"; };
 		7E53E5771ACD0F0400809385 /* user1_selected@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user1_selected@2x.png"; sourceTree = "<group>"; };
+		7E53E5791ACD169200809385 /* user1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user1@2x.png"; sourceTree = "<group>"; };
+		7E53E57B1ACD3B3C00809385 /* TeamSelectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TeamSelectionViewController.h; sourceTree = "<group>"; };
+		7E53E57C1ACD3B3C00809385 /* TeamSelectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TeamSelectionViewController.m; sourceTree = "<group>"; };
+		7E53E57E1ACD3C8D00809385 /* team1_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team1_active@2x.png"; sourceTree = "<group>"; };
+		7E53E57F1ACD3C8D00809385 /* team1@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team1@2x.png"; sourceTree = "<group>"; };
+		7E53E5801ACD3C8D00809385 /* team2_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team2_active@2x.png"; sourceTree = "<group>"; };
+		7E53E5811ACD3C8D00809385 /* team2@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team2@2x.png"; sourceTree = "<group>"; };
+		7E53E5821ACD3C8D00809385 /* team3_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team3_active@2x.png"; sourceTree = "<group>"; };
+		7E53E5831ACD3C8D00809385 /* team3@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team3@2x.png"; sourceTree = "<group>"; };
+		7E53E5841ACD3C8D00809385 /* team4_active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team4_active@2x.png"; sourceTree = "<group>"; };
+		7E53E5851ACD3C8D00809385 /* team4@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "team4@2x.png"; sourceTree = "<group>"; };
+		7E53E58E1ACD6A3F00809385 /* user1_selectedonly@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user1_selectedonly@2x.png"; sourceTree = "<group>"; };
 		7E9D51C51AC2F91E00DB63D5 /* btRippleButtton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = btRippleButtton.m; sourceTree = "<group>"; };
 		7E9D51C61AC2F91E00DB63D5 /* btRippleButtton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = btRippleButtton.h; sourceTree = "<group>"; };
 		7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
@@ -173,6 +196,16 @@
 		7E53E5291ACA5ED000809385 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7E53E58E1ACD6A3F00809385 /* user1_selectedonly@2x.png */,
+				7E53E57E1ACD3C8D00809385 /* team1_active@2x.png */,
+				7E53E57F1ACD3C8D00809385 /* team1@2x.png */,
+				7E53E5801ACD3C8D00809385 /* team2_active@2x.png */,
+				7E53E5811ACD3C8D00809385 /* team2@2x.png */,
+				7E53E5821ACD3C8D00809385 /* team3_active@2x.png */,
+				7E53E5831ACD3C8D00809385 /* team3@2x.png */,
+				7E53E5841ACD3C8D00809385 /* team4_active@2x.png */,
+				7E53E5851ACD3C8D00809385 /* team4@2x.png */,
+				7E53E5791ACD169200809385 /* user1@2x.png */,
 				7E53E5771ACD0F0400809385 /* user1_selected@2x.png */,
 				7E53E5611ACC24AF00809385 /* user2@2x.png */,
 				7E53E5621ACC24AF00809385 /* user3@2x.png */,
@@ -265,6 +298,8 @@
 				9E9FD1CA17DA502500A3D1EC /* GVAppDelegate.m */,
 				9E9FD1D217DA502500A3D1EC /* MainStoryboard_iPhone.storyboard */,
 				9E9FD1D517DA502500A3D1EC /* MainStoryboard_iPad.storyboard */,
+				7E53E57B1ACD3B3C00809385 /* TeamSelectionViewController.h */,
+				7E53E57C1ACD3B3C00809385 /* TeamSelectionViewController.m */,
 				9E9FD1D817DA502500A3D1EC /* GVMasterViewController.h */,
 				9E9FD1D917DA502500A3D1EC /* GVMasterViewController.m */,
 				9E32DD14180ECA2A00D38DD4 /* GVLoadingDetailViewController.h */,
@@ -364,19 +399,27 @@
 				7E53E5401ACBAB1700809385 /* tab_energy_active@2x.png in Resources */,
 				7E53E5751ACC24AF00809385 /* user11@2x.png in Resources */,
 				7E53E56D1ACC24AF00809385 /* user3@2x.png in Resources */,
+				7E53E58A1ACD3C8D00809385 /* team3_active@2x.png in Resources */,
 				7E53E56E1ACC24AF00809385 /* user4@2x.png in Resources */,
 				7EE4A6BB1AC91CC7008EFB90 /* canvasjs.min.js in Resources */,
 				7E53E5421ACBAB1700809385 /* tab_incident_reporting_active@2x.png in Resources */,
 				7E53E5741ACC24AF00809385 /* user10@2x.png in Resources */,
 				7EE4A6B91AC918C7008EFB90 /* waste.html in Resources */,
+				7E53E5871ACD3C8D00809385 /* team1@2x.png in Resources */,
+				7E53E58D1ACD3C8D00809385 /* team4@2x.png in Resources */,
 				7E53E5601ACC222C00809385 /* background_view.png in Resources */,
 				7E53E5491ACBAB1700809385 /* tab_water@2x.png in Resources */,
+				7E53E57A1ACD169200809385 /* user1@2x.png in Resources */,
+				7E53E58B1ACD3C8D00809385 /* team3@2x.png in Resources */,
 				9E9FD1C517DA502500A3D1EC /* InfoPlist.strings in Resources */,
 				7E53E52D1ACA5F1F00809385 /* login_app_name_2x.png in Resources */,
+				7E53E58C1ACD3C8D00809385 /* team4_active@2x.png in Resources */,
 				7E53E5441ACBAB1700809385 /* tab_incidents_active@2x.png in Resources */,
 				7E53E5481ACBAB1700809385 /* tab_water_active@2x.png in Resources */,
 				7E53E5471ACBAB1700809385 /* tab_waste@2x.png in Resources */,
 				7E53E5721ACC24AF00809385 /* user8@2x.png in Resources */,
+				7E53E58F1ACD6A3F00809385 /* user1_selectedonly@2x.png in Resources */,
+				7E53E5861ACD3C8D00809385 /* team1_active@2x.png in Resources */,
 				7E53E5531ACBE87D00809385 /* top_user_info@2x.png in Resources */,
 				7E53E5431ACBAB1700809385 /* tab_incident_reporting@2x.png in Resources */,
 				7E53E53E1ACBAB1700809385 /* tab_air_active@2x.png in Resources */,
@@ -402,7 +445,9 @@
 				9E9FD1D717DA502500A3D1EC /* MainStoryboard_iPad.storyboard in Resources */,
 				7E53E5701ACC24AF00809385 /* user6@2x.png in Resources */,
 				7EE4A6BA1AC918C7008EFB90 /* water.html in Resources */,
+				7E53E5881ACD3C8D00809385 /* team2_active@2x.png in Resources */,
 				7E53E5411ACBAB1700809385 /* tab_energy@2x.png in Resources */,
+				7E53E5891ACD3C8D00809385 /* team2@2x.png in Resources */,
 				7EE4A6B81AC918C7008EFB90 /* air.html in Resources */,
 				7E53E5711ACC24AF00809385 /* user7@2x.png in Resources */,
 			);
@@ -419,6 +464,7 @@
 				9E9FD1C717DA502500A3D1EC /* main.m in Sources */,
 				9E9FD1CB17DA502500A3D1EC /* GVAppDelegate.m in Sources */,
 				9E9FD1DA17DA502500A3D1EC /* GVMasterViewController.m in Sources */,
+				7E53E57D1ACD3B3C00809385 /* TeamSelectionViewController.m in Sources */,
 				7EC2B8D81AC53DE400883BF8 /* WasteDetailsViewController.m in Sources */,
 				9E32DD16180ECA2A00D38DD4 /* GVLoadingDetailViewController.m in Sources */,
 				7EC2B8E11AC53E1C00883BF8 /* IncidentDetailsViewController.m in Sources */,
