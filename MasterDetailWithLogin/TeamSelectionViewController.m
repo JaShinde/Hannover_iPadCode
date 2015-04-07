@@ -61,18 +61,18 @@
     
     self.navigationItem.rightBarButtonItem = addButton;
     
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user1@2x.png"] atIndex:0];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:1];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:2];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:3];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user7@2x.png"] atIndex:4];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user8@2x.png"] atIndex:5];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user9@2x.png"] atIndex:6];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user10@2x.png"] atIndex:7];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user11@2x.png"] atIndex:8];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user5@2x.png"] atIndex:9];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user6@2x.png"] atIndex:10];
-    [_selectedCells insertObject:[NSString stringWithFormat:@"user12@2x.png"] atIndex:11];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user7@2x.png"] atIndex:0];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user1@2x.png"] atIndex:1];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user2@2x.png"] atIndex:2];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user3@2x.png"] atIndex:3];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user10@2x.png"] atIndex:4];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user4@2x.png"] atIndex:5];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user11@2x.png"] atIndex:6];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user5@2x.png"] atIndex:7];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user8@2x.png"] atIndex:8];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user12@2x.png"] atIndex:9];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user9@2x.png"] atIndex:10];
+    [_selectedCells insertObject:[NSString stringWithFormat:@"user6@2x.png"] atIndex:11];
     
     
     //    self.collectionView.backgroundView = [[UIImageView alloc] initWithImage: [UIImage imageWithContentsOfFile: @"background_view.png"]];
@@ -82,7 +82,7 @@
     //    self.navigationController.navigationBar.shadowImage = [UIImage new];
     self.navigationController.navigationBar.translucent = YES;
     
-
+    
 }
 
 - (void)handleLongGesture:(UILongPressGestureRecognizer *)gestureRecognizer{
@@ -98,7 +98,7 @@
     if (indexPath == nil){
         NSLog(@"couldn't find index path");
     } else {
-        if(indexPath.row == 0) {
+        if(indexPath.row == 1) {
             // get the cell at indexPath (the one you long pressed)
             UICollectionViewCell* cell = [self.collectionView cellForItemAtIndexPath:indexPath];
             UIImageView *recipeImageView = (UIImageView *)[cell viewWithTag:100];
@@ -109,19 +109,11 @@
             [self.collectionView reloadData];
             self.teamSelect.hidden = NO;
             
-            //            TeamSelectionViewController *content = [self.storyboard instantiateViewControllerWithIdentifier:@"teamSelection"];
-            //            content.modalPresentationStyle = UIModalPresentationFormSheet;
-            //            content.modalTransitionStyle = UIModalTransitionStyleCrossDissolve;
-            //            content.view.frame = CGRectMake(0, 500, 720,100);
-            //
-            //            [self presentViewController:content animated:NO completion:nil];
-            
             
         }
     }
     
-    //    UICollectionViewCell *cell = [self.collectionView dequeueReusableCellWithReuseIdentifier:@"IncidentPhotoCell" forIndexPath:indexPath];
-    
+     
 }
 
 
@@ -137,18 +129,24 @@
     NSLog(@"Will Will Appear");
     self.teamSelect.hidden = YES;
     
-    [_selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"user2@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"user3@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"user4@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"user7@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"user8@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:6 withObject:[NSString stringWithFormat:@"user9@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:7 withObject:[NSString stringWithFormat:@"user10@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:8 withObject:[NSString stringWithFormat:@"user11@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:9 withObject:[NSString stringWithFormat:@"user5@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:10 withObject:[NSString stringWithFormat:@"user6@2x.png"]];
-    [_selectedCells replaceObjectAtIndex:11 withObject:[NSString stringWithFormat:@"user12@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user7@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"user1@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"user2@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"user3@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"user10@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"user4@2x.png"]];
+   
+    
+    
+    [_selectedCells replaceObjectAtIndex:6 withObject:[NSString stringWithFormat:@"user11@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:7 withObject:[NSString stringWithFormat:@"user5@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:8 withObject:[NSString stringWithFormat:@"user8@2x.png"]];
+    
+    
+    
+    [_selectedCells replaceObjectAtIndex:9 withObject:[NSString stringWithFormat:@"user12@2x.png"]];
+       [_selectedCells replaceObjectAtIndex:10 withObject:[NSString stringWithFormat:@"user9@2x.png"]];
+    [_selectedCells replaceObjectAtIndex:11 withObject:[NSString stringWithFormat:@"user6@2x.png"]];
     
     [self.collectionView reloadData];
 }
@@ -232,7 +230,7 @@
                 forState:UIControlStateNormal];
     
     
-    [self.selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
+    [self.selectedCells replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
     
     [self.collectionView reloadData];
     
@@ -254,7 +252,7 @@
     [self.team4 setImage:[UIImage imageNamed:@"team4@2x.png"]
                 forState:UIControlStateNormal];
     
-    [self.selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
+    [self.selectedCells replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
     
     [self.collectionView reloadData];
     
@@ -274,7 +272,7 @@
     
     [self.team4 setImage:[UIImage imageNamed:@"team4@2x.png"]
                 forState:UIControlStateNormal];
-    [self.selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
+    [self.selectedCells replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
     
     [self.collectionView reloadData];
     
@@ -294,7 +292,7 @@
     
     [self.team3 setImage:[UIImage imageNamed:@"team3@2x.png"]
                 forState:UIControlStateNormal];
-    [self.selectedCells replaceObjectAtIndex:0 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
+    [self.selectedCells replaceObjectAtIndex:1 withObject:[NSString stringWithFormat:@"user1_selectedonly@2x.png"]];
     
     [self.collectionView reloadData];
     self.teamSelect.hidden = YES;

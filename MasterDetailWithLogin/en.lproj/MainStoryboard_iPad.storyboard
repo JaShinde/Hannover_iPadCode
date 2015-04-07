@@ -40,85 +40,15 @@
                                 <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" indicatorStyle="white" minimumZoomScale="0.0" maximumZoomScale="0.0" dataMode="prototypes" id="tlM-2Z-X1P">
+                            <webView contentMode="scaleToFill" id="Cbc-T4-uDW">
                                 <rect key="frame" x="0.0" y="60" width="1024" height="720"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="1" minimumInteritemSpacing="1" id="VWC-oh-CdJ">
-                                    <size key="itemSize" width="250" height="250"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="IncidentPhotoCell" id="9u3-O7-4vv">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView multipleTouchEnabled="YES" tag="100" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="HUS-RM-BLc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="250" height="250"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                                </imageView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <size key="customSize" width="250" height="250"/>
-                                    </collectionViewCell>
-                                </cells>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES" calendarEvent="YES"/>
                                 <connections>
-                                    <outlet property="dataSource" destination="4" id="cId-YQ-5Zr"/>
-                                    <outlet property="delegate" destination="4" id="ybH-FH-TZs"/>
+                                    <outlet property="delegate" destination="4" id="LOR-a6-VyX"/>
                                 </connections>
-                            </collectionView>
-                            <view alpha="0.79999999999999982" contentMode="scaleToFill" id="Jv5-zP-9gK">
-                                <rect key="frame" x="0.0" y="580" width="1024" height="144"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="jsy-8b-CLQ">
-                                        <rect key="frame" x="47" y="90" width="165" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="team1.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="Team1Select:" destination="4" eventType="touchUpInside" id="38z-kR-xhd"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="aG9-SV-LOd">
-                                        <rect key="frame" x="289" y="90" width="165" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="team2.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="Team2Select:" destination="4" eventType="touchUpInside" id="sBd-0R-yh0"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="YaI-q6-JNo">
-                                        <rect key="frame" x="540" y="90" width="165" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="team3.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="Team3Select:" destination="4" eventType="touchUpInside" id="WZx-g2-Otr"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="e5a-2y-FQy">
-                                        <rect key="frame" x="805" y="90" width="165" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" backgroundImage="team4.png">
-                                            <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="Team4Select:" destination="4" eventType="touchUpInside" id="QW6-u8-gnb"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                                <color key="backgroundColor" red="0.027679711950931721" green="0.050238500034975486" blue="0.061483577806122458" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
+                            </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -130,12 +60,7 @@
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
                     <connections>
-                        <outlet property="collectionView" destination="tlM-2Z-X1P" id="tav-FQ-cEc"/>
-                        <outlet property="team1" destination="jsy-8b-CLQ" id="PXG-oh-jAV"/>
-                        <outlet property="team2" destination="aG9-SV-LOd" id="9qy-gH-p8d"/>
-                        <outlet property="team3" destination="YaI-q6-JNo" id="jaD-BR-LYm"/>
-                        <outlet property="team4" destination="e5a-2y-FQy" id="bHs-CF-NKj"/>
-                        <outlet property="teamSelect" destination="Jv5-zP-9gK" id="zib-LA-egM"/>
+                        <outlet property="dashboardView" destination="Cbc-T4-uDW" id="FwH-Gu-hVK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="15" sceneMemberID="firstResponder"/>
@@ -494,10 +419,10 @@
             </objects>
             <point key="canvasLocation" x="789" y="925"/>
         </scene>
-        <!--Team Selection View Controller - TeamSelectionView-->
+        <!--Team Selection View Controller - Incident Details-->
         <scene sceneID="zEz-tM-vNC">
             <objects>
-                <viewController storyboardIdentifier="teamSelection" title="TeamSelectionView" modalPresentationStyle="formSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KKD-xL-RJ8" customClass="TeamSelectionViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="teamSelection" title="Incident Details" modalPresentationStyle="formSheet" useStoryboardIdentifierAsRestorationIdentifier="YES" id="KKD-xL-RJ8" customClass="TeamSelectionViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="15M-1N-hTc">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -37,125 +37,125 @@
                 }
 
                 $("#geographic").on("click", function (e){
-                    if(intersects(e.pageX, e.pageY, 538,90, 16))
+                    if(intersects(e.pageX, e.pageY, 453,93, 16))
                     {
-//                        alert("show");
+                  //    alert("show");
                                     submitButton('show');
                     }else{
-//                        alert("not show");
+                    //    alert("not show");
                     }
                 });
 
-                var chart = new CanvasJS.Chart("chartContainer",
-                                               {
-                                               title:{
-                                               text: "SBU - RPN"
-                                               },
-                                               axisX: {
-                                               title: "Months"
-                                               },
-                                               axisY: {
-                                               title: "Incidents"
-                                               },
-                                               legend: {
-                                               //verticalAlign: "bottom",
-                                               //horizontalAlign: "center",
-                                               horizontalAlign: "right", // left, center ,right
-                                               verticalAlign: "center",  // top, center, bottom
-                                               },
-                                               zoomEnabled:true,
-                                               animationEnabled: true,
-                                               data: [
-                                                      {
-                                                      type: "column",
-                                                      showInLegend: true,
-                                                      legendMarkerType: "square",
-                                                      legendText: "RPN - 9 to 30(Needs attention)",
-                                                      name: "RPN - 9 to 30",
-                                                      dataPoints: [
-                                                                   { label: "JAN",y: 3},
-                                                                   { label: "FEB",y: 4},
-                                                                   { label: "MAR",y: 7},
-                                                                   { label: "APR",y: 3},
-                                                                   { label: "MAY",y: 5},
-                                                                   { label: "JUN",y: 3},
-                                                                   { label: "JUL",y: 2},
-                                                                   { label: "AUG",y: 5},
-                                                                   { label: "SEP",y: 8},
-                                                                   { label: "OCT",y: 6},
-                                                                   { label: "NOV",y: 3},
-                                                                   { label: "DEC",y: 4}
-                                                                   ]
-                                                      },
-                                                      {
-                                                      type: "column",
-                                                      showInLegend: true,
-                                                      legendMarkerType: "square",
-                                                      legendText: "RPN - 31 to 64(Major)",
-                                                      type: "column",
-                                                      name: "RPN - 31 to 64",
-                                                      dataPoints: [
-                                                                   { label: "JAN",y: 2},
-                                                                   { label: "FEB",y: 5},
-                                                                   { label: "MAR",y: 3},
-                                                                   { label: "APR",y: 4},
-                                                                   { label: "MAY",y: 8},
-                                                                   { label: "JUN",y: 1},
-                                                                   { label: "JUL",y: 3},
-                                                                   { label: "AUG",y: 2},
-                                                                   { label: "SEP",y: 4},
-                                                                   { label: "OCT",y: 4},
-                                                                   { label: "NOV",y: 2},
-                                                                   { label: "DEC",y: 1}
-                                                                   ]
-                                                      },
-                                                      {
-                                                      type: "column",
-                                                      showInLegend: true,
-                                                      legendMarkerType: "square",
-                                                      legendText: "RPN - 65 to 100 (Severe)",
-                                                      name: "RPN - 65 to 100",
-                                                      dataPoints: [
-                                                                   { label: "JAN",y: 3},
-                                                                   { label: "FEB",y: 1},
-                                                                   { label: "MAR",y: 2},
-                                                                   { label: "APR",y: 3},
-                                                                   { label: "MAY",y: 3},
-                                                                   { label: "JUN",y: 1},
-                                                                   { label: "JUL",y: 3},
-                                                                   { label: "AUG",y: 4},
-                                                                   { label: "SEP",y: 2},
-                                                                   { label: "OCT",y: 1},
-                                                                   { label: "NOV",y: 4},
-                                                                   { label: "DEC",y: 3}
-                                                                   ]
-                                                      },
-                                                      {
-                                                      type: "column",
-                                                      showInLegend: true,
-                                                      legendMarkerType: "square",
-                                                      legendText: "RPN > 100 (Highly Severe)",
-                                                      name: "RPN > 100",
-                                                      dataPoints: [
-                                                                   { label: "JAN",y: 2},
-                                                                   { label: "FEB",y: 1},
-                                                                   { label: "MAR",y: 2},
-                                                                   { label: "APR",y: 3},
-                                                                   { label: "MAY",y: 1},
-                                                                   { label: "JUN",y: 1},
-                                                                   { label: "JUL",y: 2},
-                                                                   { label: "AUG",y: 1},
-                                                                   { label: "SEP",y: 2},
-                                                                   { label: "OCT",y: 1},
-                                                                   { label: "NOV",y: 1},
-                                                                   { label: "DEC",y: 2}
-                                                                   ]
-                                                      },
-                                                      ]
-                                               
-                                               });
-                                               
-                                               chart.render();
+//                var chart = new CanvasJS.Chart("chartContainer",
+//                                               {
+//                                               title:{
+//                                               text: "SBU - RPN"
+//                                               },
+//                                               axisX: {
+//                                               title: "Months"
+//                                               },
+//                                               axisY: {
+//                                               title: "Incidents"
+//                                               },
+//                                               legend: {
+//                                               //verticalAlign: "bottom",
+//                                               //horizontalAlign: "center",
+//                                               horizontalAlign: "right", // left, center ,right
+//                                               verticalAlign: "center",  // top, center, bottom
+//                                               },
+//                                               zoomEnabled:true,
+//                                               animationEnabled: true,
+//                                               data: [
+//                                                      {
+//                                                      type: "column",
+//                                                      showInLegend: true,
+//                                                      legendMarkerType: "square",
+//                                                      legendText: "RPN - 9 to 30(Needs attention)",
+//                                                      name: "RPN - 9 to 30",
+//                                                      dataPoints: [
+//                                                                   { label: "JAN",y: 3},
+//                                                                   { label: "FEB",y: 4},
+//                                                                   { label: "MAR",y: 7},
+//                                                                   { label: "APR",y: 3},
+//                                                                   { label: "MAY",y: 5},
+//                                                                   { label: "JUN",y: 3},
+//                                                                   { label: "JUL",y: 2},
+//                                                                   { label: "AUG",y: 5},
+//                                                                   { label: "SEP",y: 8},
+//                                                                   { label: "OCT",y: 6},
+//                                                                   { label: "NOV",y: 3},
+//                                                                   { label: "DEC",y: 4}
+//                                                                   ]
+//                                                      },
+//                                                      {
+//                                                      type: "column",
+//                                                      showInLegend: true,
+//                                                      legendMarkerType: "square",
+//                                                      legendText: "RPN - 31 to 64(Major)",
+//                                                      type: "column",
+//                                                      name: "RPN - 31 to 64",
+//                                                      dataPoints: [
+//                                                                   { label: "JAN",y: 2},
+//                                                                   { label: "FEB",y: 5},
+//                                                                   { label: "MAR",y: 3},
+//                                                                   { label: "APR",y: 4},
+//                                                                   { label: "MAY",y: 8},
+//                                                                   { label: "JUN",y: 1},
+//                                                                   { label: "JUL",y: 3},
+//                                                                   { label: "AUG",y: 2},
+//                                                                   { label: "SEP",y: 4},
+//                                                                   { label: "OCT",y: 4},
+//                                                                   { label: "NOV",y: 2},
+//                                                                   { label: "DEC",y: 1}
+//                                                                   ]
+//                                                      },
+//                                                      {
+//                                                      type: "column",
+//                                                      showInLegend: true,
+//                                                      legendMarkerType: "square",
+//                                                      legendText: "RPN - 65 to 100 (Severe)",
+//                                                      name: "RPN - 65 to 100",
+//                                                      dataPoints: [
+//                                                                   { label: "JAN",y: 3},
+//                                                                   { label: "FEB",y: 1},
+//                                                                   { label: "MAR",y: 2},
+//                                                                   { label: "APR",y: 3},
+//                                                                   { label: "MAY",y: 3},
+//                                                                   { label: "JUN",y: 1},
+//                                                                   { label: "JUL",y: 3},
+//                                                                   { label: "AUG",y: 4},
+//                                                                   { label: "SEP",y: 2},
+//                                                                   { label: "OCT",y: 1},
+//                                                                   { label: "NOV",y: 4},
+//                                                                   { label: "DEC",y: 3}
+//                                                                   ]
+//                                                      },
+//                                                      {
+//                                                      type: "column",
+//                                                      showInLegend: true,
+//                                                      legendMarkerType: "square",
+//                                                      legendText: "RPN > 100 (Highly Severe)",
+//                                                      name: "RPN > 100",
+//                                                      dataPoints: [
+//                                                                   { label: "JAN",y: 2},
+//                                                                   { label: "FEB",y: 1},
+//                                                                   { label: "MAR",y: 2},
+//                                                                   { label: "APR",y: 3},
+//                                                                   { label: "MAY",y: 1},
+//                                                                   { label: "JUN",y: 1},
+//                                                                   { label: "JUL",y: 2},
+//                                                                   { label: "AUG",y: 1},
+//                                                                   { label: "SEP",y: 2},
+//                                                                   { label: "OCT",y: 1},
+//                                                                   { label: "NOV",y: 1},
+//                                                                   { label: "DEC",y: 2}
+//                                                                   ]
+//                                                      },
+//                                                      ]
+//                                               
+//                                               });
+//                                               
+//                                               chart.render();
 
 var chart1 = new CanvasJS.Chart("chartContainer1",
                                {
@@ -232,145 +232,145 @@ var chart1 = new CanvasJS.Chart("chartContainer1",
 
                 chart1.render();
 
-                var chart2 = new CanvasJS.Chart("chartContainer2",
-                        {
-                            title:{
-                                text: "Plant EHS Safety Matrics"
-                            },
-                      
-                            toolTip: {
-                                shared: true
-                            },
-                            axisY:{
-                                title: "Incidents"
-                            },
-
-                            zoomEnabled: true,
-                            animationEnabled: true,
-
-                            data: [
-                                {
-                                    //color: "#369EAD",
-                                    showInLegend: true,
-                                    legendMarkerType: "square",
-                                    legendText: "Open",
-                                    type: "stackedBar",
-                                    name:"Open",
-                                    dataPoints: [
-                                        { y: 3, label:"Engine Assembly" },
-                                        { y: 4, label:"Final Assembly" },
-                                        { y: 1, label:"Paint Shop" },
-                                        { y: 3, label:"Body Shop" },
-                                        { y: 3, label:"Stamping" }
-                                    ]
-                                },
-                                {
-                                    showInLegend: true,
-                                    legendMarkerType: "square",
-                                    legendText: "Pending",
-                                    name:"Pending",
-                                    type: "stackedBar",
-                                    dataPoints: [
-                                        { y: 6, label:"Engine Assembly" },
-                                        { y: 8, label:"Final Assembly" },
-                                        { y: 4, label:"Paint Shop" },
-                                        { y: 3, label:"Body Shop" },
-                                        { y: 5, label:"Stamping" }
-
-                                    ]
-                                },
-                                {
-                                    showInLegend: true,
-                                    legendMarkerType: "square",
-                                    legendText: "Closed",
-                                    type: "stackedBar",
-                                    name:"Closed",
-                                    dataPoints: [
-                                        { y: 4, label:"Engine Assembly" },
-                                        { y: 6, label:"Final Assembly" },
-                                        { y: 3, label:"Paint Shop" },
-                                        { y: 5, label:"Body Shop" },
-                                        { y: 2, label:"Stamping" }
-
-                                    ]
-                                }
-                            ]
-                        });
-
-                chart2.render();
-
-                var chart3 = new CanvasJS.Chart("chartContainer3",
-                        {
-                            title:{
-                                text: "Safety Index"
-                            },
-                            axisX:{
-                                title: "Year"
-                            },
-                            axisY:{
-                                title: "Safety Index"
-                            },
-                            zoomEnabled: true,
-                            animationEnabled: true,
-                            data: [
-                                {
-                                    type: "stackedColumn100",
-                                    legendText: "DFR",
-                                    showInLegend: "true",
-                                    legendMarkerType: "square",
-//                                    indexLabel: "#percent %",
-//                                    indexLabelPlacement: "inside",
-//                                    indexLabelFontColor: "white",
-                                    dataPoints: [
-                                        {  y: 3.8, label: "2014"},
-                                        {  y: 3.4, label: "2013" },
-                                        {  y: 2.7, label: "2012" },
-                                        {  y: 2.3, label: "2011" }
-                                    ]
-                                },
-                                {
-                                    type: "stackedColumn100",
-                                    legendText: "SeverityRate",
-                                    showInLegend: "true",
-//                                    indexLabel: "#percent %",
-//                                    indexLabelPlacement: "inside",
-//                                    indexLabelFontColor: "white",
-                                    dataPoints: [
-                                        {  y: 8.1, label: "2014"},
-                                        {  y: 7.3, label: "2013" },
-                                        {  y: 5.8, label: "2012" },
-                                        {  y: 5.0, label: "2011" }
-                                    ]
-                                },
-                                {
-                                    type: "stackedColumn100",
-                                    legendText: "RIFR",
-                                    showInLegend: "true",
-//                                    indexLabel: "#percent %",
-//                                    indexLabelPlacement: "inside",
-//                                    indexLabelFontColor: "white",
-                                    dataPoints: [
-                                        {  y: 7.0, label: "2014"},
-                                        {  y: 6.3, label: "2013" },
-                                        {  y: 5.0, label: "2012" },
-                                        {  y: 4.3, label: "2011" }
-                                    ]
-                                },
-                                {
-                                    type: "line",
-                                    legendText: "Safety Index",
-                                    showInLegend: "true",
-                                    dataPoints: [
-                                        {  y: 18.8, label: "2014"},
-                                        {  y: 16.9, label: "2013"},
-                                        {  y: 13.5, label: "2012"},
-                                        {  y: 11.5, label: "2011"}
-                                    ]
-                                }
-
-                            ]
-                        });
-                chart3.render();
+//                var chart2 = new CanvasJS.Chart("chartContainer2",
+//                        {
+//                            title:{
+//                                text: "Plant EHS Safety Matrics"
+//                            },
+//                      
+//                            toolTip: {
+//                                shared: true
+//                            },
+//                            axisY:{
+//                                title: "Incidents"
+//                            },
+//
+//                            zoomEnabled: true,
+//                            animationEnabled: true,
+//
+//                            data: [
+//                                {
+//                                    //color: "#369EAD",
+//                                    showInLegend: true,
+//                                    legendMarkerType: "square",
+//                                    legendText: "Open",
+//                                    type: "stackedBar",
+//                                    name:"Open",
+//                                    dataPoints: [
+//                                        { y: 3, label:"Engine Assembly" },
+//                                        { y: 4, label:"Final Assembly" },
+//                                        { y: 1, label:"Paint Shop" },
+//                                        { y: 3, label:"Body Shop" },
+//                                        { y: 3, label:"Stamping" }
+//                                    ]
+//                                },
+//                                {
+//                                    showInLegend: true,
+//                                    legendMarkerType: "square",
+//                                    legendText: "Pending",
+//                                    name:"Pending",
+//                                    type: "stackedBar",
+//                                    dataPoints: [
+//                                        { y: 6, label:"Engine Assembly" },
+//                                        { y: 8, label:"Final Assembly" },
+//                                        { y: 4, label:"Paint Shop" },
+//                                        { y: 3, label:"Body Shop" },
+//                                        { y: 5, label:"Stamping" }
+//
+//                                    ]
+//                                },
+//                                {
+//                                    showInLegend: true,
+//                                    legendMarkerType: "square",
+//                                    legendText: "Closed",
+//                                    type: "stackedBar",
+//                                    name:"Closed",
+//                                    dataPoints: [
+//                                        { y: 4, label:"Engine Assembly" },
+//                                        { y: 6, label:"Final Assembly" },
+//                                        { y: 3, label:"Paint Shop" },
+//                                        { y: 5, label:"Body Shop" },
+//                                        { y: 2, label:"Stamping" }
+//
+//                                    ]
+//                                }
+//                            ]
+//                        });
+//
+//                chart2.render();
+//
+//                var chart3 = new CanvasJS.Chart("chartContainer3",
+//                        {
+//                            title:{
+//                                text: "Safety Index"
+//                            },
+//                            axisX:{
+//                                title: "Year"
+//                            },
+//                            axisY:{
+//                                title: "Safety Index"
+//                            },
+//                            zoomEnabled: true,
+//                            animationEnabled: true,
+//                            data: [
+//                                {
+//                                    type: "stackedColumn100",
+//                                    legendText: "DFR",
+//                                    showInLegend: "true",
+//                                    legendMarkerType: "square",
+////                                    indexLabel: "#percent %",
+////                                    indexLabelPlacement: "inside",
+////                                    indexLabelFontColor: "white",
+//                                    dataPoints: [
+//                                        {  y: 3.8, label: "2014"},
+//                                        {  y: 3.4, label: "2013" },
+//                                        {  y: 2.7, label: "2012" },
+//                                        {  y: 2.3, label: "2011" }
+//                                    ]
+//                                },
+//                                {
+//                                    type: "stackedColumn100",
+//                                    legendText: "SeverityRate",
+//                                    showInLegend: "true",
+////                                    indexLabel: "#percent %",
+////                                    indexLabelPlacement: "inside",
+////                                    indexLabelFontColor: "white",
+//                                    dataPoints: [
+//                                        {  y: 8.1, label: "2014"},
+//                                        {  y: 7.3, label: "2013" },
+//                                        {  y: 5.8, label: "2012" },
+//                                        {  y: 5.0, label: "2011" }
+//                                    ]
+//                                },
+//                                {
+//                                    type: "stackedColumn100",
+//                                    legendText: "RIFR",
+//                                    showInLegend: "true",
+////                                    indexLabel: "#percent %",
+////                                    indexLabelPlacement: "inside",
+////                                    indexLabelFontColor: "white",
+//                                    dataPoints: [
+//                                        {  y: 7.0, label: "2014"},
+//                                        {  y: 6.3, label: "2013" },
+//                                        {  y: 5.0, label: "2012" },
+//                                        {  y: 4.3, label: "2011" }
+//                                    ]
+//                                },
+//                                {
+//                                    type: "line",
+//                                    legendText: "Safety Index",
+//                                    showInLegend: "true",
+//                                    dataPoints: [
+//                                        {  y: 18.8, label: "2014"},
+//                                        {  y: 16.9, label: "2013"},
+//                                        {  y: 13.5, label: "2012"},
+//                                        {  y: 11.5, label: "2011"}
+//                                    ]
+//                                }
+//
+//                            ]
+//                        });
+//                chart3.render();
             }
         </script>
         <script type="text/javascript" src="canvasjs.min.js"></script>
@@ -380,17 +380,17 @@ var chart1 = new CanvasJS.Chart("chartContainer1",
     <canvas id="geographic" style="height: 340px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px; background:url('map_view@2x.png') no-repeat; background-size: 100% 300px;">
         <button id="button1"></button>
     </canvas>
-        <div id="chartContainer" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
+<!--        <div id="chartContainer" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
         </div>
-        
+-->
         <div id="chartContainer1" style="height: 300px; width: 100%;border: 2px solid #a1a1a1;border-radius: 0px;">
             
         </div>
-        <div id="chartContainer2" style="height: 300px; width: 49%;float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
-
+<!--        <div id="chartContainer2" style="height: 300px; width: 49%;float:left;border: 2px solid #a1a1a1;border-radius: 0px;">
         </div>
-        <div id="chartContainer3" style="height: 300px; width: 49%;float:right;border: 2px solid #a1a1a1;border-radius: 0px;">
-
+-->
+<!--        <div id="chartContainer3" style="height: 300px; width: 49%;float:right;border: 2px solid #a1a1a1;border-radius: 0px;">
         </div>
+        -->
     </body>
 </html>

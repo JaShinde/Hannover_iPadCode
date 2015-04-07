@@ -57,7 +57,7 @@
             [_objects insertObject:[NSString stringWithFormat:@"tab_waste@2x.png"] atIndex:2];
             [_objects insertObject:[NSString stringWithFormat:@"tab_air@2x.png"] atIndex:3];
             [_objects insertObject:[NSString stringWithFormat:@"tab_water@2x.png"] atIndex:4];
-            [_objects insertObject:[NSString stringWithFormat:@"tab_incidents@2x.png"] atIndex:5];
+//            [_objects insertObject:[NSString stringWithFormat:@"tab_incidents@2x.png"] atIndex:5];
     
 //    [_selectedObjects insertObject:[NSString stringWithFormat:@"tab_incident_reporting_active@2x.png"] atIndex:0];
 //    [_selectedObjects insertObject:[NSString stringWithFormat:@"tab_energy_active@2x.png"] atIndex:1];
@@ -196,7 +196,7 @@
         }
     }
     
-    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 125)]; // your cell's height should be greater than 48 for this.
+    UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 150)]; // your cell's height should be greater than 48 for this.
     imgView.tag = 1;
     [cell.contentView addSubview:imgView];
     imgView = nil;
@@ -244,7 +244,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 125;
+    return 150;
 }
 /*
 // Override to support conditional rearranging of the table view.
@@ -268,7 +268,7 @@
             [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
             [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
             [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
-            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+//            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
             
             UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
             _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
@@ -284,7 +284,7 @@
             [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
             [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
             [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
-            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+//            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
             
             UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
             _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
@@ -298,7 +298,7 @@
             [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste_active@2x.png"]];
             [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
             [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
-            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+//            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
             
             UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
             _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
@@ -312,7 +312,7 @@
             [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
             [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air_active@2x.png"]];
             [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
-            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+//            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
 
             UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
             _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
@@ -325,7 +325,7 @@
             [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
             [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
             [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water_active@2x.png"]];
-            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
+//            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents@2x.png"]];
             UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
             _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
             self.detailViewManager.detailViewController = self.detailViewManager.waterDetails;
@@ -337,7 +337,7 @@
             [_objects replaceObjectAtIndex:2 withObject:[NSString stringWithFormat:@"tab_waste@2x.png"]];
             [_objects replaceObjectAtIndex:3 withObject:[NSString stringWithFormat:@"tab_air@2x.png"]];
             [_objects replaceObjectAtIndex:4 withObject:[NSString stringWithFormat:@"tab_water@2x.png"]];
-            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents_active@2x.png"]];
+//            [_objects replaceObjectAtIndex:5 withObject:[NSString stringWithFormat:@"tab_incidents_active@2x.png"]];
 
             UIImageView *_imgView = (UIImageView *)[swipedCell.contentView viewWithTag:1];
             _imgView.image = [UIImage imageNamed:_objects[indexPath.row]]; // repace the same with array of
