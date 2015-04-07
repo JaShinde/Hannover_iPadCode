@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E45A33B1AD3D0B500A82A4D /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E45A33A1AD3D0B500A82A4D /* JavaScriptCore.framework */; };
+		7E45A33D1AD3D63800A82A4D /* map_view@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E45A33C1AD3D63800A82A4D /* map_view@2x.png */; };
 		7E53E52D1ACA5F1F00809385 /* login_app_name_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E52A1ACA5F1F00809385 /* login_app_name_2x.png */; };
 		7E53E52E1ACA5F1F00809385 /* login_bg_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E52B1ACA5F1F00809385 /* login_bg_2x.png */; };
 		7E53E52F1ACA5F1F00809385 /* login_box_2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 7E53E52C1ACA5F1F00809385 /* login_box_2x.png */; };
@@ -86,6 +88,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E45A33A1AD3D0B500A82A4D /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		7E45A33C1AD3D63800A82A4D /* map_view@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "map_view@2x.png"; sourceTree = "<group>"; };
 		7E53E52A1ACA5F1F00809385 /* login_app_name_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_app_name_2x.png; sourceTree = "<group>"; };
 		7E53E52B1ACA5F1F00809385 /* login_bg_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_bg_2x.png; sourceTree = "<group>"; };
 		7E53E52C1ACA5F1F00809385 /* login_box_2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = login_box_2x.png; sourceTree = "<group>"; };
@@ -183,6 +187,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E45A33B1AD3D0B500A82A4D /* JavaScriptCore.framework in Frameworks */,
 				7E9D51C91AC2FA7400DB63D5 /* QuartzCore.framework in Frameworks */,
 				9E9FD1BB17DA502500A3D1EC /* UIKit.framework in Frameworks */,
 				9E9FD1BD17DA502500A3D1EC /* Foundation.framework in Frameworks */,
@@ -196,6 +201,7 @@
 		7E53E5291ACA5ED000809385 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				7E45A33C1AD3D63800A82A4D /* map_view@2x.png */,
 				7E53E58E1ACD6A3F00809385 /* user1_selectedonly@2x.png */,
 				7E53E57E1ACD3C8D00809385 /* team1_active@2x.png */,
 				7E53E57F1ACD3C8D00809385 /* team1@2x.png */,
@@ -277,6 +283,7 @@
 		9E9FD1B917DA502500A3D1EC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				7E45A33A1AD3D0B500A82A4D /* JavaScriptCore.framework */,
 				7E9D51C81AC2FA7400DB63D5 /* QuartzCore.framework */,
 				9E9FD1BA17DA502500A3D1EC /* UIKit.framework */,
 				9E9FD1BC17DA502500A3D1EC /* Foundation.framework */,
@@ -425,6 +432,7 @@
 				7E53E53E1ACBAB1700809385 /* tab_air_active@2x.png in Resources */,
 				7E53E5731ACC24AF00809385 /* user9@2x.png in Resources */,
 				7E53E5561ACBF7B500809385 /* Icon-76.png in Resources */,
+				7E45A33D1AD3D63800A82A4D /* map_view@2x.png in Resources */,
 				9E9FD1CD17DA502500A3D1EC /* Default.png in Resources */,
 				9E9FD1CF17DA502500A3D1EC /* Default@2x.png in Resources */,
 				7E53E5571ACBF7B500809385 /* icon-76@2x.png in Resources */,

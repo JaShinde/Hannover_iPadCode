@@ -20,7 +20,7 @@
 @property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
 //@property (nonatomic,weak) IBOutlet UIPopoverController *teamSelectView;
 @property(strong, nonatomic) NSMutableArray *selectedCells;
-//@property (strong, nonatomic) UIAlertView *teamSelection;
+
 
 
 @property (nonatomic,weak) IBOutlet UIButton *team1;

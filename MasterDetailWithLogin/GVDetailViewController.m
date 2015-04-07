@@ -238,6 +238,13 @@
 //    
 //        [self.collectionView reloadData];
 //    }
+    
+    TeamSelectionViewController *myController =
+    [self.storyboard instantiateViewControllerWithIdentifier:@"teamSelection"];
+    
+    [self.navigationController pushViewController:myController animated:YES];
+   // [myController release];
+    
 }
 
 //- (BOOL)collectionView:(UICollectionView *)collectionView

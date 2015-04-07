@@ -7,20 +7,24 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "GVDetailViewController.h"
 
 
-@interface TeamSelectionViewController : UIViewController
+
+@interface TeamSelectionViewController : UIViewController<UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout>
 {
 
 
 }
+@property(nonatomic, weak) IBOutlet UICollectionView *collectionView;
+//@property (nonatomic,weak) IBOutlet UIPopoverController *teamSelectView;
+@property(strong, nonatomic) NSMutableArray *selectedCells;
 
-@property (strong, nonatomic) GVDetailViewController *detailViewController;
+
 @property (nonatomic,weak) IBOutlet UIButton *team1;
 @property (nonatomic,weak) IBOutlet UIButton *team2;
 @property (nonatomic,weak) IBOutlet UIButton *team3;
 @property (nonatomic,weak) IBOutlet UIButton *team4;
+@property (nonatomic,weak) IBOutlet UIView *teamSelect;
 
 
 - (IBAction)dismissView:(id)sender;
@@ -28,5 +32,6 @@
 - (IBAction)Team2Select:(id)sender;
 - (IBAction)Team3Select:(id)sender;
 - (IBAction)Team4Select:(id)sender;
+
 
 @end

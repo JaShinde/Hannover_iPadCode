@@ -7,6 +7,8 @@
 //
 
 #import "IncidentDetailsViewController.h"
+#import <JavaScriptCore/JavaScriptCore.h>
+//#import "TeamSelectionViewController.h"
 
 @interface IncidentDetailsViewController ()
 
@@ -18,7 +20,9 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
+
         // Custom initialization
+
     }
     return self;
 }
@@ -51,8 +55,25 @@
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView
 {
+    JSContext *context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"]; // Undocumented access
+    context[@"submitButton"] = ^(NSString *param1) {
+        [self yourObjectiveCMethod:param1];
+    };
     
 }
+
+- (void)yourObjectiveCMethod:(NSString *)param1 {
+    
+    NSLog(@"User clicked submit. param1=%@", param1);
+//    TeamSelectionViewController *content = [self.storyboard instantiateViewControllerWithIdentifier:@"teamSelection"];
+//    content.modalPresentationStyle = UIModalPresentationFormSheet;
+//    content.modalTransitionStyle = UIModalTransitionStyleCoverVertical;
+//
+//    [self presentViewController:content animated:YES completion:nil];
+    
+    
+}
+
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error{
     
